@@ -1,0 +1,54 @@
+grammar org.csstudio.xtext.dbtexteditor.DbTextEditor with org.eclipse.xtext.common.Terminals
+
+generate dbTextEditor "http://www.csstudio.org/xtext/dbtexteditor/DbTextEditor"
+
+
+dbModel:
+	records += Record* 
+	;
+	
+	
+Record: 
+	name = 'record' '('  recordname=Recordnames  ',' recordLink=STRING')''{'
+	infosfields += (Info | Field)*
+	'}'
+;
+	
+Field: 
+	name = 'field' '(' fieldname = Fieldnames ',' ( fieldstring=STRING | fieldint=INT) ')'
+;
+
+
+Info: 
+	'info' '(' name = 'asyn:READBACK' ',' infoValue = STRING ')'
+;
+
+// R4 : Enumeration field names
+enum Fieldnames:
+  NAME | DESC | ASG | SCAN | PHAS | PINI | SDIS | PROC |
+  PACT | SEVR | STAT | TIME | DTYP | ONAM | OSV | OUT |
+  SIML | ZNAM | ZSV | INP | EGU | LINR | EGUL | EGUF | 
+  HIGH | HSV | HIHI | HHSV | EIST | EISV | EIVL | ELST | 
+  ELSV | ELVL | FRST | FRSV | FRVL | FVST | HYST | LLSV
+  | FVSV | FVVL | MASK | NIST | NISV | NIVL | NOBT | ONST
+   | ONSV | ONVL | SHFT  | SVST | SVSV | SVVL | SXST | 
+   SXSV | SXVL | TEST | TESV | TEVL | THST | THSV | THVL 
+   | TWST | TWSV | TWVL | UNSV | ZRST | ZRSV | ZRVL 
+   | LOLO | LOW | LSV | SSCN | TSE | PREC | DRVH | LOPR
+   | DRVL | HOPR | CALC | INPA | INPB | INPC | INPD 
+   | FLNK | INPE | INPF | INPG | INPH | INPI | INPJ 
+   | INPK | INAA | INBB | INCC | SIOL
+  ;
+
+// R5 : Enumeration record names
+enum Recordnames:
+  ai | ao | longin | longout | stringin | stringout | lsi |
+  lso | waveform | bi | bo | mbbi | mbbo | mbbiDirect | 
+  mbboDirect | calcout | scalcout | calc
+  ;
+  
+  
+  @Override 
+terminal SL_COMMENT: 
+	'#'!('\n'|'\r')* ('\r'? '\n')?
+;
