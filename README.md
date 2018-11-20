@@ -56,7 +56,9 @@ the command line from the this dbTextEditorGitHub repository.
 Click "Clone or download" and "Download Zip" the dbTextEditorGitHub-master
 from this repository just run:
 
+```bash
 mvn clean verify
+```
 
 ## How to install it in Eclipse
 
