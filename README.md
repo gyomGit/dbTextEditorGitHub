@@ -68,10 +68,10 @@ mvn clean verify
 
 This way you do not need to install Maven on your computer.
 Install [M2Eclipse](https://www.eclipse.org/m2e/) abbreviated as m2e, a set of
-Eclipse plug-ins that integrate Maven into Eclipse.
-Right-click on the org.example.hellomaven.parent in the package explorer and
-select Run As | Maven build… and in the appearing dialog specify "clean verify"
-as the goals.
+Eclipse plug-ins that integrate Maven into Eclipse. After imported the
+dbTextEditorGitHub-master as a project, right-click on the
+dbTextEditorGitHub-master in the package explorer and select Run As | Maven build…
+and in the appearing dialog specify "clean verify" as the goals.
 The goal clean will instruct Maven to perform a clean build, thus, all the
 existing generated artifacts will be removed before building, for example, all
 Java class files will be removed before compiling. The goal verify will instruct
