@@ -4,7 +4,6 @@
 This whole repository contains these 8 projects that together build this Eclipse plug-in.
 This plug-in is designed to edit db text files in Eclipse IDE, among other environments.
 
-
 ====
 
 ### org.csstudio.xtext.dbtexteditor.feature:
@@ -47,32 +46,59 @@ This contains the components related to the Eclipse UI (the Eclipse editor and
 features related to the Eclipse tooling).
 
 ====
+## How to obtain Db files Editor Plug-in to be installed from dbTextEditorGitHub Github repository:
 
-## How to built the plug-in
+Click "Clone or download" and "Download Zip" the dbTextEditorGitHub-master.
 
-If you installed the Maven binaries in your system, you can run the build from
-the command line from the this dbTextEditorGitHub repository.
+## Build the plug-in with Maven:
 
-Click "Clone or download" and "Download Zip" the dbTextEditorGitHub-master
-from this repository just run:
+There are two ways.
+
+### Maven build from any operating system:
+
+Install [Maven binaries](https://maven.apache.org/) in your operating system.
+
+Run the build from the command line from the dbTextEditorGitHub-master
+repository.
 
 ```bash
 mvn clean verify
 ```
+### Maven build from within Eclipse:
 
-## How to install it in Eclipse
+This way you do not need to install Maven on your computer.
+Install [M2Eclipse](https://www.eclipse.org/m2e/) abbreviated as m2e, a set of
+Eclipse plug-ins that integrate Maven into Eclipse.
+Right-click on the org.example.hellomaven.parent in the package explorer and
+select Run As | Maven build… and in the appearing dialog specify "clean verify"
+as the goals.
+The goal clean will instruct Maven to perform a clean build, thus, all the
+existing generated artifacts will be removed before building, for example, all
+Java class files will be removed before compiling. The goal verify will instruct
+Maven to compile everything, generate artifacts, for example jar files and
+update sites, and run all the tests.
 
-After this Maven building is done, the target folder of the
-org.csstudio.xtext.dbtexteditor.repository project will contain:
 
-A zipped version of the update site.
+## How to install Db files Editor Plug-in in Eclipse:
 
-The subdirectory: "repository" will contain: The update site itself. Just
-indicate the path of this update site in The Eclipse Install New Software...
-dialog.
+After the Maven building is done:
+the target folder of the org.csstudio.xtext.dbtexteditor.repository project
+contains the update site and also a zipped version of it.
 
-You can put the zipped repository on the web as well to offer an offline
-installable version of your software. The Eclipse Install New Software... dialog
-allows you to also specify a local ZIP file as the repository.
+The subdirectory called "repository" which is the update site itself.
+Just indicate the path of this "repository" update site in The Eclipse Install
+New Software... dialog.
+
+A zipped version of this update site, which is:
+org.csstudio.xtext.dbtexteditor.repository-1.0.0-SNAPSHOT.zip You can put the
+zipped repository on the web as well to offer an offline installable version of
+your software. The Eclipse Install New Software... dialog allows you to also
+specify a local ZIP file as the repository.
+
 
 ====
+
+### Acknowledgments
+Thanks to Sven Efftinge, the founder of Xtext.
+Thanks to Bettini, Lorenzo and his book: Implementing Domain-Specific Languages with Xtext
+and Xtend - Second Edition, which allowed me to create this job.
