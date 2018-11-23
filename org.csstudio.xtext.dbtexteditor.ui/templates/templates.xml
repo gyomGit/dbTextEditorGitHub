@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+<template autoinsert="true" 
+context="org.csstudio.xtext.dbtexteditor.DbTextEditor.kw_SCAN"
+deleted="false"
+description=""
+enabled="true"
+name="SCAN 10 second">SCAN, "10 second")</template>
+<template autoinsert="true"
+context="org.csstudio.xtext.dbtexteditor.DbTextEditor.kw_SCAN"
+deleted="false" description=""
+enabled="true"
+name="SCAN Event">SCAN, "Event")</template>
+<template autoinsert="true"
+context="org.csstudio.xtext.dbtexteditor.DbTextEditor.kw_SCAN"
+deleted="false" description=""
+enabled="true"
+name="SCAN I/O Intr">SCAN, "I/O Intr")</template>
+<template autoinsert="true"
+context="org.csstudio.xtext.dbtexteditor.DbTextEditor.kw_SCAN"
+deleted="false"
+description=""
+enabled="true"
+name="SCAN Passive">SCAN, "Passive")</template>
+</templates>
