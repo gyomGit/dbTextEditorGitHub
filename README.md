@@ -42,8 +42,10 @@ This project contains the JUnit tests that do not depend on any UI.
 This project contains the JUnit tests that depend on the Eclipse UI.
 
 ### org.csstudio.xtext.dbtexteditor.ui:
-This contains the components related to the Eclipse UI (the Eclipse editor and
-features related to the Eclipse tooling).
+This project contains the components related to the Eclipse UI (the Eclipse editor and
+features related to the Eclipse tooling). A directory called "templates" contains a couple
+of Eclipse default templates according to a Context that are part of the Content assist
+window list triggered by pressing *Ctrl + Space*.
 
 ====
 ## How to obtain Db files Editor Plug-in to be installed from dbTextEditorGitHub Github repository:
@@ -85,7 +87,7 @@ After the Maven building is done:
 the target folder of the org.csstudio.xtext.dbtexteditor.repository project
 contains the update site and also a zipped version of it.
 
-The subdirectory called "repository" which is the update site itself.
+The subdirectory called "repository" is the update site itself.
 Just indicate the path of this "repository" update site in The Eclipse Install
 New Software... dialog.
 
