@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.csstudio.xtext.dbtexteditor.feature.source" version="1.0.0.201811091023" label="DbTextEditor Feature  Developer Resources">
+  <includes id="org.csstudio.xtext.dbtexteditor.feature" version="1.0.0.201811091023"/>
+  <plugin id="org.csstudio.xtext.dbtexteditor.source" version="1.0.0.201811091023" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.csstudio.xtext.dbtexteditor.ide.source" version="1.0.0.201811091023" download-size="0" install-size="0" unpack="false"/>
+  <plugin id="org.csstudio.xtext.dbtexteditor.ui.source" version="1.0.0.201811091023" download-size="0" install-size="0" unpack="false"/>
+</feature>

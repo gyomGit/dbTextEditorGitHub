@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.csstudio.xtext.dbtexteditor.ide
+Bundle-SymbolicName: org.csstudio.xtext.dbtexteditor.ide; singleton:=t
+ rue
+Export-Package: org.csstudio.xtext.dbtexteditor.ide.contentassist.antl
+ r,org.csstudio.xtext.dbtexteditor.ide.contentassist.antlr.internal
+Bundle-Name: org.csstudio.xtext.dbtexteditor.ide
+Bundle-Version: 1.0.0.201811091023
+Require-Bundle: org.csstudio.xtext.dbtexteditor,org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,org.antlr.runtime;bundle-version="[3.2.0,
+ 3.2.1)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: My Company
+

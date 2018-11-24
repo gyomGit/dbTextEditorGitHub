@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='4'>
+  <unit id='org.csstudio.xtext.dbtexteditor.feature.feature.group' version='1.0.0.201811091023' singleton='false'>
+    <update id='org.csstudio.xtext.dbtexteditor.feature.feature.group' range='[0.0.0,1.0.0.201811091023)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='DbTextEditor Feature '/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      <property name='maven-groupId' value='org.csstudio.xtext.dbtexteditor'/>
+      <property name='maven-artifactId' value='org.csstudio.xtext.dbtexteditor.feature'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.feature.group' version='1.0.0.201811091023'/>
+    </provides>
+    <requires size='4'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.ide' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.ui' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.feature.jar' range='[1.0.0.201811091023,1.0.0.201811091023]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+  <unit id='org.csstudio.xtext.dbtexteditor.feature.feature.jar' version='1.0.0.201811091023'>
+    <properties size='4'>
+      <property name='org.eclipse.equinox.p2.name' value='DbTextEditor Feature '/>
+      <property name='maven-groupId' value='org.csstudio.xtext.dbtexteditor'/>
+      <property name='maven-artifactId' value='org.csstudio.xtext.dbtexteditor.feature'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.feature.jar' version='1.0.0.201811091023'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+      <provided namespace='org.eclipse.update.feature' name='org.csstudio.xtext.dbtexteditor.feature' version='1.0.0.201811091023'/>
+    </provides>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <artifacts size='1'>
+      <artifact classifier='org.eclipse.update.feature' id='org.csstudio.xtext.dbtexteditor.feature' version='1.0.0.201811091023'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+  <unit id='org.csstudio.xtext.dbtexteditor.feature.source.feature.group' version='1.0.0.201811091023' singleton='false'>
+    <update id='org.csstudio.xtext.dbtexteditor.feature.source.feature.group' range='[0.0.0,1.0.0.201811091023)' severity='0'/>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='DbTextEditor Feature  Developer Resources'/>
+      <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      <property name='maven-groupId' value='org.csstudio.xtext.dbtexteditor'/>
+      <property name='maven-artifactId' value='org.csstudio.xtext.dbtexteditor.feature'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources-feature'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.source.feature.group' version='1.0.0.201811091023'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.feature.group' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.source' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.ide.source' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.ui.source' range='[1.0.0.201811091023,1.0.0.201811091023]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.source.feature.jar' range='[1.0.0.201811091023,1.0.0.201811091023]'>
+        <filter>
+          (org.eclipse.update.install.features=true)
+        </filter>
+      </required>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+  <unit id='org.csstudio.xtext.dbtexteditor.feature.source.feature.jar' version='1.0.0.201811091023'>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='DbTextEditor Feature  Developer Resources'/>
+      <property name='maven-groupId' value='org.csstudio.xtext.dbtexteditor'/>
+      <property name='maven-artifactId' value='org.csstudio.xtext.dbtexteditor.feature'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources-feature'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.csstudio.xtext.dbtexteditor.feature.source.feature.jar' version='1.0.0.201811091023'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+      <provided namespace='org.eclipse.update.feature' name='org.csstudio.xtext.dbtexteditor.feature.source' version='1.0.0.201811091023'/>
+    </provides>
+    <filter>
+      (org.eclipse.update.install.features=true)
+    </filter>
+    <artifacts size='1'>
+      <artifact classifier='org.eclipse.update.feature' id='org.csstudio.xtext.dbtexteditor.feature.source' version='1.0.0.201811091023'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='zipped'>
+          true
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

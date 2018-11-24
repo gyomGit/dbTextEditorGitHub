@@ -1,0 +1,13 @@
+!SESSION 2018-11-09 11:25:16.642 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /Users/guillaumebalourdetcleaned/Documents/workspace/org.csstudio.xtext.dbtexteditor.parent/org.csstudio.xtext.dbtexteditor.ui.tests/target/surefire.properties
+Command-line arguments:  -data /Users/guillaumebalourdetcleaned/Documents/workspace/org.csstudio.xtext.dbtexteditor.parent/org.csstudio.xtext.dbtexteditor.ui.tests/target/work/data -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /Users/guillaumebalourdetcleaned/Documents/workspace/org.csstudio.xtext.dbtexteditor.parent/org.csstudio.xtext.dbtexteditor.ui.tests/target/surefire.properties
+
+!ENTRY org.eclipse.core.net 1 0 2018-11-09 11:25:24.817
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-11-09 11:25:38.538
+!MESSAGE The workspace will exit with unsaved changes in this session.

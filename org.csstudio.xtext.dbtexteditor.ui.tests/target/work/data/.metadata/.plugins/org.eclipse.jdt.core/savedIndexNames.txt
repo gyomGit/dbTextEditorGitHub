@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/Users/guillaumebalourdetcleaned/Documents/workspace/org.csstudio.xtext.dbtexteditor.parent/org.csstudio.xtext.dbtexteditor.ui.tests/target/work/data/.metadata/.plugins/org.eclipse.jdt.core

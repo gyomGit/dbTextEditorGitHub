@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+Test set: org.csstudio.xtext.dbtexteditor.ui.tests.DbTextEditorOutlineTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.51 sec - in org.csstudio.xtext.dbtexteditor.ui.tests.DbTextEditorOutlineTest
+testOutline(org.csstudio.xtext.dbtexteditor.ui.tests.DbTextEditorOutlineTest)  Time elapsed: 2.501 sec

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension
+		point="org.eclipse.ui.editors">
+		<editor
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+			default="true"
+			extensions="db"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			name="DbTextEditor Editor">
+		</editor>
+	</extension>
+	<extension
+		point="org.eclipse.ui.handlers">
+		<handler
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+			commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
+			<activeWhen>
+				<reference
+					definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+		<handler
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+			commandId="org.csstudio.xtext.dbtexteditor.DbTextEditor.validate">
+		<activeWhen>
+			<reference
+					definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+			</reference>
+		</activeWhen>
+		</handler>
+		<!-- copy qualified name -->
+		<handler
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
+			<activeWhen>
+				<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened" />
+			</activeWhen>
+		</handler>
+		<handler
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
+			<activeWhen>
+				<and>
+					<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.XtextEditor.opened" />
+					<iterate>
+						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
+					</iterate>
+				</and>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension point="org.eclipse.core.expressions.definitions">
+		<definition id="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+			<and>
+				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
+				<with variable="activeEditor">
+					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
+						value="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+						forcePluginActivation="true"/>
+				</with>
+			</and>
+		</definition>
+		<definition id="org.csstudio.xtext.dbtexteditor.DbTextEditor.XtextEditor.opened">
+			<and>
+				<reference definitionId="isXtextEditorActive"/>
+				<with variable="activeEditor">
+					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
+						value="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+						forcePluginActivation="true"/>
+				</with>
+			</and>
+		</definition>
+	</extension>
+	<extension
+			point="org.eclipse.ui.preferencePages">
+		<page
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			name="DbTextEditor">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+		</page>
+		<page
+			category="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.coloring"
+			name="Syntax Coloring">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+		</page>
+		<page
+			category="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.templates"
+			name="Templates">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+		</page>
+	</extension>
+	<extension
+			point="org.eclipse.ui.propertyPages">
+		<page
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			name="DbTextEditor">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+			<filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+		</page>
+	</extension>
+	<extension
+		point="org.eclipse.ui.keywords">
+		<keyword
+			id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"
+			label="DbTextEditor"/>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+	<command
+			description="Trigger expensive validation"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.validate"
+			name="Validate">
+	</command>
+	<!-- copy qualified name -->
+	<command
+			id="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
+			categoryId="org.eclipse.ui.category.edit"
+			description="Copy the qualified name for the selected element"
+			name="Copy Qualified Name">
+	</command>
+	<command
+			id="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName"
+			categoryId="org.eclipse.ui.category.edit"
+			description="Copy the qualified name for the selected element"
+			name="Copy Qualified Name">
+	</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.edit">
+			 <command
+				 commandId="org.csstudio.xtext.dbtexteditor.DbTextEditor.validate"
+				 style="push"
+				 tooltip="Trigger expensive validation">
+			<visibleWhen checkEnabled="false">
+				<reference
+					definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+				</reference>
+			</visibleWhen>
+		</command>
+		</menuContribution>
+		<!-- copy qualified name -->
+		<menuContribution locationURI="popup:#TextEditorContext?after=copy">
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
+				style="push" tooltip="Copy Qualified Name">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened" />
+				</visibleWhen>
+			</command>
+		</menuContribution>
+		<menuContribution locationURI="menu:edit?after=copy">
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
+				style="push" tooltip="Copy Qualified Name">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened" />
+				</visibleWhen>
+			</command>
+		</menuContribution>
+		<menuContribution locationURI="popup:org.eclipse.xtext.ui.outline?after=additions">
+			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName"
+				style="push" tooltip="Copy Qualified Name">
+				<visibleWhen checkEnabled="false">
+					<and>
+						<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.XtextEditor.opened" />
+						<iterate>
+							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
+						</iterate>
+					</and>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
+			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+					</reference>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+		<handler
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+			commandId="org.eclipse.xtext.ui.editor.FindReferences">
+			<activeWhen>
+				<reference
+					definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<content-type
+			base-type="org.eclipse.core.runtime.text"
+			file-extensions="db"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.contenttype"
+			name="DbTextEditor File"
+			priority="normal">
+		</content-type>
+	</extension>
+	<!-- adding resource factories -->
+	<extension
+		point="org.eclipse.emf.ecore.extension_parser">
+		<parser
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			type="db">
+		</parser>
+	</extension>
+	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
+		<resourceServiceProvider
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+			uriExtension="db">
+		</resourceServiceProvider>
+	</extension>
+	<!-- marker definitions for org.csstudio.xtext.dbtexteditor.DbTextEditor -->
+	<extension
+			id="dbtexteditor.check.fast"
+			name="DbTextEditor Problem"
+			point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.xtext.ui.check.fast"/>
+		<persistent value="true"/>
+	</extension>
+	<extension
+			id="dbtexteditor.check.normal"
+			name="DbTextEditor Problem"
+			point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.xtext.ui.check.normal"/>
+		<persistent value="true"/>
+	</extension>
+	<extension
+			id="dbtexteditor.check.expensive"
+			name="DbTextEditor Problem"
+			point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.xtext.ui.check.expensive"/>
+		<persistent value="true"/>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.validator.preferencePage"
+			name="Errors/Warnings">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+		</page>
+	</extension>
+	<extension point="org.eclipse.xtext.builder.participant">
+		<participant
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+			fileExtensions="db"/>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.compiler.preferencePage"
+			name="Compiler">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+		</page>
+	</extension>
+	<extension point="org.eclipse.ui.propertyPages">
+		<page
+			category="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.compiler.propertyPage"
+			name="Compiler">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+			<filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+		</page>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
+			<command
+				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
+				id="org.csstudio.xtext.dbtexteditor.DbTextEditor.OpenGeneratedCode"
+				style="push">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened" />
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+		<handler
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
+			<activeWhen>
+				<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened" />
+			</activeWhen>
+		</handler>
+	</extension>
+	<!-- Quick Outline -->
+	<extension
+		point="org.eclipse.ui.handlers">
+		<handler 
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
+			<activeWhen>
+				<reference
+					definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+		<command
+			description="Open the quick outline."
+			id="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+			name="Quick Outline">
+		</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.open">
+			<command commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+				style="push"
+				tooltip="Open Quick Outline">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened"/>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<!-- quickfix marker resolution generator for org.csstudio.xtext.dbtexteditor.DbTextEditor -->
+	<extension
+			point="org.eclipse.ui.ide.markerResolution">
+		<markerResolutionGenerator
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.csstudio.xtext.dbtexteditor.ui.dbtexteditor.check.fast">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+		<markerResolutionGenerator
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.csstudio.xtext.dbtexteditor.ui.dbtexteditor.check.normal">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+		<markerResolutionGenerator
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.csstudio.xtext.dbtexteditor.ui.dbtexteditor.check.expensive">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+	</extension>
+	<!-- Rename Refactoring -->
+	<extension point="org.eclipse.ui.handlers">
+		<handler 
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
+			<activeWhen>
+				<reference
+					definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.edit">
+			<command commandId="org.eclipse.xtext.ui.refactoring.RenameElement"
+				style="push">
+				<visibleWhen checkEnabled="false">
+					<reference
+						definitionId="org.csstudio.xtext.dbtexteditor.DbTextEditor.Editor.opened">
+					</reference>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			category="org.csstudio.xtext.dbtexteditor.DbTextEditor"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+			id="org.csstudio.xtext.dbtexteditor.DbTextEditor.refactoring"
+			name="Refactoring">
+			<keywordReference id="org.csstudio.xtext.dbtexteditor.ui.keyword_DbTextEditor"/>
+		</page>
+	</extension>
+	<extension point="org.eclipse.compare.contentViewers">
+		<viewer id="org.csstudio.xtext.dbtexteditor.DbTextEditor.compare.contentViewers"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="db">
+		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.csstudio.xtext.dbtexteditor.DbTextEditor.contenttype"
+			contentViewerId="org.csstudio.xtext.dbtexteditor.DbTextEditor.compare.contentViewers" />
+	</extension>
+	<extension point="org.eclipse.compare.contentMergeViewers">
+		<viewer id="org.csstudio.xtext.dbtexteditor.DbTextEditor.compare.contentMergeViewers"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="db" label="DbTextEditor Compare">
+		</viewer>
+		<contentTypeBinding
+			contentTypeId="org.csstudio.xtext.dbtexteditor.DbTextEditor.contenttype"
+			contentMergeViewerId="org.csstudio.xtext.dbtexteditor.DbTextEditor.compare.contentMergeViewers" />
+	</extension>
+	<extension point="org.eclipse.ui.editors.documentProviders">
+		<provider id="org.csstudio.xtext.dbtexteditor.DbTextEditor.editors.documentProviders"
+			class="org.csstudio.xtext.dbtexteditor.ui.DbTextEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+			extensions="db">
+		</provider>
+	</extension>
+	<extension point="org.eclipse.team.core.fileTypes">
+		<fileTypes
+			extension="db"
+			type="text">
+		</fileTypes>
+	</extension>
+</plugin>
