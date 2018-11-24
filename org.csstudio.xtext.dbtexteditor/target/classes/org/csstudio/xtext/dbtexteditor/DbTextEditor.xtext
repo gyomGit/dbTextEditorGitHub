@@ -15,7 +15,7 @@ Record:
 ;
 	
 Field: 
-	name = 'field' '(' fieldname = Fieldnames ',' ( fieldstring=STRING | fieldint=INT) ')'
+	name = 'field' '(' fieldname = Fieldnames ',' ( fieldstring=STRING | fieldint=INT | fielddouble=DOUBLE ) ')'
 ;
 
 
@@ -51,4 +51,8 @@ enum Recordnames:
   @Override 
 terminal SL_COMMENT: 
 	'#'!('\n'|'\r')* ('\r'? '\n')?
+;
+
+terminal DOUBLE:
+	INT '.' INT
 ;

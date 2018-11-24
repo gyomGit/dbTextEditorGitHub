@@ -218,6 +218,12 @@ rule__Field__Alternatives_4
 		(rule__Field__FieldintAssignment_4_1)
 		{ after(grammarAccess.getFieldAccess().getFieldintAssignment_4_1()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getFieldAccess().getFielddoubleAssignment_4_2()); }
+		(rule__Field__FielddoubleAssignment_4_2)
+		{ after(grammarAccess.getFieldAccess().getFielddoubleAssignment_4_2()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1641,6 +1647,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Field__FielddoubleAssignment_4_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getFieldAccess().getFielddoubleDOUBLETerminalRuleCall_4_2_0()); }
+		RULE_DOUBLE
+		{ after(grammarAccess.getFieldAccess().getFielddoubleDOUBLETerminalRuleCall_4_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Info__NameAssignment_2
 	@init {
 		int stackSize = keepStackSize();
@@ -1676,6 +1697,8 @@ finally {
 }
 
 RULE_SL_COMMENT : '#' ~(('\n'|'\r'))* ('\r'? '\n')?;
+
+RULE_DOUBLE : RULE_INT '.' RULE_INT;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

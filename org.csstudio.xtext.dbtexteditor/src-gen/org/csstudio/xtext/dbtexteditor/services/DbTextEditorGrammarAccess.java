@@ -127,13 +127,15 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFieldstringSTRINGTerminalRuleCall_4_0_0 = (RuleCall)cFieldstringAssignment_4_0.eContents().get(0);
 		private final Assignment cFieldintAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
 		private final RuleCall cFieldintINTTerminalRuleCall_4_1_0 = (RuleCall)cFieldintAssignment_4_1.eContents().get(0);
+		private final Assignment cFielddoubleAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
+		private final RuleCall cFielddoubleDOUBLETerminalRuleCall_4_2_0 = (RuleCall)cFielddoubleAssignment_4_2.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Field:
-		//	name='field' '(' fieldname=Fieldnames ',' (fieldstring=STRING | fieldint=INT) ')';
+		//	name='field' '(' fieldname=Fieldnames ',' (fieldstring=STRING | fieldint=INT | fielddouble=DOUBLE) ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name='field' '(' fieldname=Fieldnames ',' (fieldstring=STRING | fieldint=INT) ')'
+		//name='field' '(' fieldname=Fieldnames ',' (fieldstring=STRING | fieldint=INT | fielddouble=DOUBLE) ')'
 		public Group getGroup() { return cGroup; }
 		
 		//name='field'
@@ -154,7 +156,7 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//','
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 		
-		//fieldstring=STRING | fieldint=INT
+		//fieldstring=STRING | fieldint=INT | fielddouble=DOUBLE
 		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 		
 		//fieldstring=STRING
@@ -168,6 +170,12 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//INT
 		public RuleCall getFieldintINTTerminalRuleCall_4_1_0() { return cFieldintINTTerminalRuleCall_4_1_0; }
+		
+		//fielddouble=DOUBLE
+		public Assignment getFielddoubleAssignment_4_2() { return cFielddoubleAssignment_4_2; }
+		
+		//DOUBLE
+		public RuleCall getFielddoubleDOUBLETerminalRuleCall_4_2_0() { return cFielddoubleDOUBLETerminalRuleCall_4_2_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
@@ -1186,6 +1194,7 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 	private final FieldnamesElements eFieldnames;
 	private final RecordnamesElements eRecordnames;
 	private final TerminalRule tSL_COMMENT;
+	private final TerminalRule tDOUBLE;
 	
 	private final Grammar grammar;
 	
@@ -1203,6 +1212,7 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 		this.eFieldnames = new FieldnamesElements();
 		this.eRecordnames = new RecordnamesElements();
 		this.tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.csstudio.xtext.dbtexteditor.DbTextEditor.SL_COMMENT");
+		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.csstudio.xtext.dbtexteditor.DbTextEditor.DOUBLE");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1255,7 +1265,7 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Field:
-	//	name='field' '(' fieldname=Fieldnames ',' (fieldstring=STRING | fieldint=INT) ')';
+	//	name='field' '(' fieldname=Fieldnames ',' (fieldstring=STRING | fieldint=INT | fielddouble=DOUBLE) ')';
 	public FieldElements getFieldAccess() {
 		return pField;
 	}
@@ -1313,6 +1323,12 @@ public class DbTextEditorGrammarAccess extends AbstractGrammarElementFinder {
 	//	'#' !('\n' | '\r')* ('\r'? '\n')?;
 	public TerminalRule getSL_COMMENTRule() {
 		return tSL_COMMENT;
+	}
+	
+	//terminal DOUBLE:
+	//	INT '.' INT;
+	public TerminalRule getDOUBLERule() {
+		return tDOUBLE;
 	}
 	
 	//terminal ID:

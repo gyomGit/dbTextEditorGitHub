@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_SL_COMMENT", "RULE_ID", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'record'", "'('", "','", "')'", "'{'", "'}'", "'field'", "'info'", "'asyn:READBACK'", "'NAME'", "'DESC'", "'ASG'", "'SCAN'", "'PHAS'", "'PINI'", "'SDIS'", "'PROC'", "'PACT'", "'SEVR'", "'STAT'", "'TIME'", "'DTYP'", "'ONAM'", "'OSV'", "'OUT'", "'SIML'", "'ZNAM'", "'ZSV'", "'INP'", "'EGU'", "'LINR'", "'EGUL'", "'EGUF'", "'HIGH'", "'HSV'", "'HIHI'", "'HHSV'", "'EIST'", "'EISV'", "'EIVL'", "'ELST'", "'ELSV'", "'ELVL'", "'FRST'", "'FRSV'", "'FRVL'", "'FVST'", "'HYST'", "'LLSV'", "'FVSV'", "'FVVL'", "'MASK'", "'NIST'", "'NISV'", "'NIVL'", "'NOBT'", "'ONST'", "'ONSV'", "'ONVL'", "'SHFT'", "'SVST'", "'SVSV'", "'SVVL'", "'SXST'", "'SXSV'", "'SXVL'", "'TEST'", "'TESV'", "'TEVL'", "'THST'", "'THSV'", "'THVL'", "'TWST'", "'TWSV'", "'TWVL'", "'UNSV'", "'ZRST'", "'ZRSV'", "'ZRVL'", "'LOLO'", "'LOW'", "'LSV'", "'SSCN'", "'TSE'", "'PREC'", "'DRVH'", "'LOPR'", "'DRVL'", "'HOPR'", "'CALC'", "'INPA'", "'INPB'", "'INPC'", "'INPD'", "'FLNK'", "'INPE'", "'INPF'", "'INPG'", "'INPH'", "'INPI'", "'INPJ'", "'INPK'", "'INAA'", "'INBB'", "'INCC'", "'SIOL'", "'ai'", "'ao'", "'longin'", "'longout'", "'stringin'", "'stringout'", "'lsi'", "'lso'", "'waveform'", "'bi'", "'bo'", "'mbbi'", "'mbbo'", "'mbbiDirect'", "'mbboDirect'", "'calcout'", "'scalcout'", "'calc'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_DOUBLE", "RULE_SL_COMMENT", "RULE_ID", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'record'", "'('", "','", "')'", "'{'", "'}'", "'field'", "'info'", "'asyn:READBACK'", "'NAME'", "'DESC'", "'ASG'", "'SCAN'", "'PHAS'", "'PINI'", "'SDIS'", "'PROC'", "'PACT'", "'SEVR'", "'STAT'", "'TIME'", "'DTYP'", "'ONAM'", "'OSV'", "'OUT'", "'SIML'", "'ZNAM'", "'ZSV'", "'INP'", "'EGU'", "'LINR'", "'EGUL'", "'EGUF'", "'HIGH'", "'HSV'", "'HIHI'", "'HHSV'", "'EIST'", "'EISV'", "'EIVL'", "'ELST'", "'ELSV'", "'ELVL'", "'FRST'", "'FRSV'", "'FRVL'", "'FVST'", "'HYST'", "'LLSV'", "'FVSV'", "'FVVL'", "'MASK'", "'NIST'", "'NISV'", "'NIVL'", "'NOBT'", "'ONST'", "'ONSV'", "'ONVL'", "'SHFT'", "'SVST'", "'SVSV'", "'SVVL'", "'SXST'", "'SXSV'", "'SXVL'", "'TEST'", "'TESV'", "'TEVL'", "'THST'", "'THSV'", "'THVL'", "'TWST'", "'TWSV'", "'TWVL'", "'UNSV'", "'ZRST'", "'ZRSV'", "'ZRVL'", "'LOLO'", "'LOW'", "'LSV'", "'SSCN'", "'TSE'", "'PREC'", "'DRVH'", "'LOPR'", "'DRVL'", "'HOPR'", "'CALC'", "'INPA'", "'INPB'", "'INPC'", "'INPD'", "'FLNK'", "'INPE'", "'INPF'", "'INPG'", "'INPH'", "'INPI'", "'INPJ'", "'INPK'", "'INAA'", "'INBB'", "'INCC'", "'SIOL'", "'ai'", "'ao'", "'longin'", "'longout'", "'stringin'", "'stringout'", "'lsi'", "'lso'", "'waveform'", "'bi'", "'bo'", "'mbbi'", "'mbbo'", "'mbbiDirect'", "'mbboDirect'", "'calcout'", "'scalcout'", "'calc'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -37,14 +37,15 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
     public static final int T__133=133;
     public static final int T__132=132;
     public static final int T__60=60;
+    public static final int T__135=135;
     public static final int T__61=61;
     public static final int T__134=134;
-    public static final int RULE_ID=7;
+    public static final int RULE_ID=8;
     public static final int T__131=131;
     public static final int T__130=130;
     public static final int RULE_INT=5;
     public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=9;
     public static final int T__67=67;
     public static final int T__129=129;
     public static final int T__68=68;
@@ -90,7 +91,6 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__11=11;
     public static final int T__99=99;
     public static final int T__12=12;
     public static final int T__13=13;
@@ -118,7 +118,8 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
     public static final int T__123=123;
     public static final int T__120=120;
     public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=6;
+    public static final int RULE_SL_COMMENT=7;
+    public static final int RULE_DOUBLE=6;
     public static final int T__77=77;
     public static final int T__119=119;
     public static final int T__78=78;
@@ -141,8 +142,8 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
     public static final int T__113=113;
     public static final int T__83=83;
     public static final int T__112=112;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__88=88;
     public static final int T__108=108;
     public static final int T__89=89;
@@ -253,7 +254,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==11) ) {
+                if ( (LA1_0==12) ) {
                     alt1=1;
                 }
 
@@ -386,7 +387,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
             // InternalDbTextEditor.g:117:4: (lv_name_0_0= 'record' )
             // InternalDbTextEditor.g:118:5: lv_name_0_0= 'record'
             {
-            lv_name_0_0=(Token)match(input,11,FOLLOW_4); 
+            lv_name_0_0=(Token)match(input,12,FOLLOW_4); 
 
             					newLeafNode(lv_name_0_0, grammarAccess.getRecordAccess().getNameRecordKeyword_0_0());
             				
@@ -402,7 +403,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,12,FOLLOW_5); 
+            otherlv_1=(Token)match(input,13,FOLLOW_5); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRecordAccess().getLeftParenthesisKeyword_1());
             		
@@ -437,7 +438,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,13,FOLLOW_7); 
+            otherlv_3=(Token)match(input,14,FOLLOW_7); 
 
             			newLeafNode(otherlv_3, grammarAccess.getRecordAccess().getCommaKeyword_3());
             		
@@ -467,11 +468,11 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FOLLOW_9); 
+            otherlv_5=(Token)match(input,15,FOLLOW_9); 
 
             			newLeafNode(otherlv_5, grammarAccess.getRecordAccess().getRightParenthesisKeyword_5());
             		
-            otherlv_6=(Token)match(input,15,FOLLOW_10); 
+            otherlv_6=(Token)match(input,16,FOLLOW_10); 
 
             			newLeafNode(otherlv_6, grammarAccess.getRecordAccess().getLeftCurlyBracketKeyword_6());
             		
@@ -481,7 +482,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( ((LA3_0>=17 && LA3_0<=18)) ) {
+                if ( ((LA3_0>=18 && LA3_0<=19)) ) {
                     alt3=1;
                 }
 
@@ -497,10 +498,10 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
             	    int alt2=2;
             	    int LA2_0 = input.LA(1);
 
-            	    if ( (LA2_0==18) ) {
+            	    if ( (LA2_0==19) ) {
             	        alt2=1;
             	    }
-            	    else if ( (LA2_0==17) ) {
+            	    else if ( (LA2_0==18) ) {
             	        alt2=2;
             	    }
             	    else {
@@ -575,7 +576,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_8=(Token)match(input,16,FOLLOW_2); 
+            otherlv_8=(Token)match(input,17,FOLLOW_2); 
 
             			newLeafNode(otherlv_8, grammarAccess.getRecordAccess().getRightCurlyBracketKeyword_8());
             		
@@ -638,7 +639,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleField"
-    // InternalDbTextEditor.g:235:1: ruleField returns [EObject current=null] : ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) ) otherlv_6= ')' ) ;
+    // InternalDbTextEditor.g:235:1: ruleField returns [EObject current=null] : ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) | ( (lv_fielddouble_6_0= RULE_DOUBLE ) ) ) otherlv_7= ')' ) ;
     public final EObject ruleField() throws RecognitionException {
         EObject current = null;
 
@@ -647,7 +648,8 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token lv_fieldstring_4_0=null;
         Token lv_fieldint_5_0=null;
-        Token otherlv_6=null;
+        Token lv_fielddouble_6_0=null;
+        Token otherlv_7=null;
         Enumerator lv_fieldname_2_0 = null;
 
 
@@ -655,11 +657,11 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDbTextEditor.g:241:2: ( ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) ) otherlv_6= ')' ) )
-            // InternalDbTextEditor.g:242:2: ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) ) otherlv_6= ')' )
+            // InternalDbTextEditor.g:241:2: ( ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) | ( (lv_fielddouble_6_0= RULE_DOUBLE ) ) ) otherlv_7= ')' ) )
+            // InternalDbTextEditor.g:242:2: ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) | ( (lv_fielddouble_6_0= RULE_DOUBLE ) ) ) otherlv_7= ')' )
             {
-            // InternalDbTextEditor.g:242:2: ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) ) otherlv_6= ')' )
-            // InternalDbTextEditor.g:243:3: ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) ) otherlv_6= ')'
+            // InternalDbTextEditor.g:242:2: ( ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) | ( (lv_fielddouble_6_0= RULE_DOUBLE ) ) ) otherlv_7= ')' )
+            // InternalDbTextEditor.g:243:3: ( (lv_name_0_0= 'field' ) ) otherlv_1= '(' ( (lv_fieldname_2_0= ruleFieldnames ) ) otherlv_3= ',' ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) | ( (lv_fielddouble_6_0= RULE_DOUBLE ) ) ) otherlv_7= ')'
             {
             // InternalDbTextEditor.g:243:3: ( (lv_name_0_0= 'field' ) )
             // InternalDbTextEditor.g:244:4: (lv_name_0_0= 'field' )
@@ -667,7 +669,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
             // InternalDbTextEditor.g:244:4: (lv_name_0_0= 'field' )
             // InternalDbTextEditor.g:245:5: lv_name_0_0= 'field'
             {
-            lv_name_0_0=(Token)match(input,17,FOLLOW_4); 
+            lv_name_0_0=(Token)match(input,18,FOLLOW_4); 
 
             					newLeafNode(lv_name_0_0, grammarAccess.getFieldAccess().getNameFieldKeyword_0_0());
             				
@@ -683,7 +685,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,12,FOLLOW_11); 
+            otherlv_1=(Token)match(input,13,FOLLOW_11); 
 
             			newLeafNode(otherlv_1, grammarAccess.getFieldAccess().getLeftParenthesisKeyword_1());
             		
@@ -718,26 +720,35 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,13,FOLLOW_12); 
+            otherlv_3=(Token)match(input,14,FOLLOW_12); 
 
             			newLeafNode(otherlv_3, grammarAccess.getFieldAccess().getCommaKeyword_3());
             		
-            // InternalDbTextEditor.g:284:3: ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==RULE_STRING) ) {
+            // InternalDbTextEditor.g:284:3: ( ( (lv_fieldstring_4_0= RULE_STRING ) ) | ( (lv_fieldint_5_0= RULE_INT ) ) | ( (lv_fielddouble_6_0= RULE_DOUBLE ) ) )
+            int alt4=3;
+            switch ( input.LA(1) ) {
+            case RULE_STRING:
+                {
                 alt4=1;
-            }
-            else if ( (LA4_0==RULE_INT) ) {
+                }
+                break;
+            case RULE_INT:
+                {
                 alt4=2;
-            }
-            else {
+                }
+                break;
+            case RULE_DOUBLE:
+                {
+                alt4=3;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
+
             switch (alt4) {
                 case 1 :
                     // InternalDbTextEditor.g:285:4: ( (lv_fieldstring_4_0= RULE_STRING ) )
@@ -803,12 +814,44 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 3 :
+                    // InternalDbTextEditor.g:323:4: ( (lv_fielddouble_6_0= RULE_DOUBLE ) )
+                    {
+                    // InternalDbTextEditor.g:323:4: ( (lv_fielddouble_6_0= RULE_DOUBLE ) )
+                    // InternalDbTextEditor.g:324:5: (lv_fielddouble_6_0= RULE_DOUBLE )
+                    {
+                    // InternalDbTextEditor.g:324:5: (lv_fielddouble_6_0= RULE_DOUBLE )
+                    // InternalDbTextEditor.g:325:6: lv_fielddouble_6_0= RULE_DOUBLE
+                    {
+                    lv_fielddouble_6_0=(Token)match(input,RULE_DOUBLE,FOLLOW_8); 
+
+                    						newLeafNode(lv_fielddouble_6_0, grammarAccess.getFieldAccess().getFielddoubleDOUBLETerminalRuleCall_4_2_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getFieldRule());
+                    						}
+                    						setWithLastConsumed(
+                    							current,
+                    							"fielddouble",
+                    							lv_fielddouble_6_0,
+                    							"org.csstudio.xtext.dbtexteditor.DbTextEditor.DOUBLE");
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-            otherlv_6=(Token)match(input,14,FOLLOW_2); 
+            otherlv_7=(Token)match(input,15,FOLLOW_2); 
 
-            			newLeafNode(otherlv_6, grammarAccess.getFieldAccess().getRightParenthesisKeyword_5());
+            			newLeafNode(otherlv_7, grammarAccess.getFieldAccess().getRightParenthesisKeyword_5());
             		
 
             }
@@ -833,7 +876,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInfo"
-    // InternalDbTextEditor.g:331:1: entryRuleInfo returns [EObject current=null] : iv_ruleInfo= ruleInfo EOF ;
+    // InternalDbTextEditor.g:350:1: entryRuleInfo returns [EObject current=null] : iv_ruleInfo= ruleInfo EOF ;
     public final EObject entryRuleInfo() throws RecognitionException {
         EObject current = null;
 
@@ -841,8 +884,8 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDbTextEditor.g:331:45: (iv_ruleInfo= ruleInfo EOF )
-            // InternalDbTextEditor.g:332:2: iv_ruleInfo= ruleInfo EOF
+            // InternalDbTextEditor.g:350:45: (iv_ruleInfo= ruleInfo EOF )
+            // InternalDbTextEditor.g:351:2: iv_ruleInfo= ruleInfo EOF
             {
              newCompositeNode(grammarAccess.getInfoRule()); 
             pushFollow(FOLLOW_1);
@@ -869,7 +912,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInfo"
-    // InternalDbTextEditor.g:338:1: ruleInfo returns [EObject current=null] : (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' ) ;
+    // InternalDbTextEditor.g:357:1: ruleInfo returns [EObject current=null] : (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' ) ;
     public final EObject ruleInfo() throws RecognitionException {
         EObject current = null;
 
@@ -884,27 +927,27 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDbTextEditor.g:344:2: ( (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' ) )
-            // InternalDbTextEditor.g:345:2: (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' )
+            // InternalDbTextEditor.g:363:2: ( (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' ) )
+            // InternalDbTextEditor.g:364:2: (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' )
             {
-            // InternalDbTextEditor.g:345:2: (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' )
-            // InternalDbTextEditor.g:346:3: otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')'
+            // InternalDbTextEditor.g:364:2: (otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')' )
+            // InternalDbTextEditor.g:365:3: otherlv_0= 'info' otherlv_1= '(' ( (lv_name_2_0= 'asyn:READBACK' ) ) otherlv_3= ',' ( (lv_infoValue_4_0= RULE_STRING ) ) otherlv_5= ')'
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_4); 
+            otherlv_0=(Token)match(input,19,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getInfoAccess().getInfoKeyword_0());
             		
-            otherlv_1=(Token)match(input,12,FOLLOW_13); 
+            otherlv_1=(Token)match(input,13,FOLLOW_13); 
 
             			newLeafNode(otherlv_1, grammarAccess.getInfoAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalDbTextEditor.g:354:3: ( (lv_name_2_0= 'asyn:READBACK' ) )
-            // InternalDbTextEditor.g:355:4: (lv_name_2_0= 'asyn:READBACK' )
+            // InternalDbTextEditor.g:373:3: ( (lv_name_2_0= 'asyn:READBACK' ) )
+            // InternalDbTextEditor.g:374:4: (lv_name_2_0= 'asyn:READBACK' )
             {
-            // InternalDbTextEditor.g:355:4: (lv_name_2_0= 'asyn:READBACK' )
-            // InternalDbTextEditor.g:356:5: lv_name_2_0= 'asyn:READBACK'
+            // InternalDbTextEditor.g:374:4: (lv_name_2_0= 'asyn:READBACK' )
+            // InternalDbTextEditor.g:375:5: lv_name_2_0= 'asyn:READBACK'
             {
-            lv_name_2_0=(Token)match(input,19,FOLLOW_6); 
+            lv_name_2_0=(Token)match(input,20,FOLLOW_6); 
 
             					newLeafNode(lv_name_2_0, grammarAccess.getInfoAccess().getNameAsynREADBACKKeyword_2_0());
             				
@@ -920,15 +963,15 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,13,FOLLOW_7); 
+            otherlv_3=(Token)match(input,14,FOLLOW_7); 
 
             			newLeafNode(otherlv_3, grammarAccess.getInfoAccess().getCommaKeyword_3());
             		
-            // InternalDbTextEditor.g:372:3: ( (lv_infoValue_4_0= RULE_STRING ) )
-            // InternalDbTextEditor.g:373:4: (lv_infoValue_4_0= RULE_STRING )
+            // InternalDbTextEditor.g:391:3: ( (lv_infoValue_4_0= RULE_STRING ) )
+            // InternalDbTextEditor.g:392:4: (lv_infoValue_4_0= RULE_STRING )
             {
-            // InternalDbTextEditor.g:373:4: (lv_infoValue_4_0= RULE_STRING )
-            // InternalDbTextEditor.g:374:5: lv_infoValue_4_0= RULE_STRING
+            // InternalDbTextEditor.g:392:4: (lv_infoValue_4_0= RULE_STRING )
+            // InternalDbTextEditor.g:393:5: lv_infoValue_4_0= RULE_STRING
             {
             lv_infoValue_4_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
@@ -950,7 +993,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FOLLOW_2); 
+            otherlv_5=(Token)match(input,15,FOLLOW_2); 
 
             			newLeafNode(otherlv_5, grammarAccess.getInfoAccess().getRightParenthesisKeyword_5());
             		
@@ -977,7 +1020,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldnames"
-    // InternalDbTextEditor.g:398:1: ruleFieldnames returns [Enumerator current=null] : ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) ) ;
+    // InternalDbTextEditor.g:417:1: ruleFieldnames returns [Enumerator current=null] : ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) ) ;
     public final Enumerator ruleFieldnames() throws RecognitionException {
         Enumerator current = null;
 
@@ -1083,493 +1126,493 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDbTextEditor.g:404:2: ( ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) ) )
-            // InternalDbTextEditor.g:405:2: ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) )
+            // InternalDbTextEditor.g:423:2: ( ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) ) )
+            // InternalDbTextEditor.g:424:2: ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) )
             {
-            // InternalDbTextEditor.g:405:2: ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) )
+            // InternalDbTextEditor.g:424:2: ( (enumLiteral_0= 'NAME' ) | (enumLiteral_1= 'DESC' ) | (enumLiteral_2= 'ASG' ) | (enumLiteral_3= 'SCAN' ) | (enumLiteral_4= 'PHAS' ) | (enumLiteral_5= 'PINI' ) | (enumLiteral_6= 'SDIS' ) | (enumLiteral_7= 'PROC' ) | (enumLiteral_8= 'PACT' ) | (enumLiteral_9= 'SEVR' ) | (enumLiteral_10= 'STAT' ) | (enumLiteral_11= 'TIME' ) | (enumLiteral_12= 'DTYP' ) | (enumLiteral_13= 'ONAM' ) | (enumLiteral_14= 'OSV' ) | (enumLiteral_15= 'OUT' ) | (enumLiteral_16= 'SIML' ) | (enumLiteral_17= 'ZNAM' ) | (enumLiteral_18= 'ZSV' ) | (enumLiteral_19= 'INP' ) | (enumLiteral_20= 'EGU' ) | (enumLiteral_21= 'LINR' ) | (enumLiteral_22= 'EGUL' ) | (enumLiteral_23= 'EGUF' ) | (enumLiteral_24= 'HIGH' ) | (enumLiteral_25= 'HSV' ) | (enumLiteral_26= 'HIHI' ) | (enumLiteral_27= 'HHSV' ) | (enumLiteral_28= 'EIST' ) | (enumLiteral_29= 'EISV' ) | (enumLiteral_30= 'EIVL' ) | (enumLiteral_31= 'ELST' ) | (enumLiteral_32= 'ELSV' ) | (enumLiteral_33= 'ELVL' ) | (enumLiteral_34= 'FRST' ) | (enumLiteral_35= 'FRSV' ) | (enumLiteral_36= 'FRVL' ) | (enumLiteral_37= 'FVST' ) | (enumLiteral_38= 'HYST' ) | (enumLiteral_39= 'LLSV' ) | (enumLiteral_40= 'FVSV' ) | (enumLiteral_41= 'FVVL' ) | (enumLiteral_42= 'MASK' ) | (enumLiteral_43= 'NIST' ) | (enumLiteral_44= 'NISV' ) | (enumLiteral_45= 'NIVL' ) | (enumLiteral_46= 'NOBT' ) | (enumLiteral_47= 'ONST' ) | (enumLiteral_48= 'ONSV' ) | (enumLiteral_49= 'ONVL' ) | (enumLiteral_50= 'SHFT' ) | (enumLiteral_51= 'SVST' ) | (enumLiteral_52= 'SVSV' ) | (enumLiteral_53= 'SVVL' ) | (enumLiteral_54= 'SXST' ) | (enumLiteral_55= 'SXSV' ) | (enumLiteral_56= 'SXVL' ) | (enumLiteral_57= 'TEST' ) | (enumLiteral_58= 'TESV' ) | (enumLiteral_59= 'TEVL' ) | (enumLiteral_60= 'THST' ) | (enumLiteral_61= 'THSV' ) | (enumLiteral_62= 'THVL' ) | (enumLiteral_63= 'TWST' ) | (enumLiteral_64= 'TWSV' ) | (enumLiteral_65= 'TWVL' ) | (enumLiteral_66= 'UNSV' ) | (enumLiteral_67= 'ZRST' ) | (enumLiteral_68= 'ZRSV' ) | (enumLiteral_69= 'ZRVL' ) | (enumLiteral_70= 'LOLO' ) | (enumLiteral_71= 'LOW' ) | (enumLiteral_72= 'LSV' ) | (enumLiteral_73= 'SSCN' ) | (enumLiteral_74= 'TSE' ) | (enumLiteral_75= 'PREC' ) | (enumLiteral_76= 'DRVH' ) | (enumLiteral_77= 'LOPR' ) | (enumLiteral_78= 'DRVL' ) | (enumLiteral_79= 'HOPR' ) | (enumLiteral_80= 'CALC' ) | (enumLiteral_81= 'INPA' ) | (enumLiteral_82= 'INPB' ) | (enumLiteral_83= 'INPC' ) | (enumLiteral_84= 'INPD' ) | (enumLiteral_85= 'FLNK' ) | (enumLiteral_86= 'INPE' ) | (enumLiteral_87= 'INPF' ) | (enumLiteral_88= 'INPG' ) | (enumLiteral_89= 'INPH' ) | (enumLiteral_90= 'INPI' ) | (enumLiteral_91= 'INPJ' ) | (enumLiteral_92= 'INPK' ) | (enumLiteral_93= 'INAA' ) | (enumLiteral_94= 'INBB' ) | (enumLiteral_95= 'INCC' ) | (enumLiteral_96= 'SIOL' ) )
             int alt5=97;
             switch ( input.LA(1) ) {
-            case 20:
+            case 21:
                 {
                 alt5=1;
                 }
                 break;
-            case 21:
+            case 22:
                 {
                 alt5=2;
                 }
                 break;
-            case 22:
+            case 23:
                 {
                 alt5=3;
                 }
                 break;
-            case 23:
+            case 24:
                 {
                 alt5=4;
                 }
                 break;
-            case 24:
+            case 25:
                 {
                 alt5=5;
                 }
                 break;
-            case 25:
+            case 26:
                 {
                 alt5=6;
                 }
                 break;
-            case 26:
+            case 27:
                 {
                 alt5=7;
                 }
                 break;
-            case 27:
+            case 28:
                 {
                 alt5=8;
                 }
                 break;
-            case 28:
+            case 29:
                 {
                 alt5=9;
                 }
                 break;
-            case 29:
+            case 30:
                 {
                 alt5=10;
                 }
                 break;
-            case 30:
+            case 31:
                 {
                 alt5=11;
                 }
                 break;
-            case 31:
+            case 32:
                 {
                 alt5=12;
                 }
                 break;
-            case 32:
+            case 33:
                 {
                 alt5=13;
                 }
                 break;
-            case 33:
+            case 34:
                 {
                 alt5=14;
                 }
                 break;
-            case 34:
+            case 35:
                 {
                 alt5=15;
                 }
                 break;
-            case 35:
+            case 36:
                 {
                 alt5=16;
                 }
                 break;
-            case 36:
+            case 37:
                 {
                 alt5=17;
                 }
                 break;
-            case 37:
+            case 38:
                 {
                 alt5=18;
                 }
                 break;
-            case 38:
+            case 39:
                 {
                 alt5=19;
                 }
                 break;
-            case 39:
+            case 40:
                 {
                 alt5=20;
                 }
                 break;
-            case 40:
+            case 41:
                 {
                 alt5=21;
                 }
                 break;
-            case 41:
+            case 42:
                 {
                 alt5=22;
                 }
                 break;
-            case 42:
+            case 43:
                 {
                 alt5=23;
                 }
                 break;
-            case 43:
+            case 44:
                 {
                 alt5=24;
                 }
                 break;
-            case 44:
+            case 45:
                 {
                 alt5=25;
                 }
                 break;
-            case 45:
+            case 46:
                 {
                 alt5=26;
                 }
                 break;
-            case 46:
+            case 47:
                 {
                 alt5=27;
                 }
                 break;
-            case 47:
+            case 48:
                 {
                 alt5=28;
                 }
                 break;
-            case 48:
+            case 49:
                 {
                 alt5=29;
                 }
                 break;
-            case 49:
+            case 50:
                 {
                 alt5=30;
                 }
                 break;
-            case 50:
+            case 51:
                 {
                 alt5=31;
                 }
                 break;
-            case 51:
+            case 52:
                 {
                 alt5=32;
                 }
                 break;
-            case 52:
+            case 53:
                 {
                 alt5=33;
                 }
                 break;
-            case 53:
+            case 54:
                 {
                 alt5=34;
                 }
                 break;
-            case 54:
+            case 55:
                 {
                 alt5=35;
                 }
                 break;
-            case 55:
+            case 56:
                 {
                 alt5=36;
                 }
                 break;
-            case 56:
+            case 57:
                 {
                 alt5=37;
                 }
                 break;
-            case 57:
+            case 58:
                 {
                 alt5=38;
                 }
                 break;
-            case 58:
+            case 59:
                 {
                 alt5=39;
                 }
                 break;
-            case 59:
+            case 60:
                 {
                 alt5=40;
                 }
                 break;
-            case 60:
+            case 61:
                 {
                 alt5=41;
                 }
                 break;
-            case 61:
+            case 62:
                 {
                 alt5=42;
                 }
                 break;
-            case 62:
+            case 63:
                 {
                 alt5=43;
                 }
                 break;
-            case 63:
+            case 64:
                 {
                 alt5=44;
                 }
                 break;
-            case 64:
+            case 65:
                 {
                 alt5=45;
                 }
                 break;
-            case 65:
+            case 66:
                 {
                 alt5=46;
                 }
                 break;
-            case 66:
+            case 67:
                 {
                 alt5=47;
                 }
                 break;
-            case 67:
+            case 68:
                 {
                 alt5=48;
                 }
                 break;
-            case 68:
+            case 69:
                 {
                 alt5=49;
                 }
                 break;
-            case 69:
+            case 70:
                 {
                 alt5=50;
                 }
                 break;
-            case 70:
+            case 71:
                 {
                 alt5=51;
                 }
                 break;
-            case 71:
+            case 72:
                 {
                 alt5=52;
                 }
                 break;
-            case 72:
+            case 73:
                 {
                 alt5=53;
                 }
                 break;
-            case 73:
+            case 74:
                 {
                 alt5=54;
                 }
                 break;
-            case 74:
+            case 75:
                 {
                 alt5=55;
                 }
                 break;
-            case 75:
+            case 76:
                 {
                 alt5=56;
                 }
                 break;
-            case 76:
+            case 77:
                 {
                 alt5=57;
                 }
                 break;
-            case 77:
+            case 78:
                 {
                 alt5=58;
                 }
                 break;
-            case 78:
+            case 79:
                 {
                 alt5=59;
                 }
                 break;
-            case 79:
+            case 80:
                 {
                 alt5=60;
                 }
                 break;
-            case 80:
+            case 81:
                 {
                 alt5=61;
                 }
                 break;
-            case 81:
+            case 82:
                 {
                 alt5=62;
                 }
                 break;
-            case 82:
+            case 83:
                 {
                 alt5=63;
                 }
                 break;
-            case 83:
+            case 84:
                 {
                 alt5=64;
                 }
                 break;
-            case 84:
+            case 85:
                 {
                 alt5=65;
                 }
                 break;
-            case 85:
+            case 86:
                 {
                 alt5=66;
                 }
                 break;
-            case 86:
+            case 87:
                 {
                 alt5=67;
                 }
                 break;
-            case 87:
+            case 88:
                 {
                 alt5=68;
                 }
                 break;
-            case 88:
+            case 89:
                 {
                 alt5=69;
                 }
                 break;
-            case 89:
+            case 90:
                 {
                 alt5=70;
                 }
                 break;
-            case 90:
+            case 91:
                 {
                 alt5=71;
                 }
                 break;
-            case 91:
+            case 92:
                 {
                 alt5=72;
                 }
                 break;
-            case 92:
+            case 93:
                 {
                 alt5=73;
                 }
                 break;
-            case 93:
+            case 94:
                 {
                 alt5=74;
                 }
                 break;
-            case 94:
+            case 95:
                 {
                 alt5=75;
                 }
                 break;
-            case 95:
+            case 96:
                 {
                 alt5=76;
                 }
                 break;
-            case 96:
+            case 97:
                 {
                 alt5=77;
                 }
                 break;
-            case 97:
+            case 98:
                 {
                 alt5=78;
                 }
                 break;
-            case 98:
+            case 99:
                 {
                 alt5=79;
                 }
                 break;
-            case 99:
+            case 100:
                 {
                 alt5=80;
                 }
                 break;
-            case 100:
+            case 101:
                 {
                 alt5=81;
                 }
                 break;
-            case 101:
+            case 102:
                 {
                 alt5=82;
                 }
                 break;
-            case 102:
+            case 103:
                 {
                 alt5=83;
                 }
                 break;
-            case 103:
+            case 104:
                 {
                 alt5=84;
                 }
                 break;
-            case 104:
+            case 105:
                 {
                 alt5=85;
                 }
                 break;
-            case 105:
+            case 106:
                 {
                 alt5=86;
                 }
                 break;
-            case 106:
+            case 107:
                 {
                 alt5=87;
                 }
                 break;
-            case 107:
+            case 108:
                 {
                 alt5=88;
                 }
                 break;
-            case 108:
+            case 109:
                 {
                 alt5=89;
                 }
                 break;
-            case 109:
+            case 110:
                 {
                 alt5=90;
                 }
                 break;
-            case 110:
+            case 111:
                 {
                 alt5=91;
                 }
                 break;
-            case 111:
+            case 112:
                 {
                 alt5=92;
                 }
                 break;
-            case 112:
+            case 113:
                 {
                 alt5=93;
                 }
                 break;
-            case 113:
+            case 114:
                 {
                 alt5=94;
                 }
                 break;
-            case 114:
+            case 115:
                 {
                 alt5=95;
                 }
                 break;
-            case 115:
+            case 116:
                 {
                 alt5=96;
                 }
                 break;
-            case 116:
+            case 117:
                 {
                 alt5=97;
                 }
@@ -1583,12 +1626,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             switch (alt5) {
                 case 1 :
-                    // InternalDbTextEditor.g:406:3: (enumLiteral_0= 'NAME' )
+                    // InternalDbTextEditor.g:425:3: (enumLiteral_0= 'NAME' )
                     {
-                    // InternalDbTextEditor.g:406:3: (enumLiteral_0= 'NAME' )
-                    // InternalDbTextEditor.g:407:4: enumLiteral_0= 'NAME'
+                    // InternalDbTextEditor.g:425:3: (enumLiteral_0= 'NAME' )
+                    // InternalDbTextEditor.g:426:4: enumLiteral_0= 'NAME'
                     {
-                    enumLiteral_0=(Token)match(input,20,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,21,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getNAMEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getFieldnamesAccess().getNAMEEnumLiteralDeclaration_0());
@@ -1600,12 +1643,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDbTextEditor.g:414:3: (enumLiteral_1= 'DESC' )
+                    // InternalDbTextEditor.g:433:3: (enumLiteral_1= 'DESC' )
                     {
-                    // InternalDbTextEditor.g:414:3: (enumLiteral_1= 'DESC' )
-                    // InternalDbTextEditor.g:415:4: enumLiteral_1= 'DESC'
+                    // InternalDbTextEditor.g:433:3: (enumLiteral_1= 'DESC' )
+                    // InternalDbTextEditor.g:434:4: enumLiteral_1= 'DESC'
                     {
-                    enumLiteral_1=(Token)match(input,21,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,22,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getDESCEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getFieldnamesAccess().getDESCEnumLiteralDeclaration_1());
@@ -1617,12 +1660,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDbTextEditor.g:422:3: (enumLiteral_2= 'ASG' )
+                    // InternalDbTextEditor.g:441:3: (enumLiteral_2= 'ASG' )
                     {
-                    // InternalDbTextEditor.g:422:3: (enumLiteral_2= 'ASG' )
-                    // InternalDbTextEditor.g:423:4: enumLiteral_2= 'ASG'
+                    // InternalDbTextEditor.g:441:3: (enumLiteral_2= 'ASG' )
+                    // InternalDbTextEditor.g:442:4: enumLiteral_2= 'ASG'
                     {
-                    enumLiteral_2=(Token)match(input,22,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,23,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getASGEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getFieldnamesAccess().getASGEnumLiteralDeclaration_2());
@@ -1634,12 +1677,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalDbTextEditor.g:430:3: (enumLiteral_3= 'SCAN' )
+                    // InternalDbTextEditor.g:449:3: (enumLiteral_3= 'SCAN' )
                     {
-                    // InternalDbTextEditor.g:430:3: (enumLiteral_3= 'SCAN' )
-                    // InternalDbTextEditor.g:431:4: enumLiteral_3= 'SCAN'
+                    // InternalDbTextEditor.g:449:3: (enumLiteral_3= 'SCAN' )
+                    // InternalDbTextEditor.g:450:4: enumLiteral_3= 'SCAN'
                     {
-                    enumLiteral_3=(Token)match(input,23,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,24,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSCANEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getFieldnamesAccess().getSCANEnumLiteralDeclaration_3());
@@ -1651,12 +1694,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalDbTextEditor.g:438:3: (enumLiteral_4= 'PHAS' )
+                    // InternalDbTextEditor.g:457:3: (enumLiteral_4= 'PHAS' )
                     {
-                    // InternalDbTextEditor.g:438:3: (enumLiteral_4= 'PHAS' )
-                    // InternalDbTextEditor.g:439:4: enumLiteral_4= 'PHAS'
+                    // InternalDbTextEditor.g:457:3: (enumLiteral_4= 'PHAS' )
+                    // InternalDbTextEditor.g:458:4: enumLiteral_4= 'PHAS'
                     {
-                    enumLiteral_4=(Token)match(input,24,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,25,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getPHASEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getFieldnamesAccess().getPHASEnumLiteralDeclaration_4());
@@ -1668,12 +1711,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalDbTextEditor.g:446:3: (enumLiteral_5= 'PINI' )
+                    // InternalDbTextEditor.g:465:3: (enumLiteral_5= 'PINI' )
                     {
-                    // InternalDbTextEditor.g:446:3: (enumLiteral_5= 'PINI' )
-                    // InternalDbTextEditor.g:447:4: enumLiteral_5= 'PINI'
+                    // InternalDbTextEditor.g:465:3: (enumLiteral_5= 'PINI' )
+                    // InternalDbTextEditor.g:466:4: enumLiteral_5= 'PINI'
                     {
-                    enumLiteral_5=(Token)match(input,25,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,26,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getPINIEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getFieldnamesAccess().getPINIEnumLiteralDeclaration_5());
@@ -1685,12 +1728,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalDbTextEditor.g:454:3: (enumLiteral_6= 'SDIS' )
+                    // InternalDbTextEditor.g:473:3: (enumLiteral_6= 'SDIS' )
                     {
-                    // InternalDbTextEditor.g:454:3: (enumLiteral_6= 'SDIS' )
-                    // InternalDbTextEditor.g:455:4: enumLiteral_6= 'SDIS'
+                    // InternalDbTextEditor.g:473:3: (enumLiteral_6= 'SDIS' )
+                    // InternalDbTextEditor.g:474:4: enumLiteral_6= 'SDIS'
                     {
-                    enumLiteral_6=(Token)match(input,26,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,27,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSDISEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getFieldnamesAccess().getSDISEnumLiteralDeclaration_6());
@@ -1702,12 +1745,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalDbTextEditor.g:462:3: (enumLiteral_7= 'PROC' )
+                    // InternalDbTextEditor.g:481:3: (enumLiteral_7= 'PROC' )
                     {
-                    // InternalDbTextEditor.g:462:3: (enumLiteral_7= 'PROC' )
-                    // InternalDbTextEditor.g:463:4: enumLiteral_7= 'PROC'
+                    // InternalDbTextEditor.g:481:3: (enumLiteral_7= 'PROC' )
+                    // InternalDbTextEditor.g:482:4: enumLiteral_7= 'PROC'
                     {
-                    enumLiteral_7=(Token)match(input,27,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,28,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getPROCEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getFieldnamesAccess().getPROCEnumLiteralDeclaration_7());
@@ -1719,12 +1762,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalDbTextEditor.g:470:3: (enumLiteral_8= 'PACT' )
+                    // InternalDbTextEditor.g:489:3: (enumLiteral_8= 'PACT' )
                     {
-                    // InternalDbTextEditor.g:470:3: (enumLiteral_8= 'PACT' )
-                    // InternalDbTextEditor.g:471:4: enumLiteral_8= 'PACT'
+                    // InternalDbTextEditor.g:489:3: (enumLiteral_8= 'PACT' )
+                    // InternalDbTextEditor.g:490:4: enumLiteral_8= 'PACT'
                     {
-                    enumLiteral_8=(Token)match(input,28,FOLLOW_2); 
+                    enumLiteral_8=(Token)match(input,29,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getPACTEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_8, grammarAccess.getFieldnamesAccess().getPACTEnumLiteralDeclaration_8());
@@ -1736,12 +1779,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalDbTextEditor.g:478:3: (enumLiteral_9= 'SEVR' )
+                    // InternalDbTextEditor.g:497:3: (enumLiteral_9= 'SEVR' )
                     {
-                    // InternalDbTextEditor.g:478:3: (enumLiteral_9= 'SEVR' )
-                    // InternalDbTextEditor.g:479:4: enumLiteral_9= 'SEVR'
+                    // InternalDbTextEditor.g:497:3: (enumLiteral_9= 'SEVR' )
+                    // InternalDbTextEditor.g:498:4: enumLiteral_9= 'SEVR'
                     {
-                    enumLiteral_9=(Token)match(input,29,FOLLOW_2); 
+                    enumLiteral_9=(Token)match(input,30,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSEVREnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_9, grammarAccess.getFieldnamesAccess().getSEVREnumLiteralDeclaration_9());
@@ -1753,12 +1796,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalDbTextEditor.g:486:3: (enumLiteral_10= 'STAT' )
+                    // InternalDbTextEditor.g:505:3: (enumLiteral_10= 'STAT' )
                     {
-                    // InternalDbTextEditor.g:486:3: (enumLiteral_10= 'STAT' )
-                    // InternalDbTextEditor.g:487:4: enumLiteral_10= 'STAT'
+                    // InternalDbTextEditor.g:505:3: (enumLiteral_10= 'STAT' )
+                    // InternalDbTextEditor.g:506:4: enumLiteral_10= 'STAT'
                     {
-                    enumLiteral_10=(Token)match(input,30,FOLLOW_2); 
+                    enumLiteral_10=(Token)match(input,31,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSTATEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_10, grammarAccess.getFieldnamesAccess().getSTATEnumLiteralDeclaration_10());
@@ -1770,12 +1813,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalDbTextEditor.g:494:3: (enumLiteral_11= 'TIME' )
+                    // InternalDbTextEditor.g:513:3: (enumLiteral_11= 'TIME' )
                     {
-                    // InternalDbTextEditor.g:494:3: (enumLiteral_11= 'TIME' )
-                    // InternalDbTextEditor.g:495:4: enumLiteral_11= 'TIME'
+                    // InternalDbTextEditor.g:513:3: (enumLiteral_11= 'TIME' )
+                    // InternalDbTextEditor.g:514:4: enumLiteral_11= 'TIME'
                     {
-                    enumLiteral_11=(Token)match(input,31,FOLLOW_2); 
+                    enumLiteral_11=(Token)match(input,32,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTIMEEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_11, grammarAccess.getFieldnamesAccess().getTIMEEnumLiteralDeclaration_11());
@@ -1787,12 +1830,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalDbTextEditor.g:502:3: (enumLiteral_12= 'DTYP' )
+                    // InternalDbTextEditor.g:521:3: (enumLiteral_12= 'DTYP' )
                     {
-                    // InternalDbTextEditor.g:502:3: (enumLiteral_12= 'DTYP' )
-                    // InternalDbTextEditor.g:503:4: enumLiteral_12= 'DTYP'
+                    // InternalDbTextEditor.g:521:3: (enumLiteral_12= 'DTYP' )
+                    // InternalDbTextEditor.g:522:4: enumLiteral_12= 'DTYP'
                     {
-                    enumLiteral_12=(Token)match(input,32,FOLLOW_2); 
+                    enumLiteral_12=(Token)match(input,33,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getDTYPEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_12, grammarAccess.getFieldnamesAccess().getDTYPEnumLiteralDeclaration_12());
@@ -1804,12 +1847,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalDbTextEditor.g:510:3: (enumLiteral_13= 'ONAM' )
+                    // InternalDbTextEditor.g:529:3: (enumLiteral_13= 'ONAM' )
                     {
-                    // InternalDbTextEditor.g:510:3: (enumLiteral_13= 'ONAM' )
-                    // InternalDbTextEditor.g:511:4: enumLiteral_13= 'ONAM'
+                    // InternalDbTextEditor.g:529:3: (enumLiteral_13= 'ONAM' )
+                    // InternalDbTextEditor.g:530:4: enumLiteral_13= 'ONAM'
                     {
-                    enumLiteral_13=(Token)match(input,33,FOLLOW_2); 
+                    enumLiteral_13=(Token)match(input,34,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getONAMEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_13, grammarAccess.getFieldnamesAccess().getONAMEnumLiteralDeclaration_13());
@@ -1821,12 +1864,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalDbTextEditor.g:518:3: (enumLiteral_14= 'OSV' )
+                    // InternalDbTextEditor.g:537:3: (enumLiteral_14= 'OSV' )
                     {
-                    // InternalDbTextEditor.g:518:3: (enumLiteral_14= 'OSV' )
-                    // InternalDbTextEditor.g:519:4: enumLiteral_14= 'OSV'
+                    // InternalDbTextEditor.g:537:3: (enumLiteral_14= 'OSV' )
+                    // InternalDbTextEditor.g:538:4: enumLiteral_14= 'OSV'
                     {
-                    enumLiteral_14=(Token)match(input,34,FOLLOW_2); 
+                    enumLiteral_14=(Token)match(input,35,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getOSVEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_14, grammarAccess.getFieldnamesAccess().getOSVEnumLiteralDeclaration_14());
@@ -1838,12 +1881,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalDbTextEditor.g:526:3: (enumLiteral_15= 'OUT' )
+                    // InternalDbTextEditor.g:545:3: (enumLiteral_15= 'OUT' )
                     {
-                    // InternalDbTextEditor.g:526:3: (enumLiteral_15= 'OUT' )
-                    // InternalDbTextEditor.g:527:4: enumLiteral_15= 'OUT'
+                    // InternalDbTextEditor.g:545:3: (enumLiteral_15= 'OUT' )
+                    // InternalDbTextEditor.g:546:4: enumLiteral_15= 'OUT'
                     {
-                    enumLiteral_15=(Token)match(input,35,FOLLOW_2); 
+                    enumLiteral_15=(Token)match(input,36,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getOUTEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_15, grammarAccess.getFieldnamesAccess().getOUTEnumLiteralDeclaration_15());
@@ -1855,12 +1898,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalDbTextEditor.g:534:3: (enumLiteral_16= 'SIML' )
+                    // InternalDbTextEditor.g:553:3: (enumLiteral_16= 'SIML' )
                     {
-                    // InternalDbTextEditor.g:534:3: (enumLiteral_16= 'SIML' )
-                    // InternalDbTextEditor.g:535:4: enumLiteral_16= 'SIML'
+                    // InternalDbTextEditor.g:553:3: (enumLiteral_16= 'SIML' )
+                    // InternalDbTextEditor.g:554:4: enumLiteral_16= 'SIML'
                     {
-                    enumLiteral_16=(Token)match(input,36,FOLLOW_2); 
+                    enumLiteral_16=(Token)match(input,37,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSIMLEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_16, grammarAccess.getFieldnamesAccess().getSIMLEnumLiteralDeclaration_16());
@@ -1872,12 +1915,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalDbTextEditor.g:542:3: (enumLiteral_17= 'ZNAM' )
+                    // InternalDbTextEditor.g:561:3: (enumLiteral_17= 'ZNAM' )
                     {
-                    // InternalDbTextEditor.g:542:3: (enumLiteral_17= 'ZNAM' )
-                    // InternalDbTextEditor.g:543:4: enumLiteral_17= 'ZNAM'
+                    // InternalDbTextEditor.g:561:3: (enumLiteral_17= 'ZNAM' )
+                    // InternalDbTextEditor.g:562:4: enumLiteral_17= 'ZNAM'
                     {
-                    enumLiteral_17=(Token)match(input,37,FOLLOW_2); 
+                    enumLiteral_17=(Token)match(input,38,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getZNAMEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_17, grammarAccess.getFieldnamesAccess().getZNAMEnumLiteralDeclaration_17());
@@ -1889,12 +1932,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // InternalDbTextEditor.g:550:3: (enumLiteral_18= 'ZSV' )
+                    // InternalDbTextEditor.g:569:3: (enumLiteral_18= 'ZSV' )
                     {
-                    // InternalDbTextEditor.g:550:3: (enumLiteral_18= 'ZSV' )
-                    // InternalDbTextEditor.g:551:4: enumLiteral_18= 'ZSV'
+                    // InternalDbTextEditor.g:569:3: (enumLiteral_18= 'ZSV' )
+                    // InternalDbTextEditor.g:570:4: enumLiteral_18= 'ZSV'
                     {
-                    enumLiteral_18=(Token)match(input,38,FOLLOW_2); 
+                    enumLiteral_18=(Token)match(input,39,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getZSVEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_18, grammarAccess.getFieldnamesAccess().getZSVEnumLiteralDeclaration_18());
@@ -1906,12 +1949,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // InternalDbTextEditor.g:558:3: (enumLiteral_19= 'INP' )
+                    // InternalDbTextEditor.g:577:3: (enumLiteral_19= 'INP' )
                     {
-                    // InternalDbTextEditor.g:558:3: (enumLiteral_19= 'INP' )
-                    // InternalDbTextEditor.g:559:4: enumLiteral_19= 'INP'
+                    // InternalDbTextEditor.g:577:3: (enumLiteral_19= 'INP' )
+                    // InternalDbTextEditor.g:578:4: enumLiteral_19= 'INP'
                     {
-                    enumLiteral_19=(Token)match(input,39,FOLLOW_2); 
+                    enumLiteral_19=(Token)match(input,40,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPEnumLiteralDeclaration_19().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_19, grammarAccess.getFieldnamesAccess().getINPEnumLiteralDeclaration_19());
@@ -1923,12 +1966,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // InternalDbTextEditor.g:566:3: (enumLiteral_20= 'EGU' )
+                    // InternalDbTextEditor.g:585:3: (enumLiteral_20= 'EGU' )
                     {
-                    // InternalDbTextEditor.g:566:3: (enumLiteral_20= 'EGU' )
-                    // InternalDbTextEditor.g:567:4: enumLiteral_20= 'EGU'
+                    // InternalDbTextEditor.g:585:3: (enumLiteral_20= 'EGU' )
+                    // InternalDbTextEditor.g:586:4: enumLiteral_20= 'EGU'
                     {
-                    enumLiteral_20=(Token)match(input,40,FOLLOW_2); 
+                    enumLiteral_20=(Token)match(input,41,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getEGUEnumLiteralDeclaration_20().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_20, grammarAccess.getFieldnamesAccess().getEGUEnumLiteralDeclaration_20());
@@ -1940,12 +1983,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // InternalDbTextEditor.g:574:3: (enumLiteral_21= 'LINR' )
+                    // InternalDbTextEditor.g:593:3: (enumLiteral_21= 'LINR' )
                     {
-                    // InternalDbTextEditor.g:574:3: (enumLiteral_21= 'LINR' )
-                    // InternalDbTextEditor.g:575:4: enumLiteral_21= 'LINR'
+                    // InternalDbTextEditor.g:593:3: (enumLiteral_21= 'LINR' )
+                    // InternalDbTextEditor.g:594:4: enumLiteral_21= 'LINR'
                     {
-                    enumLiteral_21=(Token)match(input,41,FOLLOW_2); 
+                    enumLiteral_21=(Token)match(input,42,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getLINREnumLiteralDeclaration_21().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_21, grammarAccess.getFieldnamesAccess().getLINREnumLiteralDeclaration_21());
@@ -1957,12 +2000,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // InternalDbTextEditor.g:582:3: (enumLiteral_22= 'EGUL' )
+                    // InternalDbTextEditor.g:601:3: (enumLiteral_22= 'EGUL' )
                     {
-                    // InternalDbTextEditor.g:582:3: (enumLiteral_22= 'EGUL' )
-                    // InternalDbTextEditor.g:583:4: enumLiteral_22= 'EGUL'
+                    // InternalDbTextEditor.g:601:3: (enumLiteral_22= 'EGUL' )
+                    // InternalDbTextEditor.g:602:4: enumLiteral_22= 'EGUL'
                     {
-                    enumLiteral_22=(Token)match(input,42,FOLLOW_2); 
+                    enumLiteral_22=(Token)match(input,43,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getEGULEnumLiteralDeclaration_22().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_22, grammarAccess.getFieldnamesAccess().getEGULEnumLiteralDeclaration_22());
@@ -1974,12 +2017,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // InternalDbTextEditor.g:590:3: (enumLiteral_23= 'EGUF' )
+                    // InternalDbTextEditor.g:609:3: (enumLiteral_23= 'EGUF' )
                     {
-                    // InternalDbTextEditor.g:590:3: (enumLiteral_23= 'EGUF' )
-                    // InternalDbTextEditor.g:591:4: enumLiteral_23= 'EGUF'
+                    // InternalDbTextEditor.g:609:3: (enumLiteral_23= 'EGUF' )
+                    // InternalDbTextEditor.g:610:4: enumLiteral_23= 'EGUF'
                     {
-                    enumLiteral_23=(Token)match(input,43,FOLLOW_2); 
+                    enumLiteral_23=(Token)match(input,44,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getEGUFEnumLiteralDeclaration_23().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_23, grammarAccess.getFieldnamesAccess().getEGUFEnumLiteralDeclaration_23());
@@ -1991,12 +2034,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 25 :
-                    // InternalDbTextEditor.g:598:3: (enumLiteral_24= 'HIGH' )
+                    // InternalDbTextEditor.g:617:3: (enumLiteral_24= 'HIGH' )
                     {
-                    // InternalDbTextEditor.g:598:3: (enumLiteral_24= 'HIGH' )
-                    // InternalDbTextEditor.g:599:4: enumLiteral_24= 'HIGH'
+                    // InternalDbTextEditor.g:617:3: (enumLiteral_24= 'HIGH' )
+                    // InternalDbTextEditor.g:618:4: enumLiteral_24= 'HIGH'
                     {
-                    enumLiteral_24=(Token)match(input,44,FOLLOW_2); 
+                    enumLiteral_24=(Token)match(input,45,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getHIGHEnumLiteralDeclaration_24().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_24, grammarAccess.getFieldnamesAccess().getHIGHEnumLiteralDeclaration_24());
@@ -2008,12 +2051,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 26 :
-                    // InternalDbTextEditor.g:606:3: (enumLiteral_25= 'HSV' )
+                    // InternalDbTextEditor.g:625:3: (enumLiteral_25= 'HSV' )
                     {
-                    // InternalDbTextEditor.g:606:3: (enumLiteral_25= 'HSV' )
-                    // InternalDbTextEditor.g:607:4: enumLiteral_25= 'HSV'
+                    // InternalDbTextEditor.g:625:3: (enumLiteral_25= 'HSV' )
+                    // InternalDbTextEditor.g:626:4: enumLiteral_25= 'HSV'
                     {
-                    enumLiteral_25=(Token)match(input,45,FOLLOW_2); 
+                    enumLiteral_25=(Token)match(input,46,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getHSVEnumLiteralDeclaration_25().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_25, grammarAccess.getFieldnamesAccess().getHSVEnumLiteralDeclaration_25());
@@ -2025,12 +2068,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 27 :
-                    // InternalDbTextEditor.g:614:3: (enumLiteral_26= 'HIHI' )
+                    // InternalDbTextEditor.g:633:3: (enumLiteral_26= 'HIHI' )
                     {
-                    // InternalDbTextEditor.g:614:3: (enumLiteral_26= 'HIHI' )
-                    // InternalDbTextEditor.g:615:4: enumLiteral_26= 'HIHI'
+                    // InternalDbTextEditor.g:633:3: (enumLiteral_26= 'HIHI' )
+                    // InternalDbTextEditor.g:634:4: enumLiteral_26= 'HIHI'
                     {
-                    enumLiteral_26=(Token)match(input,46,FOLLOW_2); 
+                    enumLiteral_26=(Token)match(input,47,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getHIHIEnumLiteralDeclaration_26().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_26, grammarAccess.getFieldnamesAccess().getHIHIEnumLiteralDeclaration_26());
@@ -2042,12 +2085,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 28 :
-                    // InternalDbTextEditor.g:622:3: (enumLiteral_27= 'HHSV' )
+                    // InternalDbTextEditor.g:641:3: (enumLiteral_27= 'HHSV' )
                     {
-                    // InternalDbTextEditor.g:622:3: (enumLiteral_27= 'HHSV' )
-                    // InternalDbTextEditor.g:623:4: enumLiteral_27= 'HHSV'
+                    // InternalDbTextEditor.g:641:3: (enumLiteral_27= 'HHSV' )
+                    // InternalDbTextEditor.g:642:4: enumLiteral_27= 'HHSV'
                     {
-                    enumLiteral_27=(Token)match(input,47,FOLLOW_2); 
+                    enumLiteral_27=(Token)match(input,48,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getHHSVEnumLiteralDeclaration_27().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_27, grammarAccess.getFieldnamesAccess().getHHSVEnumLiteralDeclaration_27());
@@ -2059,12 +2102,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 29 :
-                    // InternalDbTextEditor.g:630:3: (enumLiteral_28= 'EIST' )
+                    // InternalDbTextEditor.g:649:3: (enumLiteral_28= 'EIST' )
                     {
-                    // InternalDbTextEditor.g:630:3: (enumLiteral_28= 'EIST' )
-                    // InternalDbTextEditor.g:631:4: enumLiteral_28= 'EIST'
+                    // InternalDbTextEditor.g:649:3: (enumLiteral_28= 'EIST' )
+                    // InternalDbTextEditor.g:650:4: enumLiteral_28= 'EIST'
                     {
-                    enumLiteral_28=(Token)match(input,48,FOLLOW_2); 
+                    enumLiteral_28=(Token)match(input,49,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getEISTEnumLiteralDeclaration_28().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_28, grammarAccess.getFieldnamesAccess().getEISTEnumLiteralDeclaration_28());
@@ -2076,12 +2119,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 30 :
-                    // InternalDbTextEditor.g:638:3: (enumLiteral_29= 'EISV' )
+                    // InternalDbTextEditor.g:657:3: (enumLiteral_29= 'EISV' )
                     {
-                    // InternalDbTextEditor.g:638:3: (enumLiteral_29= 'EISV' )
-                    // InternalDbTextEditor.g:639:4: enumLiteral_29= 'EISV'
+                    // InternalDbTextEditor.g:657:3: (enumLiteral_29= 'EISV' )
+                    // InternalDbTextEditor.g:658:4: enumLiteral_29= 'EISV'
                     {
-                    enumLiteral_29=(Token)match(input,49,FOLLOW_2); 
+                    enumLiteral_29=(Token)match(input,50,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getEISVEnumLiteralDeclaration_29().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_29, grammarAccess.getFieldnamesAccess().getEISVEnumLiteralDeclaration_29());
@@ -2093,12 +2136,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 31 :
-                    // InternalDbTextEditor.g:646:3: (enumLiteral_30= 'EIVL' )
+                    // InternalDbTextEditor.g:665:3: (enumLiteral_30= 'EIVL' )
                     {
-                    // InternalDbTextEditor.g:646:3: (enumLiteral_30= 'EIVL' )
-                    // InternalDbTextEditor.g:647:4: enumLiteral_30= 'EIVL'
+                    // InternalDbTextEditor.g:665:3: (enumLiteral_30= 'EIVL' )
+                    // InternalDbTextEditor.g:666:4: enumLiteral_30= 'EIVL'
                     {
-                    enumLiteral_30=(Token)match(input,50,FOLLOW_2); 
+                    enumLiteral_30=(Token)match(input,51,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getEIVLEnumLiteralDeclaration_30().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_30, grammarAccess.getFieldnamesAccess().getEIVLEnumLiteralDeclaration_30());
@@ -2110,12 +2153,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 32 :
-                    // InternalDbTextEditor.g:654:3: (enumLiteral_31= 'ELST' )
+                    // InternalDbTextEditor.g:673:3: (enumLiteral_31= 'ELST' )
                     {
-                    // InternalDbTextEditor.g:654:3: (enumLiteral_31= 'ELST' )
-                    // InternalDbTextEditor.g:655:4: enumLiteral_31= 'ELST'
+                    // InternalDbTextEditor.g:673:3: (enumLiteral_31= 'ELST' )
+                    // InternalDbTextEditor.g:674:4: enumLiteral_31= 'ELST'
                     {
-                    enumLiteral_31=(Token)match(input,51,FOLLOW_2); 
+                    enumLiteral_31=(Token)match(input,52,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getELSTEnumLiteralDeclaration_31().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_31, grammarAccess.getFieldnamesAccess().getELSTEnumLiteralDeclaration_31());
@@ -2127,12 +2170,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 33 :
-                    // InternalDbTextEditor.g:662:3: (enumLiteral_32= 'ELSV' )
+                    // InternalDbTextEditor.g:681:3: (enumLiteral_32= 'ELSV' )
                     {
-                    // InternalDbTextEditor.g:662:3: (enumLiteral_32= 'ELSV' )
-                    // InternalDbTextEditor.g:663:4: enumLiteral_32= 'ELSV'
+                    // InternalDbTextEditor.g:681:3: (enumLiteral_32= 'ELSV' )
+                    // InternalDbTextEditor.g:682:4: enumLiteral_32= 'ELSV'
                     {
-                    enumLiteral_32=(Token)match(input,52,FOLLOW_2); 
+                    enumLiteral_32=(Token)match(input,53,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getELSVEnumLiteralDeclaration_32().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_32, grammarAccess.getFieldnamesAccess().getELSVEnumLiteralDeclaration_32());
@@ -2144,12 +2187,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 34 :
-                    // InternalDbTextEditor.g:670:3: (enumLiteral_33= 'ELVL' )
+                    // InternalDbTextEditor.g:689:3: (enumLiteral_33= 'ELVL' )
                     {
-                    // InternalDbTextEditor.g:670:3: (enumLiteral_33= 'ELVL' )
-                    // InternalDbTextEditor.g:671:4: enumLiteral_33= 'ELVL'
+                    // InternalDbTextEditor.g:689:3: (enumLiteral_33= 'ELVL' )
+                    // InternalDbTextEditor.g:690:4: enumLiteral_33= 'ELVL'
                     {
-                    enumLiteral_33=(Token)match(input,53,FOLLOW_2); 
+                    enumLiteral_33=(Token)match(input,54,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getELVLEnumLiteralDeclaration_33().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_33, grammarAccess.getFieldnamesAccess().getELVLEnumLiteralDeclaration_33());
@@ -2161,12 +2204,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 35 :
-                    // InternalDbTextEditor.g:678:3: (enumLiteral_34= 'FRST' )
+                    // InternalDbTextEditor.g:697:3: (enumLiteral_34= 'FRST' )
                     {
-                    // InternalDbTextEditor.g:678:3: (enumLiteral_34= 'FRST' )
-                    // InternalDbTextEditor.g:679:4: enumLiteral_34= 'FRST'
+                    // InternalDbTextEditor.g:697:3: (enumLiteral_34= 'FRST' )
+                    // InternalDbTextEditor.g:698:4: enumLiteral_34= 'FRST'
                     {
-                    enumLiteral_34=(Token)match(input,54,FOLLOW_2); 
+                    enumLiteral_34=(Token)match(input,55,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFRSTEnumLiteralDeclaration_34().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_34, grammarAccess.getFieldnamesAccess().getFRSTEnumLiteralDeclaration_34());
@@ -2178,12 +2221,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 36 :
-                    // InternalDbTextEditor.g:686:3: (enumLiteral_35= 'FRSV' )
+                    // InternalDbTextEditor.g:705:3: (enumLiteral_35= 'FRSV' )
                     {
-                    // InternalDbTextEditor.g:686:3: (enumLiteral_35= 'FRSV' )
-                    // InternalDbTextEditor.g:687:4: enumLiteral_35= 'FRSV'
+                    // InternalDbTextEditor.g:705:3: (enumLiteral_35= 'FRSV' )
+                    // InternalDbTextEditor.g:706:4: enumLiteral_35= 'FRSV'
                     {
-                    enumLiteral_35=(Token)match(input,55,FOLLOW_2); 
+                    enumLiteral_35=(Token)match(input,56,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFRSVEnumLiteralDeclaration_35().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_35, grammarAccess.getFieldnamesAccess().getFRSVEnumLiteralDeclaration_35());
@@ -2195,12 +2238,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 37 :
-                    // InternalDbTextEditor.g:694:3: (enumLiteral_36= 'FRVL' )
+                    // InternalDbTextEditor.g:713:3: (enumLiteral_36= 'FRVL' )
                     {
-                    // InternalDbTextEditor.g:694:3: (enumLiteral_36= 'FRVL' )
-                    // InternalDbTextEditor.g:695:4: enumLiteral_36= 'FRVL'
+                    // InternalDbTextEditor.g:713:3: (enumLiteral_36= 'FRVL' )
+                    // InternalDbTextEditor.g:714:4: enumLiteral_36= 'FRVL'
                     {
-                    enumLiteral_36=(Token)match(input,56,FOLLOW_2); 
+                    enumLiteral_36=(Token)match(input,57,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFRVLEnumLiteralDeclaration_36().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_36, grammarAccess.getFieldnamesAccess().getFRVLEnumLiteralDeclaration_36());
@@ -2212,12 +2255,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 38 :
-                    // InternalDbTextEditor.g:702:3: (enumLiteral_37= 'FVST' )
+                    // InternalDbTextEditor.g:721:3: (enumLiteral_37= 'FVST' )
                     {
-                    // InternalDbTextEditor.g:702:3: (enumLiteral_37= 'FVST' )
-                    // InternalDbTextEditor.g:703:4: enumLiteral_37= 'FVST'
+                    // InternalDbTextEditor.g:721:3: (enumLiteral_37= 'FVST' )
+                    // InternalDbTextEditor.g:722:4: enumLiteral_37= 'FVST'
                     {
-                    enumLiteral_37=(Token)match(input,57,FOLLOW_2); 
+                    enumLiteral_37=(Token)match(input,58,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFVSTEnumLiteralDeclaration_37().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_37, grammarAccess.getFieldnamesAccess().getFVSTEnumLiteralDeclaration_37());
@@ -2229,12 +2272,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 39 :
-                    // InternalDbTextEditor.g:710:3: (enumLiteral_38= 'HYST' )
+                    // InternalDbTextEditor.g:729:3: (enumLiteral_38= 'HYST' )
                     {
-                    // InternalDbTextEditor.g:710:3: (enumLiteral_38= 'HYST' )
-                    // InternalDbTextEditor.g:711:4: enumLiteral_38= 'HYST'
+                    // InternalDbTextEditor.g:729:3: (enumLiteral_38= 'HYST' )
+                    // InternalDbTextEditor.g:730:4: enumLiteral_38= 'HYST'
                     {
-                    enumLiteral_38=(Token)match(input,58,FOLLOW_2); 
+                    enumLiteral_38=(Token)match(input,59,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getHYSTEnumLiteralDeclaration_38().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_38, grammarAccess.getFieldnamesAccess().getHYSTEnumLiteralDeclaration_38());
@@ -2246,12 +2289,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 40 :
-                    // InternalDbTextEditor.g:718:3: (enumLiteral_39= 'LLSV' )
+                    // InternalDbTextEditor.g:737:3: (enumLiteral_39= 'LLSV' )
                     {
-                    // InternalDbTextEditor.g:718:3: (enumLiteral_39= 'LLSV' )
-                    // InternalDbTextEditor.g:719:4: enumLiteral_39= 'LLSV'
+                    // InternalDbTextEditor.g:737:3: (enumLiteral_39= 'LLSV' )
+                    // InternalDbTextEditor.g:738:4: enumLiteral_39= 'LLSV'
                     {
-                    enumLiteral_39=(Token)match(input,59,FOLLOW_2); 
+                    enumLiteral_39=(Token)match(input,60,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getLLSVEnumLiteralDeclaration_39().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_39, grammarAccess.getFieldnamesAccess().getLLSVEnumLiteralDeclaration_39());
@@ -2263,12 +2306,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 41 :
-                    // InternalDbTextEditor.g:726:3: (enumLiteral_40= 'FVSV' )
+                    // InternalDbTextEditor.g:745:3: (enumLiteral_40= 'FVSV' )
                     {
-                    // InternalDbTextEditor.g:726:3: (enumLiteral_40= 'FVSV' )
-                    // InternalDbTextEditor.g:727:4: enumLiteral_40= 'FVSV'
+                    // InternalDbTextEditor.g:745:3: (enumLiteral_40= 'FVSV' )
+                    // InternalDbTextEditor.g:746:4: enumLiteral_40= 'FVSV'
                     {
-                    enumLiteral_40=(Token)match(input,60,FOLLOW_2); 
+                    enumLiteral_40=(Token)match(input,61,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFVSVEnumLiteralDeclaration_40().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_40, grammarAccess.getFieldnamesAccess().getFVSVEnumLiteralDeclaration_40());
@@ -2280,12 +2323,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 42 :
-                    // InternalDbTextEditor.g:734:3: (enumLiteral_41= 'FVVL' )
+                    // InternalDbTextEditor.g:753:3: (enumLiteral_41= 'FVVL' )
                     {
-                    // InternalDbTextEditor.g:734:3: (enumLiteral_41= 'FVVL' )
-                    // InternalDbTextEditor.g:735:4: enumLiteral_41= 'FVVL'
+                    // InternalDbTextEditor.g:753:3: (enumLiteral_41= 'FVVL' )
+                    // InternalDbTextEditor.g:754:4: enumLiteral_41= 'FVVL'
                     {
-                    enumLiteral_41=(Token)match(input,61,FOLLOW_2); 
+                    enumLiteral_41=(Token)match(input,62,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFVVLEnumLiteralDeclaration_41().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_41, grammarAccess.getFieldnamesAccess().getFVVLEnumLiteralDeclaration_41());
@@ -2297,12 +2340,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 43 :
-                    // InternalDbTextEditor.g:742:3: (enumLiteral_42= 'MASK' )
+                    // InternalDbTextEditor.g:761:3: (enumLiteral_42= 'MASK' )
                     {
-                    // InternalDbTextEditor.g:742:3: (enumLiteral_42= 'MASK' )
-                    // InternalDbTextEditor.g:743:4: enumLiteral_42= 'MASK'
+                    // InternalDbTextEditor.g:761:3: (enumLiteral_42= 'MASK' )
+                    // InternalDbTextEditor.g:762:4: enumLiteral_42= 'MASK'
                     {
-                    enumLiteral_42=(Token)match(input,62,FOLLOW_2); 
+                    enumLiteral_42=(Token)match(input,63,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getMASKEnumLiteralDeclaration_42().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_42, grammarAccess.getFieldnamesAccess().getMASKEnumLiteralDeclaration_42());
@@ -2314,12 +2357,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 44 :
-                    // InternalDbTextEditor.g:750:3: (enumLiteral_43= 'NIST' )
+                    // InternalDbTextEditor.g:769:3: (enumLiteral_43= 'NIST' )
                     {
-                    // InternalDbTextEditor.g:750:3: (enumLiteral_43= 'NIST' )
-                    // InternalDbTextEditor.g:751:4: enumLiteral_43= 'NIST'
+                    // InternalDbTextEditor.g:769:3: (enumLiteral_43= 'NIST' )
+                    // InternalDbTextEditor.g:770:4: enumLiteral_43= 'NIST'
                     {
-                    enumLiteral_43=(Token)match(input,63,FOLLOW_2); 
+                    enumLiteral_43=(Token)match(input,64,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getNISTEnumLiteralDeclaration_43().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_43, grammarAccess.getFieldnamesAccess().getNISTEnumLiteralDeclaration_43());
@@ -2331,12 +2374,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 45 :
-                    // InternalDbTextEditor.g:758:3: (enumLiteral_44= 'NISV' )
+                    // InternalDbTextEditor.g:777:3: (enumLiteral_44= 'NISV' )
                     {
-                    // InternalDbTextEditor.g:758:3: (enumLiteral_44= 'NISV' )
-                    // InternalDbTextEditor.g:759:4: enumLiteral_44= 'NISV'
+                    // InternalDbTextEditor.g:777:3: (enumLiteral_44= 'NISV' )
+                    // InternalDbTextEditor.g:778:4: enumLiteral_44= 'NISV'
                     {
-                    enumLiteral_44=(Token)match(input,64,FOLLOW_2); 
+                    enumLiteral_44=(Token)match(input,65,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getNISVEnumLiteralDeclaration_44().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_44, grammarAccess.getFieldnamesAccess().getNISVEnumLiteralDeclaration_44());
@@ -2348,12 +2391,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 46 :
-                    // InternalDbTextEditor.g:766:3: (enumLiteral_45= 'NIVL' )
+                    // InternalDbTextEditor.g:785:3: (enumLiteral_45= 'NIVL' )
                     {
-                    // InternalDbTextEditor.g:766:3: (enumLiteral_45= 'NIVL' )
-                    // InternalDbTextEditor.g:767:4: enumLiteral_45= 'NIVL'
+                    // InternalDbTextEditor.g:785:3: (enumLiteral_45= 'NIVL' )
+                    // InternalDbTextEditor.g:786:4: enumLiteral_45= 'NIVL'
                     {
-                    enumLiteral_45=(Token)match(input,65,FOLLOW_2); 
+                    enumLiteral_45=(Token)match(input,66,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getNIVLEnumLiteralDeclaration_45().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_45, grammarAccess.getFieldnamesAccess().getNIVLEnumLiteralDeclaration_45());
@@ -2365,12 +2408,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 47 :
-                    // InternalDbTextEditor.g:774:3: (enumLiteral_46= 'NOBT' )
+                    // InternalDbTextEditor.g:793:3: (enumLiteral_46= 'NOBT' )
                     {
-                    // InternalDbTextEditor.g:774:3: (enumLiteral_46= 'NOBT' )
-                    // InternalDbTextEditor.g:775:4: enumLiteral_46= 'NOBT'
+                    // InternalDbTextEditor.g:793:3: (enumLiteral_46= 'NOBT' )
+                    // InternalDbTextEditor.g:794:4: enumLiteral_46= 'NOBT'
                     {
-                    enumLiteral_46=(Token)match(input,66,FOLLOW_2); 
+                    enumLiteral_46=(Token)match(input,67,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getNOBTEnumLiteralDeclaration_46().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_46, grammarAccess.getFieldnamesAccess().getNOBTEnumLiteralDeclaration_46());
@@ -2382,12 +2425,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 48 :
-                    // InternalDbTextEditor.g:782:3: (enumLiteral_47= 'ONST' )
+                    // InternalDbTextEditor.g:801:3: (enumLiteral_47= 'ONST' )
                     {
-                    // InternalDbTextEditor.g:782:3: (enumLiteral_47= 'ONST' )
-                    // InternalDbTextEditor.g:783:4: enumLiteral_47= 'ONST'
+                    // InternalDbTextEditor.g:801:3: (enumLiteral_47= 'ONST' )
+                    // InternalDbTextEditor.g:802:4: enumLiteral_47= 'ONST'
                     {
-                    enumLiteral_47=(Token)match(input,67,FOLLOW_2); 
+                    enumLiteral_47=(Token)match(input,68,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getONSTEnumLiteralDeclaration_47().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_47, grammarAccess.getFieldnamesAccess().getONSTEnumLiteralDeclaration_47());
@@ -2399,12 +2442,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 49 :
-                    // InternalDbTextEditor.g:790:3: (enumLiteral_48= 'ONSV' )
+                    // InternalDbTextEditor.g:809:3: (enumLiteral_48= 'ONSV' )
                     {
-                    // InternalDbTextEditor.g:790:3: (enumLiteral_48= 'ONSV' )
-                    // InternalDbTextEditor.g:791:4: enumLiteral_48= 'ONSV'
+                    // InternalDbTextEditor.g:809:3: (enumLiteral_48= 'ONSV' )
+                    // InternalDbTextEditor.g:810:4: enumLiteral_48= 'ONSV'
                     {
-                    enumLiteral_48=(Token)match(input,68,FOLLOW_2); 
+                    enumLiteral_48=(Token)match(input,69,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getONSVEnumLiteralDeclaration_48().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_48, grammarAccess.getFieldnamesAccess().getONSVEnumLiteralDeclaration_48());
@@ -2416,12 +2459,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 50 :
-                    // InternalDbTextEditor.g:798:3: (enumLiteral_49= 'ONVL' )
+                    // InternalDbTextEditor.g:817:3: (enumLiteral_49= 'ONVL' )
                     {
-                    // InternalDbTextEditor.g:798:3: (enumLiteral_49= 'ONVL' )
-                    // InternalDbTextEditor.g:799:4: enumLiteral_49= 'ONVL'
+                    // InternalDbTextEditor.g:817:3: (enumLiteral_49= 'ONVL' )
+                    // InternalDbTextEditor.g:818:4: enumLiteral_49= 'ONVL'
                     {
-                    enumLiteral_49=(Token)match(input,69,FOLLOW_2); 
+                    enumLiteral_49=(Token)match(input,70,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getONVLEnumLiteralDeclaration_49().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_49, grammarAccess.getFieldnamesAccess().getONVLEnumLiteralDeclaration_49());
@@ -2433,12 +2476,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 51 :
-                    // InternalDbTextEditor.g:806:3: (enumLiteral_50= 'SHFT' )
+                    // InternalDbTextEditor.g:825:3: (enumLiteral_50= 'SHFT' )
                     {
-                    // InternalDbTextEditor.g:806:3: (enumLiteral_50= 'SHFT' )
-                    // InternalDbTextEditor.g:807:4: enumLiteral_50= 'SHFT'
+                    // InternalDbTextEditor.g:825:3: (enumLiteral_50= 'SHFT' )
+                    // InternalDbTextEditor.g:826:4: enumLiteral_50= 'SHFT'
                     {
-                    enumLiteral_50=(Token)match(input,70,FOLLOW_2); 
+                    enumLiteral_50=(Token)match(input,71,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSHFTEnumLiteralDeclaration_50().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_50, grammarAccess.getFieldnamesAccess().getSHFTEnumLiteralDeclaration_50());
@@ -2450,12 +2493,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 52 :
-                    // InternalDbTextEditor.g:814:3: (enumLiteral_51= 'SVST' )
+                    // InternalDbTextEditor.g:833:3: (enumLiteral_51= 'SVST' )
                     {
-                    // InternalDbTextEditor.g:814:3: (enumLiteral_51= 'SVST' )
-                    // InternalDbTextEditor.g:815:4: enumLiteral_51= 'SVST'
+                    // InternalDbTextEditor.g:833:3: (enumLiteral_51= 'SVST' )
+                    // InternalDbTextEditor.g:834:4: enumLiteral_51= 'SVST'
                     {
-                    enumLiteral_51=(Token)match(input,71,FOLLOW_2); 
+                    enumLiteral_51=(Token)match(input,72,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSVSTEnumLiteralDeclaration_51().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_51, grammarAccess.getFieldnamesAccess().getSVSTEnumLiteralDeclaration_51());
@@ -2467,12 +2510,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 53 :
-                    // InternalDbTextEditor.g:822:3: (enumLiteral_52= 'SVSV' )
+                    // InternalDbTextEditor.g:841:3: (enumLiteral_52= 'SVSV' )
                     {
-                    // InternalDbTextEditor.g:822:3: (enumLiteral_52= 'SVSV' )
-                    // InternalDbTextEditor.g:823:4: enumLiteral_52= 'SVSV'
+                    // InternalDbTextEditor.g:841:3: (enumLiteral_52= 'SVSV' )
+                    // InternalDbTextEditor.g:842:4: enumLiteral_52= 'SVSV'
                     {
-                    enumLiteral_52=(Token)match(input,72,FOLLOW_2); 
+                    enumLiteral_52=(Token)match(input,73,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSVSVEnumLiteralDeclaration_52().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_52, grammarAccess.getFieldnamesAccess().getSVSVEnumLiteralDeclaration_52());
@@ -2484,12 +2527,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 54 :
-                    // InternalDbTextEditor.g:830:3: (enumLiteral_53= 'SVVL' )
+                    // InternalDbTextEditor.g:849:3: (enumLiteral_53= 'SVVL' )
                     {
-                    // InternalDbTextEditor.g:830:3: (enumLiteral_53= 'SVVL' )
-                    // InternalDbTextEditor.g:831:4: enumLiteral_53= 'SVVL'
+                    // InternalDbTextEditor.g:849:3: (enumLiteral_53= 'SVVL' )
+                    // InternalDbTextEditor.g:850:4: enumLiteral_53= 'SVVL'
                     {
-                    enumLiteral_53=(Token)match(input,73,FOLLOW_2); 
+                    enumLiteral_53=(Token)match(input,74,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSVVLEnumLiteralDeclaration_53().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_53, grammarAccess.getFieldnamesAccess().getSVVLEnumLiteralDeclaration_53());
@@ -2501,12 +2544,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 55 :
-                    // InternalDbTextEditor.g:838:3: (enumLiteral_54= 'SXST' )
+                    // InternalDbTextEditor.g:857:3: (enumLiteral_54= 'SXST' )
                     {
-                    // InternalDbTextEditor.g:838:3: (enumLiteral_54= 'SXST' )
-                    // InternalDbTextEditor.g:839:4: enumLiteral_54= 'SXST'
+                    // InternalDbTextEditor.g:857:3: (enumLiteral_54= 'SXST' )
+                    // InternalDbTextEditor.g:858:4: enumLiteral_54= 'SXST'
                     {
-                    enumLiteral_54=(Token)match(input,74,FOLLOW_2); 
+                    enumLiteral_54=(Token)match(input,75,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSXSTEnumLiteralDeclaration_54().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_54, grammarAccess.getFieldnamesAccess().getSXSTEnumLiteralDeclaration_54());
@@ -2518,12 +2561,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 56 :
-                    // InternalDbTextEditor.g:846:3: (enumLiteral_55= 'SXSV' )
+                    // InternalDbTextEditor.g:865:3: (enumLiteral_55= 'SXSV' )
                     {
-                    // InternalDbTextEditor.g:846:3: (enumLiteral_55= 'SXSV' )
-                    // InternalDbTextEditor.g:847:4: enumLiteral_55= 'SXSV'
+                    // InternalDbTextEditor.g:865:3: (enumLiteral_55= 'SXSV' )
+                    // InternalDbTextEditor.g:866:4: enumLiteral_55= 'SXSV'
                     {
-                    enumLiteral_55=(Token)match(input,75,FOLLOW_2); 
+                    enumLiteral_55=(Token)match(input,76,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSXSVEnumLiteralDeclaration_55().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_55, grammarAccess.getFieldnamesAccess().getSXSVEnumLiteralDeclaration_55());
@@ -2535,12 +2578,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 57 :
-                    // InternalDbTextEditor.g:854:3: (enumLiteral_56= 'SXVL' )
+                    // InternalDbTextEditor.g:873:3: (enumLiteral_56= 'SXVL' )
                     {
-                    // InternalDbTextEditor.g:854:3: (enumLiteral_56= 'SXVL' )
-                    // InternalDbTextEditor.g:855:4: enumLiteral_56= 'SXVL'
+                    // InternalDbTextEditor.g:873:3: (enumLiteral_56= 'SXVL' )
+                    // InternalDbTextEditor.g:874:4: enumLiteral_56= 'SXVL'
                     {
-                    enumLiteral_56=(Token)match(input,76,FOLLOW_2); 
+                    enumLiteral_56=(Token)match(input,77,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSXVLEnumLiteralDeclaration_56().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_56, grammarAccess.getFieldnamesAccess().getSXVLEnumLiteralDeclaration_56());
@@ -2552,12 +2595,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 58 :
-                    // InternalDbTextEditor.g:862:3: (enumLiteral_57= 'TEST' )
+                    // InternalDbTextEditor.g:881:3: (enumLiteral_57= 'TEST' )
                     {
-                    // InternalDbTextEditor.g:862:3: (enumLiteral_57= 'TEST' )
-                    // InternalDbTextEditor.g:863:4: enumLiteral_57= 'TEST'
+                    // InternalDbTextEditor.g:881:3: (enumLiteral_57= 'TEST' )
+                    // InternalDbTextEditor.g:882:4: enumLiteral_57= 'TEST'
                     {
-                    enumLiteral_57=(Token)match(input,77,FOLLOW_2); 
+                    enumLiteral_57=(Token)match(input,78,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTESTEnumLiteralDeclaration_57().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_57, grammarAccess.getFieldnamesAccess().getTESTEnumLiteralDeclaration_57());
@@ -2569,12 +2612,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 59 :
-                    // InternalDbTextEditor.g:870:3: (enumLiteral_58= 'TESV' )
+                    // InternalDbTextEditor.g:889:3: (enumLiteral_58= 'TESV' )
                     {
-                    // InternalDbTextEditor.g:870:3: (enumLiteral_58= 'TESV' )
-                    // InternalDbTextEditor.g:871:4: enumLiteral_58= 'TESV'
+                    // InternalDbTextEditor.g:889:3: (enumLiteral_58= 'TESV' )
+                    // InternalDbTextEditor.g:890:4: enumLiteral_58= 'TESV'
                     {
-                    enumLiteral_58=(Token)match(input,78,FOLLOW_2); 
+                    enumLiteral_58=(Token)match(input,79,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTESVEnumLiteralDeclaration_58().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_58, grammarAccess.getFieldnamesAccess().getTESVEnumLiteralDeclaration_58());
@@ -2586,12 +2629,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 60 :
-                    // InternalDbTextEditor.g:878:3: (enumLiteral_59= 'TEVL' )
+                    // InternalDbTextEditor.g:897:3: (enumLiteral_59= 'TEVL' )
                     {
-                    // InternalDbTextEditor.g:878:3: (enumLiteral_59= 'TEVL' )
-                    // InternalDbTextEditor.g:879:4: enumLiteral_59= 'TEVL'
+                    // InternalDbTextEditor.g:897:3: (enumLiteral_59= 'TEVL' )
+                    // InternalDbTextEditor.g:898:4: enumLiteral_59= 'TEVL'
                     {
-                    enumLiteral_59=(Token)match(input,79,FOLLOW_2); 
+                    enumLiteral_59=(Token)match(input,80,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTEVLEnumLiteralDeclaration_59().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_59, grammarAccess.getFieldnamesAccess().getTEVLEnumLiteralDeclaration_59());
@@ -2603,12 +2646,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 61 :
-                    // InternalDbTextEditor.g:886:3: (enumLiteral_60= 'THST' )
+                    // InternalDbTextEditor.g:905:3: (enumLiteral_60= 'THST' )
                     {
-                    // InternalDbTextEditor.g:886:3: (enumLiteral_60= 'THST' )
-                    // InternalDbTextEditor.g:887:4: enumLiteral_60= 'THST'
+                    // InternalDbTextEditor.g:905:3: (enumLiteral_60= 'THST' )
+                    // InternalDbTextEditor.g:906:4: enumLiteral_60= 'THST'
                     {
-                    enumLiteral_60=(Token)match(input,80,FOLLOW_2); 
+                    enumLiteral_60=(Token)match(input,81,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTHSTEnumLiteralDeclaration_60().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_60, grammarAccess.getFieldnamesAccess().getTHSTEnumLiteralDeclaration_60());
@@ -2620,12 +2663,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 62 :
-                    // InternalDbTextEditor.g:894:3: (enumLiteral_61= 'THSV' )
+                    // InternalDbTextEditor.g:913:3: (enumLiteral_61= 'THSV' )
                     {
-                    // InternalDbTextEditor.g:894:3: (enumLiteral_61= 'THSV' )
-                    // InternalDbTextEditor.g:895:4: enumLiteral_61= 'THSV'
+                    // InternalDbTextEditor.g:913:3: (enumLiteral_61= 'THSV' )
+                    // InternalDbTextEditor.g:914:4: enumLiteral_61= 'THSV'
                     {
-                    enumLiteral_61=(Token)match(input,81,FOLLOW_2); 
+                    enumLiteral_61=(Token)match(input,82,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTHSVEnumLiteralDeclaration_61().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_61, grammarAccess.getFieldnamesAccess().getTHSVEnumLiteralDeclaration_61());
@@ -2637,12 +2680,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 63 :
-                    // InternalDbTextEditor.g:902:3: (enumLiteral_62= 'THVL' )
+                    // InternalDbTextEditor.g:921:3: (enumLiteral_62= 'THVL' )
                     {
-                    // InternalDbTextEditor.g:902:3: (enumLiteral_62= 'THVL' )
-                    // InternalDbTextEditor.g:903:4: enumLiteral_62= 'THVL'
+                    // InternalDbTextEditor.g:921:3: (enumLiteral_62= 'THVL' )
+                    // InternalDbTextEditor.g:922:4: enumLiteral_62= 'THVL'
                     {
-                    enumLiteral_62=(Token)match(input,82,FOLLOW_2); 
+                    enumLiteral_62=(Token)match(input,83,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTHVLEnumLiteralDeclaration_62().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_62, grammarAccess.getFieldnamesAccess().getTHVLEnumLiteralDeclaration_62());
@@ -2654,12 +2697,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 64 :
-                    // InternalDbTextEditor.g:910:3: (enumLiteral_63= 'TWST' )
+                    // InternalDbTextEditor.g:929:3: (enumLiteral_63= 'TWST' )
                     {
-                    // InternalDbTextEditor.g:910:3: (enumLiteral_63= 'TWST' )
-                    // InternalDbTextEditor.g:911:4: enumLiteral_63= 'TWST'
+                    // InternalDbTextEditor.g:929:3: (enumLiteral_63= 'TWST' )
+                    // InternalDbTextEditor.g:930:4: enumLiteral_63= 'TWST'
                     {
-                    enumLiteral_63=(Token)match(input,83,FOLLOW_2); 
+                    enumLiteral_63=(Token)match(input,84,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTWSTEnumLiteralDeclaration_63().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_63, grammarAccess.getFieldnamesAccess().getTWSTEnumLiteralDeclaration_63());
@@ -2671,12 +2714,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 65 :
-                    // InternalDbTextEditor.g:918:3: (enumLiteral_64= 'TWSV' )
+                    // InternalDbTextEditor.g:937:3: (enumLiteral_64= 'TWSV' )
                     {
-                    // InternalDbTextEditor.g:918:3: (enumLiteral_64= 'TWSV' )
-                    // InternalDbTextEditor.g:919:4: enumLiteral_64= 'TWSV'
+                    // InternalDbTextEditor.g:937:3: (enumLiteral_64= 'TWSV' )
+                    // InternalDbTextEditor.g:938:4: enumLiteral_64= 'TWSV'
                     {
-                    enumLiteral_64=(Token)match(input,84,FOLLOW_2); 
+                    enumLiteral_64=(Token)match(input,85,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTWSVEnumLiteralDeclaration_64().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_64, grammarAccess.getFieldnamesAccess().getTWSVEnumLiteralDeclaration_64());
@@ -2688,12 +2731,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 66 :
-                    // InternalDbTextEditor.g:926:3: (enumLiteral_65= 'TWVL' )
+                    // InternalDbTextEditor.g:945:3: (enumLiteral_65= 'TWVL' )
                     {
-                    // InternalDbTextEditor.g:926:3: (enumLiteral_65= 'TWVL' )
-                    // InternalDbTextEditor.g:927:4: enumLiteral_65= 'TWVL'
+                    // InternalDbTextEditor.g:945:3: (enumLiteral_65= 'TWVL' )
+                    // InternalDbTextEditor.g:946:4: enumLiteral_65= 'TWVL'
                     {
-                    enumLiteral_65=(Token)match(input,85,FOLLOW_2); 
+                    enumLiteral_65=(Token)match(input,86,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTWVLEnumLiteralDeclaration_65().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_65, grammarAccess.getFieldnamesAccess().getTWVLEnumLiteralDeclaration_65());
@@ -2705,12 +2748,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 67 :
-                    // InternalDbTextEditor.g:934:3: (enumLiteral_66= 'UNSV' )
+                    // InternalDbTextEditor.g:953:3: (enumLiteral_66= 'UNSV' )
                     {
-                    // InternalDbTextEditor.g:934:3: (enumLiteral_66= 'UNSV' )
-                    // InternalDbTextEditor.g:935:4: enumLiteral_66= 'UNSV'
+                    // InternalDbTextEditor.g:953:3: (enumLiteral_66= 'UNSV' )
+                    // InternalDbTextEditor.g:954:4: enumLiteral_66= 'UNSV'
                     {
-                    enumLiteral_66=(Token)match(input,86,FOLLOW_2); 
+                    enumLiteral_66=(Token)match(input,87,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getUNSVEnumLiteralDeclaration_66().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_66, grammarAccess.getFieldnamesAccess().getUNSVEnumLiteralDeclaration_66());
@@ -2722,12 +2765,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 68 :
-                    // InternalDbTextEditor.g:942:3: (enumLiteral_67= 'ZRST' )
+                    // InternalDbTextEditor.g:961:3: (enumLiteral_67= 'ZRST' )
                     {
-                    // InternalDbTextEditor.g:942:3: (enumLiteral_67= 'ZRST' )
-                    // InternalDbTextEditor.g:943:4: enumLiteral_67= 'ZRST'
+                    // InternalDbTextEditor.g:961:3: (enumLiteral_67= 'ZRST' )
+                    // InternalDbTextEditor.g:962:4: enumLiteral_67= 'ZRST'
                     {
-                    enumLiteral_67=(Token)match(input,87,FOLLOW_2); 
+                    enumLiteral_67=(Token)match(input,88,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getZRSTEnumLiteralDeclaration_67().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_67, grammarAccess.getFieldnamesAccess().getZRSTEnumLiteralDeclaration_67());
@@ -2739,12 +2782,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 69 :
-                    // InternalDbTextEditor.g:950:3: (enumLiteral_68= 'ZRSV' )
+                    // InternalDbTextEditor.g:969:3: (enumLiteral_68= 'ZRSV' )
                     {
-                    // InternalDbTextEditor.g:950:3: (enumLiteral_68= 'ZRSV' )
-                    // InternalDbTextEditor.g:951:4: enumLiteral_68= 'ZRSV'
+                    // InternalDbTextEditor.g:969:3: (enumLiteral_68= 'ZRSV' )
+                    // InternalDbTextEditor.g:970:4: enumLiteral_68= 'ZRSV'
                     {
-                    enumLiteral_68=(Token)match(input,88,FOLLOW_2); 
+                    enumLiteral_68=(Token)match(input,89,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getZRSVEnumLiteralDeclaration_68().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_68, grammarAccess.getFieldnamesAccess().getZRSVEnumLiteralDeclaration_68());
@@ -2756,12 +2799,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 70 :
-                    // InternalDbTextEditor.g:958:3: (enumLiteral_69= 'ZRVL' )
+                    // InternalDbTextEditor.g:977:3: (enumLiteral_69= 'ZRVL' )
                     {
-                    // InternalDbTextEditor.g:958:3: (enumLiteral_69= 'ZRVL' )
-                    // InternalDbTextEditor.g:959:4: enumLiteral_69= 'ZRVL'
+                    // InternalDbTextEditor.g:977:3: (enumLiteral_69= 'ZRVL' )
+                    // InternalDbTextEditor.g:978:4: enumLiteral_69= 'ZRVL'
                     {
-                    enumLiteral_69=(Token)match(input,89,FOLLOW_2); 
+                    enumLiteral_69=(Token)match(input,90,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getZRVLEnumLiteralDeclaration_69().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_69, grammarAccess.getFieldnamesAccess().getZRVLEnumLiteralDeclaration_69());
@@ -2773,12 +2816,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 71 :
-                    // InternalDbTextEditor.g:966:3: (enumLiteral_70= 'LOLO' )
+                    // InternalDbTextEditor.g:985:3: (enumLiteral_70= 'LOLO' )
                     {
-                    // InternalDbTextEditor.g:966:3: (enumLiteral_70= 'LOLO' )
-                    // InternalDbTextEditor.g:967:4: enumLiteral_70= 'LOLO'
+                    // InternalDbTextEditor.g:985:3: (enumLiteral_70= 'LOLO' )
+                    // InternalDbTextEditor.g:986:4: enumLiteral_70= 'LOLO'
                     {
-                    enumLiteral_70=(Token)match(input,90,FOLLOW_2); 
+                    enumLiteral_70=(Token)match(input,91,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getLOLOEnumLiteralDeclaration_70().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_70, grammarAccess.getFieldnamesAccess().getLOLOEnumLiteralDeclaration_70());
@@ -2790,12 +2833,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 72 :
-                    // InternalDbTextEditor.g:974:3: (enumLiteral_71= 'LOW' )
+                    // InternalDbTextEditor.g:993:3: (enumLiteral_71= 'LOW' )
                     {
-                    // InternalDbTextEditor.g:974:3: (enumLiteral_71= 'LOW' )
-                    // InternalDbTextEditor.g:975:4: enumLiteral_71= 'LOW'
+                    // InternalDbTextEditor.g:993:3: (enumLiteral_71= 'LOW' )
+                    // InternalDbTextEditor.g:994:4: enumLiteral_71= 'LOW'
                     {
-                    enumLiteral_71=(Token)match(input,91,FOLLOW_2); 
+                    enumLiteral_71=(Token)match(input,92,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getLOWEnumLiteralDeclaration_71().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_71, grammarAccess.getFieldnamesAccess().getLOWEnumLiteralDeclaration_71());
@@ -2807,12 +2850,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 73 :
-                    // InternalDbTextEditor.g:982:3: (enumLiteral_72= 'LSV' )
+                    // InternalDbTextEditor.g:1001:3: (enumLiteral_72= 'LSV' )
                     {
-                    // InternalDbTextEditor.g:982:3: (enumLiteral_72= 'LSV' )
-                    // InternalDbTextEditor.g:983:4: enumLiteral_72= 'LSV'
+                    // InternalDbTextEditor.g:1001:3: (enumLiteral_72= 'LSV' )
+                    // InternalDbTextEditor.g:1002:4: enumLiteral_72= 'LSV'
                     {
-                    enumLiteral_72=(Token)match(input,92,FOLLOW_2); 
+                    enumLiteral_72=(Token)match(input,93,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getLSVEnumLiteralDeclaration_72().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_72, grammarAccess.getFieldnamesAccess().getLSVEnumLiteralDeclaration_72());
@@ -2824,12 +2867,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 74 :
-                    // InternalDbTextEditor.g:990:3: (enumLiteral_73= 'SSCN' )
+                    // InternalDbTextEditor.g:1009:3: (enumLiteral_73= 'SSCN' )
                     {
-                    // InternalDbTextEditor.g:990:3: (enumLiteral_73= 'SSCN' )
-                    // InternalDbTextEditor.g:991:4: enumLiteral_73= 'SSCN'
+                    // InternalDbTextEditor.g:1009:3: (enumLiteral_73= 'SSCN' )
+                    // InternalDbTextEditor.g:1010:4: enumLiteral_73= 'SSCN'
                     {
-                    enumLiteral_73=(Token)match(input,93,FOLLOW_2); 
+                    enumLiteral_73=(Token)match(input,94,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSSCNEnumLiteralDeclaration_73().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_73, grammarAccess.getFieldnamesAccess().getSSCNEnumLiteralDeclaration_73());
@@ -2841,12 +2884,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 75 :
-                    // InternalDbTextEditor.g:998:3: (enumLiteral_74= 'TSE' )
+                    // InternalDbTextEditor.g:1017:3: (enumLiteral_74= 'TSE' )
                     {
-                    // InternalDbTextEditor.g:998:3: (enumLiteral_74= 'TSE' )
-                    // InternalDbTextEditor.g:999:4: enumLiteral_74= 'TSE'
+                    // InternalDbTextEditor.g:1017:3: (enumLiteral_74= 'TSE' )
+                    // InternalDbTextEditor.g:1018:4: enumLiteral_74= 'TSE'
                     {
-                    enumLiteral_74=(Token)match(input,94,FOLLOW_2); 
+                    enumLiteral_74=(Token)match(input,95,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getTSEEnumLiteralDeclaration_74().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_74, grammarAccess.getFieldnamesAccess().getTSEEnumLiteralDeclaration_74());
@@ -2858,12 +2901,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 76 :
-                    // InternalDbTextEditor.g:1006:3: (enumLiteral_75= 'PREC' )
+                    // InternalDbTextEditor.g:1025:3: (enumLiteral_75= 'PREC' )
                     {
-                    // InternalDbTextEditor.g:1006:3: (enumLiteral_75= 'PREC' )
-                    // InternalDbTextEditor.g:1007:4: enumLiteral_75= 'PREC'
+                    // InternalDbTextEditor.g:1025:3: (enumLiteral_75= 'PREC' )
+                    // InternalDbTextEditor.g:1026:4: enumLiteral_75= 'PREC'
                     {
-                    enumLiteral_75=(Token)match(input,95,FOLLOW_2); 
+                    enumLiteral_75=(Token)match(input,96,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getPRECEnumLiteralDeclaration_75().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_75, grammarAccess.getFieldnamesAccess().getPRECEnumLiteralDeclaration_75());
@@ -2875,12 +2918,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 77 :
-                    // InternalDbTextEditor.g:1014:3: (enumLiteral_76= 'DRVH' )
+                    // InternalDbTextEditor.g:1033:3: (enumLiteral_76= 'DRVH' )
                     {
-                    // InternalDbTextEditor.g:1014:3: (enumLiteral_76= 'DRVH' )
-                    // InternalDbTextEditor.g:1015:4: enumLiteral_76= 'DRVH'
+                    // InternalDbTextEditor.g:1033:3: (enumLiteral_76= 'DRVH' )
+                    // InternalDbTextEditor.g:1034:4: enumLiteral_76= 'DRVH'
                     {
-                    enumLiteral_76=(Token)match(input,96,FOLLOW_2); 
+                    enumLiteral_76=(Token)match(input,97,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getDRVHEnumLiteralDeclaration_76().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_76, grammarAccess.getFieldnamesAccess().getDRVHEnumLiteralDeclaration_76());
@@ -2892,12 +2935,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 78 :
-                    // InternalDbTextEditor.g:1022:3: (enumLiteral_77= 'LOPR' )
+                    // InternalDbTextEditor.g:1041:3: (enumLiteral_77= 'LOPR' )
                     {
-                    // InternalDbTextEditor.g:1022:3: (enumLiteral_77= 'LOPR' )
-                    // InternalDbTextEditor.g:1023:4: enumLiteral_77= 'LOPR'
+                    // InternalDbTextEditor.g:1041:3: (enumLiteral_77= 'LOPR' )
+                    // InternalDbTextEditor.g:1042:4: enumLiteral_77= 'LOPR'
                     {
-                    enumLiteral_77=(Token)match(input,97,FOLLOW_2); 
+                    enumLiteral_77=(Token)match(input,98,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getLOPREnumLiteralDeclaration_77().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_77, grammarAccess.getFieldnamesAccess().getLOPREnumLiteralDeclaration_77());
@@ -2909,12 +2952,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 79 :
-                    // InternalDbTextEditor.g:1030:3: (enumLiteral_78= 'DRVL' )
+                    // InternalDbTextEditor.g:1049:3: (enumLiteral_78= 'DRVL' )
                     {
-                    // InternalDbTextEditor.g:1030:3: (enumLiteral_78= 'DRVL' )
-                    // InternalDbTextEditor.g:1031:4: enumLiteral_78= 'DRVL'
+                    // InternalDbTextEditor.g:1049:3: (enumLiteral_78= 'DRVL' )
+                    // InternalDbTextEditor.g:1050:4: enumLiteral_78= 'DRVL'
                     {
-                    enumLiteral_78=(Token)match(input,98,FOLLOW_2); 
+                    enumLiteral_78=(Token)match(input,99,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getDRVLEnumLiteralDeclaration_78().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_78, grammarAccess.getFieldnamesAccess().getDRVLEnumLiteralDeclaration_78());
@@ -2926,12 +2969,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 80 :
-                    // InternalDbTextEditor.g:1038:3: (enumLiteral_79= 'HOPR' )
+                    // InternalDbTextEditor.g:1057:3: (enumLiteral_79= 'HOPR' )
                     {
-                    // InternalDbTextEditor.g:1038:3: (enumLiteral_79= 'HOPR' )
-                    // InternalDbTextEditor.g:1039:4: enumLiteral_79= 'HOPR'
+                    // InternalDbTextEditor.g:1057:3: (enumLiteral_79= 'HOPR' )
+                    // InternalDbTextEditor.g:1058:4: enumLiteral_79= 'HOPR'
                     {
-                    enumLiteral_79=(Token)match(input,99,FOLLOW_2); 
+                    enumLiteral_79=(Token)match(input,100,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getHOPREnumLiteralDeclaration_79().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_79, grammarAccess.getFieldnamesAccess().getHOPREnumLiteralDeclaration_79());
@@ -2943,12 +2986,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 81 :
-                    // InternalDbTextEditor.g:1046:3: (enumLiteral_80= 'CALC' )
+                    // InternalDbTextEditor.g:1065:3: (enumLiteral_80= 'CALC' )
                     {
-                    // InternalDbTextEditor.g:1046:3: (enumLiteral_80= 'CALC' )
-                    // InternalDbTextEditor.g:1047:4: enumLiteral_80= 'CALC'
+                    // InternalDbTextEditor.g:1065:3: (enumLiteral_80= 'CALC' )
+                    // InternalDbTextEditor.g:1066:4: enumLiteral_80= 'CALC'
                     {
-                    enumLiteral_80=(Token)match(input,100,FOLLOW_2); 
+                    enumLiteral_80=(Token)match(input,101,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getCALCEnumLiteralDeclaration_80().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_80, grammarAccess.getFieldnamesAccess().getCALCEnumLiteralDeclaration_80());
@@ -2960,12 +3003,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 82 :
-                    // InternalDbTextEditor.g:1054:3: (enumLiteral_81= 'INPA' )
+                    // InternalDbTextEditor.g:1073:3: (enumLiteral_81= 'INPA' )
                     {
-                    // InternalDbTextEditor.g:1054:3: (enumLiteral_81= 'INPA' )
-                    // InternalDbTextEditor.g:1055:4: enumLiteral_81= 'INPA'
+                    // InternalDbTextEditor.g:1073:3: (enumLiteral_81= 'INPA' )
+                    // InternalDbTextEditor.g:1074:4: enumLiteral_81= 'INPA'
                     {
-                    enumLiteral_81=(Token)match(input,101,FOLLOW_2); 
+                    enumLiteral_81=(Token)match(input,102,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPAEnumLiteralDeclaration_81().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_81, grammarAccess.getFieldnamesAccess().getINPAEnumLiteralDeclaration_81());
@@ -2977,12 +3020,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 83 :
-                    // InternalDbTextEditor.g:1062:3: (enumLiteral_82= 'INPB' )
+                    // InternalDbTextEditor.g:1081:3: (enumLiteral_82= 'INPB' )
                     {
-                    // InternalDbTextEditor.g:1062:3: (enumLiteral_82= 'INPB' )
-                    // InternalDbTextEditor.g:1063:4: enumLiteral_82= 'INPB'
+                    // InternalDbTextEditor.g:1081:3: (enumLiteral_82= 'INPB' )
+                    // InternalDbTextEditor.g:1082:4: enumLiteral_82= 'INPB'
                     {
-                    enumLiteral_82=(Token)match(input,102,FOLLOW_2); 
+                    enumLiteral_82=(Token)match(input,103,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPBEnumLiteralDeclaration_82().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_82, grammarAccess.getFieldnamesAccess().getINPBEnumLiteralDeclaration_82());
@@ -2994,12 +3037,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 84 :
-                    // InternalDbTextEditor.g:1070:3: (enumLiteral_83= 'INPC' )
+                    // InternalDbTextEditor.g:1089:3: (enumLiteral_83= 'INPC' )
                     {
-                    // InternalDbTextEditor.g:1070:3: (enumLiteral_83= 'INPC' )
-                    // InternalDbTextEditor.g:1071:4: enumLiteral_83= 'INPC'
+                    // InternalDbTextEditor.g:1089:3: (enumLiteral_83= 'INPC' )
+                    // InternalDbTextEditor.g:1090:4: enumLiteral_83= 'INPC'
                     {
-                    enumLiteral_83=(Token)match(input,103,FOLLOW_2); 
+                    enumLiteral_83=(Token)match(input,104,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPCEnumLiteralDeclaration_83().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_83, grammarAccess.getFieldnamesAccess().getINPCEnumLiteralDeclaration_83());
@@ -3011,12 +3054,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 85 :
-                    // InternalDbTextEditor.g:1078:3: (enumLiteral_84= 'INPD' )
+                    // InternalDbTextEditor.g:1097:3: (enumLiteral_84= 'INPD' )
                     {
-                    // InternalDbTextEditor.g:1078:3: (enumLiteral_84= 'INPD' )
-                    // InternalDbTextEditor.g:1079:4: enumLiteral_84= 'INPD'
+                    // InternalDbTextEditor.g:1097:3: (enumLiteral_84= 'INPD' )
+                    // InternalDbTextEditor.g:1098:4: enumLiteral_84= 'INPD'
                     {
-                    enumLiteral_84=(Token)match(input,104,FOLLOW_2); 
+                    enumLiteral_84=(Token)match(input,105,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPDEnumLiteralDeclaration_84().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_84, grammarAccess.getFieldnamesAccess().getINPDEnumLiteralDeclaration_84());
@@ -3028,12 +3071,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 86 :
-                    // InternalDbTextEditor.g:1086:3: (enumLiteral_85= 'FLNK' )
+                    // InternalDbTextEditor.g:1105:3: (enumLiteral_85= 'FLNK' )
                     {
-                    // InternalDbTextEditor.g:1086:3: (enumLiteral_85= 'FLNK' )
-                    // InternalDbTextEditor.g:1087:4: enumLiteral_85= 'FLNK'
+                    // InternalDbTextEditor.g:1105:3: (enumLiteral_85= 'FLNK' )
+                    // InternalDbTextEditor.g:1106:4: enumLiteral_85= 'FLNK'
                     {
-                    enumLiteral_85=(Token)match(input,105,FOLLOW_2); 
+                    enumLiteral_85=(Token)match(input,106,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getFLNKEnumLiteralDeclaration_85().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_85, grammarAccess.getFieldnamesAccess().getFLNKEnumLiteralDeclaration_85());
@@ -3045,12 +3088,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 87 :
-                    // InternalDbTextEditor.g:1094:3: (enumLiteral_86= 'INPE' )
+                    // InternalDbTextEditor.g:1113:3: (enumLiteral_86= 'INPE' )
                     {
-                    // InternalDbTextEditor.g:1094:3: (enumLiteral_86= 'INPE' )
-                    // InternalDbTextEditor.g:1095:4: enumLiteral_86= 'INPE'
+                    // InternalDbTextEditor.g:1113:3: (enumLiteral_86= 'INPE' )
+                    // InternalDbTextEditor.g:1114:4: enumLiteral_86= 'INPE'
                     {
-                    enumLiteral_86=(Token)match(input,106,FOLLOW_2); 
+                    enumLiteral_86=(Token)match(input,107,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPEEnumLiteralDeclaration_86().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_86, grammarAccess.getFieldnamesAccess().getINPEEnumLiteralDeclaration_86());
@@ -3062,12 +3105,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 88 :
-                    // InternalDbTextEditor.g:1102:3: (enumLiteral_87= 'INPF' )
+                    // InternalDbTextEditor.g:1121:3: (enumLiteral_87= 'INPF' )
                     {
-                    // InternalDbTextEditor.g:1102:3: (enumLiteral_87= 'INPF' )
-                    // InternalDbTextEditor.g:1103:4: enumLiteral_87= 'INPF'
+                    // InternalDbTextEditor.g:1121:3: (enumLiteral_87= 'INPF' )
+                    // InternalDbTextEditor.g:1122:4: enumLiteral_87= 'INPF'
                     {
-                    enumLiteral_87=(Token)match(input,107,FOLLOW_2); 
+                    enumLiteral_87=(Token)match(input,108,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPFEnumLiteralDeclaration_87().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_87, grammarAccess.getFieldnamesAccess().getINPFEnumLiteralDeclaration_87());
@@ -3079,12 +3122,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 89 :
-                    // InternalDbTextEditor.g:1110:3: (enumLiteral_88= 'INPG' )
+                    // InternalDbTextEditor.g:1129:3: (enumLiteral_88= 'INPG' )
                     {
-                    // InternalDbTextEditor.g:1110:3: (enumLiteral_88= 'INPG' )
-                    // InternalDbTextEditor.g:1111:4: enumLiteral_88= 'INPG'
+                    // InternalDbTextEditor.g:1129:3: (enumLiteral_88= 'INPG' )
+                    // InternalDbTextEditor.g:1130:4: enumLiteral_88= 'INPG'
                     {
-                    enumLiteral_88=(Token)match(input,108,FOLLOW_2); 
+                    enumLiteral_88=(Token)match(input,109,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPGEnumLiteralDeclaration_88().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_88, grammarAccess.getFieldnamesAccess().getINPGEnumLiteralDeclaration_88());
@@ -3096,12 +3139,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 90 :
-                    // InternalDbTextEditor.g:1118:3: (enumLiteral_89= 'INPH' )
+                    // InternalDbTextEditor.g:1137:3: (enumLiteral_89= 'INPH' )
                     {
-                    // InternalDbTextEditor.g:1118:3: (enumLiteral_89= 'INPH' )
-                    // InternalDbTextEditor.g:1119:4: enumLiteral_89= 'INPH'
+                    // InternalDbTextEditor.g:1137:3: (enumLiteral_89= 'INPH' )
+                    // InternalDbTextEditor.g:1138:4: enumLiteral_89= 'INPH'
                     {
-                    enumLiteral_89=(Token)match(input,109,FOLLOW_2); 
+                    enumLiteral_89=(Token)match(input,110,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPHEnumLiteralDeclaration_89().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_89, grammarAccess.getFieldnamesAccess().getINPHEnumLiteralDeclaration_89());
@@ -3113,12 +3156,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 91 :
-                    // InternalDbTextEditor.g:1126:3: (enumLiteral_90= 'INPI' )
+                    // InternalDbTextEditor.g:1145:3: (enumLiteral_90= 'INPI' )
                     {
-                    // InternalDbTextEditor.g:1126:3: (enumLiteral_90= 'INPI' )
-                    // InternalDbTextEditor.g:1127:4: enumLiteral_90= 'INPI'
+                    // InternalDbTextEditor.g:1145:3: (enumLiteral_90= 'INPI' )
+                    // InternalDbTextEditor.g:1146:4: enumLiteral_90= 'INPI'
                     {
-                    enumLiteral_90=(Token)match(input,110,FOLLOW_2); 
+                    enumLiteral_90=(Token)match(input,111,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPIEnumLiteralDeclaration_90().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_90, grammarAccess.getFieldnamesAccess().getINPIEnumLiteralDeclaration_90());
@@ -3130,12 +3173,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 92 :
-                    // InternalDbTextEditor.g:1134:3: (enumLiteral_91= 'INPJ' )
+                    // InternalDbTextEditor.g:1153:3: (enumLiteral_91= 'INPJ' )
                     {
-                    // InternalDbTextEditor.g:1134:3: (enumLiteral_91= 'INPJ' )
-                    // InternalDbTextEditor.g:1135:4: enumLiteral_91= 'INPJ'
+                    // InternalDbTextEditor.g:1153:3: (enumLiteral_91= 'INPJ' )
+                    // InternalDbTextEditor.g:1154:4: enumLiteral_91= 'INPJ'
                     {
-                    enumLiteral_91=(Token)match(input,111,FOLLOW_2); 
+                    enumLiteral_91=(Token)match(input,112,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPJEnumLiteralDeclaration_91().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_91, grammarAccess.getFieldnamesAccess().getINPJEnumLiteralDeclaration_91());
@@ -3147,12 +3190,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 93 :
-                    // InternalDbTextEditor.g:1142:3: (enumLiteral_92= 'INPK' )
+                    // InternalDbTextEditor.g:1161:3: (enumLiteral_92= 'INPK' )
                     {
-                    // InternalDbTextEditor.g:1142:3: (enumLiteral_92= 'INPK' )
-                    // InternalDbTextEditor.g:1143:4: enumLiteral_92= 'INPK'
+                    // InternalDbTextEditor.g:1161:3: (enumLiteral_92= 'INPK' )
+                    // InternalDbTextEditor.g:1162:4: enumLiteral_92= 'INPK'
                     {
-                    enumLiteral_92=(Token)match(input,112,FOLLOW_2); 
+                    enumLiteral_92=(Token)match(input,113,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINPKEnumLiteralDeclaration_92().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_92, grammarAccess.getFieldnamesAccess().getINPKEnumLiteralDeclaration_92());
@@ -3164,12 +3207,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 94 :
-                    // InternalDbTextEditor.g:1150:3: (enumLiteral_93= 'INAA' )
+                    // InternalDbTextEditor.g:1169:3: (enumLiteral_93= 'INAA' )
                     {
-                    // InternalDbTextEditor.g:1150:3: (enumLiteral_93= 'INAA' )
-                    // InternalDbTextEditor.g:1151:4: enumLiteral_93= 'INAA'
+                    // InternalDbTextEditor.g:1169:3: (enumLiteral_93= 'INAA' )
+                    // InternalDbTextEditor.g:1170:4: enumLiteral_93= 'INAA'
                     {
-                    enumLiteral_93=(Token)match(input,113,FOLLOW_2); 
+                    enumLiteral_93=(Token)match(input,114,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINAAEnumLiteralDeclaration_93().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_93, grammarAccess.getFieldnamesAccess().getINAAEnumLiteralDeclaration_93());
@@ -3181,12 +3224,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 95 :
-                    // InternalDbTextEditor.g:1158:3: (enumLiteral_94= 'INBB' )
+                    // InternalDbTextEditor.g:1177:3: (enumLiteral_94= 'INBB' )
                     {
-                    // InternalDbTextEditor.g:1158:3: (enumLiteral_94= 'INBB' )
-                    // InternalDbTextEditor.g:1159:4: enumLiteral_94= 'INBB'
+                    // InternalDbTextEditor.g:1177:3: (enumLiteral_94= 'INBB' )
+                    // InternalDbTextEditor.g:1178:4: enumLiteral_94= 'INBB'
                     {
-                    enumLiteral_94=(Token)match(input,114,FOLLOW_2); 
+                    enumLiteral_94=(Token)match(input,115,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINBBEnumLiteralDeclaration_94().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_94, grammarAccess.getFieldnamesAccess().getINBBEnumLiteralDeclaration_94());
@@ -3198,12 +3241,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 96 :
-                    // InternalDbTextEditor.g:1166:3: (enumLiteral_95= 'INCC' )
+                    // InternalDbTextEditor.g:1185:3: (enumLiteral_95= 'INCC' )
                     {
-                    // InternalDbTextEditor.g:1166:3: (enumLiteral_95= 'INCC' )
-                    // InternalDbTextEditor.g:1167:4: enumLiteral_95= 'INCC'
+                    // InternalDbTextEditor.g:1185:3: (enumLiteral_95= 'INCC' )
+                    // InternalDbTextEditor.g:1186:4: enumLiteral_95= 'INCC'
                     {
-                    enumLiteral_95=(Token)match(input,115,FOLLOW_2); 
+                    enumLiteral_95=(Token)match(input,116,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getINCCEnumLiteralDeclaration_95().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_95, grammarAccess.getFieldnamesAccess().getINCCEnumLiteralDeclaration_95());
@@ -3215,12 +3258,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 97 :
-                    // InternalDbTextEditor.g:1174:3: (enumLiteral_96= 'SIOL' )
+                    // InternalDbTextEditor.g:1193:3: (enumLiteral_96= 'SIOL' )
                     {
-                    // InternalDbTextEditor.g:1174:3: (enumLiteral_96= 'SIOL' )
-                    // InternalDbTextEditor.g:1175:4: enumLiteral_96= 'SIOL'
+                    // InternalDbTextEditor.g:1193:3: (enumLiteral_96= 'SIOL' )
+                    // InternalDbTextEditor.g:1194:4: enumLiteral_96= 'SIOL'
                     {
-                    enumLiteral_96=(Token)match(input,116,FOLLOW_2); 
+                    enumLiteral_96=(Token)match(input,117,FOLLOW_2); 
 
                     				current = grammarAccess.getFieldnamesAccess().getSIOLEnumLiteralDeclaration_96().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_96, grammarAccess.getFieldnamesAccess().getSIOLEnumLiteralDeclaration_96());
@@ -3254,7 +3297,7 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRecordnames"
-    // InternalDbTextEditor.g:1185:1: ruleRecordnames returns [Enumerator current=null] : ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) ) ;
+    // InternalDbTextEditor.g:1204:1: ruleRecordnames returns [Enumerator current=null] : ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) ) ;
     public final Enumerator ruleRecordnames() throws RecognitionException {
         Enumerator current = null;
 
@@ -3281,98 +3324,98 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDbTextEditor.g:1191:2: ( ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) ) )
-            // InternalDbTextEditor.g:1192:2: ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) )
+            // InternalDbTextEditor.g:1210:2: ( ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) ) )
+            // InternalDbTextEditor.g:1211:2: ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) )
             {
-            // InternalDbTextEditor.g:1192:2: ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) )
+            // InternalDbTextEditor.g:1211:2: ( (enumLiteral_0= 'ai' ) | (enumLiteral_1= 'ao' ) | (enumLiteral_2= 'longin' ) | (enumLiteral_3= 'longout' ) | (enumLiteral_4= 'stringin' ) | (enumLiteral_5= 'stringout' ) | (enumLiteral_6= 'lsi' ) | (enumLiteral_7= 'lso' ) | (enumLiteral_8= 'waveform' ) | (enumLiteral_9= 'bi' ) | (enumLiteral_10= 'bo' ) | (enumLiteral_11= 'mbbi' ) | (enumLiteral_12= 'mbbo' ) | (enumLiteral_13= 'mbbiDirect' ) | (enumLiteral_14= 'mbboDirect' ) | (enumLiteral_15= 'calcout' ) | (enumLiteral_16= 'scalcout' ) | (enumLiteral_17= 'calc' ) )
             int alt6=18;
             switch ( input.LA(1) ) {
-            case 117:
+            case 118:
                 {
                 alt6=1;
                 }
                 break;
-            case 118:
+            case 119:
                 {
                 alt6=2;
                 }
                 break;
-            case 119:
+            case 120:
                 {
                 alt6=3;
                 }
                 break;
-            case 120:
+            case 121:
                 {
                 alt6=4;
                 }
                 break;
-            case 121:
+            case 122:
                 {
                 alt6=5;
                 }
                 break;
-            case 122:
+            case 123:
                 {
                 alt6=6;
                 }
                 break;
-            case 123:
+            case 124:
                 {
                 alt6=7;
                 }
                 break;
-            case 124:
+            case 125:
                 {
                 alt6=8;
                 }
                 break;
-            case 125:
+            case 126:
                 {
                 alt6=9;
                 }
                 break;
-            case 126:
+            case 127:
                 {
                 alt6=10;
                 }
                 break;
-            case 127:
+            case 128:
                 {
                 alt6=11;
                 }
                 break;
-            case 128:
+            case 129:
                 {
                 alt6=12;
                 }
                 break;
-            case 129:
+            case 130:
                 {
                 alt6=13;
                 }
                 break;
-            case 130:
+            case 131:
                 {
                 alt6=14;
                 }
                 break;
-            case 131:
+            case 132:
                 {
                 alt6=15;
                 }
                 break;
-            case 132:
+            case 133:
                 {
                 alt6=16;
                 }
                 break;
-            case 133:
+            case 134:
                 {
                 alt6=17;
                 }
                 break;
-            case 134:
+            case 135:
                 {
                 alt6=18;
                 }
@@ -3386,12 +3429,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
             switch (alt6) {
                 case 1 :
-                    // InternalDbTextEditor.g:1193:3: (enumLiteral_0= 'ai' )
+                    // InternalDbTextEditor.g:1212:3: (enumLiteral_0= 'ai' )
                     {
-                    // InternalDbTextEditor.g:1193:3: (enumLiteral_0= 'ai' )
-                    // InternalDbTextEditor.g:1194:4: enumLiteral_0= 'ai'
+                    // InternalDbTextEditor.g:1212:3: (enumLiteral_0= 'ai' )
+                    // InternalDbTextEditor.g:1213:4: enumLiteral_0= 'ai'
                     {
-                    enumLiteral_0=(Token)match(input,117,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,118,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getAiEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getRecordnamesAccess().getAiEnumLiteralDeclaration_0());
@@ -3403,12 +3446,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDbTextEditor.g:1201:3: (enumLiteral_1= 'ao' )
+                    // InternalDbTextEditor.g:1220:3: (enumLiteral_1= 'ao' )
                     {
-                    // InternalDbTextEditor.g:1201:3: (enumLiteral_1= 'ao' )
-                    // InternalDbTextEditor.g:1202:4: enumLiteral_1= 'ao'
+                    // InternalDbTextEditor.g:1220:3: (enumLiteral_1= 'ao' )
+                    // InternalDbTextEditor.g:1221:4: enumLiteral_1= 'ao'
                     {
-                    enumLiteral_1=(Token)match(input,118,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,119,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getAoEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getRecordnamesAccess().getAoEnumLiteralDeclaration_1());
@@ -3420,12 +3463,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDbTextEditor.g:1209:3: (enumLiteral_2= 'longin' )
+                    // InternalDbTextEditor.g:1228:3: (enumLiteral_2= 'longin' )
                     {
-                    // InternalDbTextEditor.g:1209:3: (enumLiteral_2= 'longin' )
-                    // InternalDbTextEditor.g:1210:4: enumLiteral_2= 'longin'
+                    // InternalDbTextEditor.g:1228:3: (enumLiteral_2= 'longin' )
+                    // InternalDbTextEditor.g:1229:4: enumLiteral_2= 'longin'
                     {
-                    enumLiteral_2=(Token)match(input,119,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,120,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getLonginEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getRecordnamesAccess().getLonginEnumLiteralDeclaration_2());
@@ -3437,12 +3480,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalDbTextEditor.g:1217:3: (enumLiteral_3= 'longout' )
+                    // InternalDbTextEditor.g:1236:3: (enumLiteral_3= 'longout' )
                     {
-                    // InternalDbTextEditor.g:1217:3: (enumLiteral_3= 'longout' )
-                    // InternalDbTextEditor.g:1218:4: enumLiteral_3= 'longout'
+                    // InternalDbTextEditor.g:1236:3: (enumLiteral_3= 'longout' )
+                    // InternalDbTextEditor.g:1237:4: enumLiteral_3= 'longout'
                     {
-                    enumLiteral_3=(Token)match(input,120,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,121,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getLongoutEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getRecordnamesAccess().getLongoutEnumLiteralDeclaration_3());
@@ -3454,12 +3497,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalDbTextEditor.g:1225:3: (enumLiteral_4= 'stringin' )
+                    // InternalDbTextEditor.g:1244:3: (enumLiteral_4= 'stringin' )
                     {
-                    // InternalDbTextEditor.g:1225:3: (enumLiteral_4= 'stringin' )
-                    // InternalDbTextEditor.g:1226:4: enumLiteral_4= 'stringin'
+                    // InternalDbTextEditor.g:1244:3: (enumLiteral_4= 'stringin' )
+                    // InternalDbTextEditor.g:1245:4: enumLiteral_4= 'stringin'
                     {
-                    enumLiteral_4=(Token)match(input,121,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,122,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getStringinEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getRecordnamesAccess().getStringinEnumLiteralDeclaration_4());
@@ -3471,12 +3514,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalDbTextEditor.g:1233:3: (enumLiteral_5= 'stringout' )
+                    // InternalDbTextEditor.g:1252:3: (enumLiteral_5= 'stringout' )
                     {
-                    // InternalDbTextEditor.g:1233:3: (enumLiteral_5= 'stringout' )
-                    // InternalDbTextEditor.g:1234:4: enumLiteral_5= 'stringout'
+                    // InternalDbTextEditor.g:1252:3: (enumLiteral_5= 'stringout' )
+                    // InternalDbTextEditor.g:1253:4: enumLiteral_5= 'stringout'
                     {
-                    enumLiteral_5=(Token)match(input,122,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,123,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getStringoutEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getRecordnamesAccess().getStringoutEnumLiteralDeclaration_5());
@@ -3488,12 +3531,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalDbTextEditor.g:1241:3: (enumLiteral_6= 'lsi' )
+                    // InternalDbTextEditor.g:1260:3: (enumLiteral_6= 'lsi' )
                     {
-                    // InternalDbTextEditor.g:1241:3: (enumLiteral_6= 'lsi' )
-                    // InternalDbTextEditor.g:1242:4: enumLiteral_6= 'lsi'
+                    // InternalDbTextEditor.g:1260:3: (enumLiteral_6= 'lsi' )
+                    // InternalDbTextEditor.g:1261:4: enumLiteral_6= 'lsi'
                     {
-                    enumLiteral_6=(Token)match(input,123,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,124,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getLsiEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getRecordnamesAccess().getLsiEnumLiteralDeclaration_6());
@@ -3505,12 +3548,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalDbTextEditor.g:1249:3: (enumLiteral_7= 'lso' )
+                    // InternalDbTextEditor.g:1268:3: (enumLiteral_7= 'lso' )
                     {
-                    // InternalDbTextEditor.g:1249:3: (enumLiteral_7= 'lso' )
-                    // InternalDbTextEditor.g:1250:4: enumLiteral_7= 'lso'
+                    // InternalDbTextEditor.g:1268:3: (enumLiteral_7= 'lso' )
+                    // InternalDbTextEditor.g:1269:4: enumLiteral_7= 'lso'
                     {
-                    enumLiteral_7=(Token)match(input,124,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,125,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getLsoEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getRecordnamesAccess().getLsoEnumLiteralDeclaration_7());
@@ -3522,12 +3565,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalDbTextEditor.g:1257:3: (enumLiteral_8= 'waveform' )
+                    // InternalDbTextEditor.g:1276:3: (enumLiteral_8= 'waveform' )
                     {
-                    // InternalDbTextEditor.g:1257:3: (enumLiteral_8= 'waveform' )
-                    // InternalDbTextEditor.g:1258:4: enumLiteral_8= 'waveform'
+                    // InternalDbTextEditor.g:1276:3: (enumLiteral_8= 'waveform' )
+                    // InternalDbTextEditor.g:1277:4: enumLiteral_8= 'waveform'
                     {
-                    enumLiteral_8=(Token)match(input,125,FOLLOW_2); 
+                    enumLiteral_8=(Token)match(input,126,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getWaveformEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_8, grammarAccess.getRecordnamesAccess().getWaveformEnumLiteralDeclaration_8());
@@ -3539,12 +3582,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalDbTextEditor.g:1265:3: (enumLiteral_9= 'bi' )
+                    // InternalDbTextEditor.g:1284:3: (enumLiteral_9= 'bi' )
                     {
-                    // InternalDbTextEditor.g:1265:3: (enumLiteral_9= 'bi' )
-                    // InternalDbTextEditor.g:1266:4: enumLiteral_9= 'bi'
+                    // InternalDbTextEditor.g:1284:3: (enumLiteral_9= 'bi' )
+                    // InternalDbTextEditor.g:1285:4: enumLiteral_9= 'bi'
                     {
-                    enumLiteral_9=(Token)match(input,126,FOLLOW_2); 
+                    enumLiteral_9=(Token)match(input,127,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getBiEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_9, grammarAccess.getRecordnamesAccess().getBiEnumLiteralDeclaration_9());
@@ -3556,12 +3599,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalDbTextEditor.g:1273:3: (enumLiteral_10= 'bo' )
+                    // InternalDbTextEditor.g:1292:3: (enumLiteral_10= 'bo' )
                     {
-                    // InternalDbTextEditor.g:1273:3: (enumLiteral_10= 'bo' )
-                    // InternalDbTextEditor.g:1274:4: enumLiteral_10= 'bo'
+                    // InternalDbTextEditor.g:1292:3: (enumLiteral_10= 'bo' )
+                    // InternalDbTextEditor.g:1293:4: enumLiteral_10= 'bo'
                     {
-                    enumLiteral_10=(Token)match(input,127,FOLLOW_2); 
+                    enumLiteral_10=(Token)match(input,128,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getBoEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_10, grammarAccess.getRecordnamesAccess().getBoEnumLiteralDeclaration_10());
@@ -3573,12 +3616,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalDbTextEditor.g:1281:3: (enumLiteral_11= 'mbbi' )
+                    // InternalDbTextEditor.g:1300:3: (enumLiteral_11= 'mbbi' )
                     {
-                    // InternalDbTextEditor.g:1281:3: (enumLiteral_11= 'mbbi' )
-                    // InternalDbTextEditor.g:1282:4: enumLiteral_11= 'mbbi'
+                    // InternalDbTextEditor.g:1300:3: (enumLiteral_11= 'mbbi' )
+                    // InternalDbTextEditor.g:1301:4: enumLiteral_11= 'mbbi'
                     {
-                    enumLiteral_11=(Token)match(input,128,FOLLOW_2); 
+                    enumLiteral_11=(Token)match(input,129,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getMbbiEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_11, grammarAccess.getRecordnamesAccess().getMbbiEnumLiteralDeclaration_11());
@@ -3590,12 +3633,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalDbTextEditor.g:1289:3: (enumLiteral_12= 'mbbo' )
+                    // InternalDbTextEditor.g:1308:3: (enumLiteral_12= 'mbbo' )
                     {
-                    // InternalDbTextEditor.g:1289:3: (enumLiteral_12= 'mbbo' )
-                    // InternalDbTextEditor.g:1290:4: enumLiteral_12= 'mbbo'
+                    // InternalDbTextEditor.g:1308:3: (enumLiteral_12= 'mbbo' )
+                    // InternalDbTextEditor.g:1309:4: enumLiteral_12= 'mbbo'
                     {
-                    enumLiteral_12=(Token)match(input,129,FOLLOW_2); 
+                    enumLiteral_12=(Token)match(input,130,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getMbboEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_12, grammarAccess.getRecordnamesAccess().getMbboEnumLiteralDeclaration_12());
@@ -3607,12 +3650,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalDbTextEditor.g:1297:3: (enumLiteral_13= 'mbbiDirect' )
+                    // InternalDbTextEditor.g:1316:3: (enumLiteral_13= 'mbbiDirect' )
                     {
-                    // InternalDbTextEditor.g:1297:3: (enumLiteral_13= 'mbbiDirect' )
-                    // InternalDbTextEditor.g:1298:4: enumLiteral_13= 'mbbiDirect'
+                    // InternalDbTextEditor.g:1316:3: (enumLiteral_13= 'mbbiDirect' )
+                    // InternalDbTextEditor.g:1317:4: enumLiteral_13= 'mbbiDirect'
                     {
-                    enumLiteral_13=(Token)match(input,130,FOLLOW_2); 
+                    enumLiteral_13=(Token)match(input,131,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getMbbiDirectEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_13, grammarAccess.getRecordnamesAccess().getMbbiDirectEnumLiteralDeclaration_13());
@@ -3624,12 +3667,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalDbTextEditor.g:1305:3: (enumLiteral_14= 'mbboDirect' )
+                    // InternalDbTextEditor.g:1324:3: (enumLiteral_14= 'mbboDirect' )
                     {
-                    // InternalDbTextEditor.g:1305:3: (enumLiteral_14= 'mbboDirect' )
-                    // InternalDbTextEditor.g:1306:4: enumLiteral_14= 'mbboDirect'
+                    // InternalDbTextEditor.g:1324:3: (enumLiteral_14= 'mbboDirect' )
+                    // InternalDbTextEditor.g:1325:4: enumLiteral_14= 'mbboDirect'
                     {
-                    enumLiteral_14=(Token)match(input,131,FOLLOW_2); 
+                    enumLiteral_14=(Token)match(input,132,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getMbboDirectEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_14, grammarAccess.getRecordnamesAccess().getMbboDirectEnumLiteralDeclaration_14());
@@ -3641,12 +3684,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalDbTextEditor.g:1313:3: (enumLiteral_15= 'calcout' )
+                    // InternalDbTextEditor.g:1332:3: (enumLiteral_15= 'calcout' )
                     {
-                    // InternalDbTextEditor.g:1313:3: (enumLiteral_15= 'calcout' )
-                    // InternalDbTextEditor.g:1314:4: enumLiteral_15= 'calcout'
+                    // InternalDbTextEditor.g:1332:3: (enumLiteral_15= 'calcout' )
+                    // InternalDbTextEditor.g:1333:4: enumLiteral_15= 'calcout'
                     {
-                    enumLiteral_15=(Token)match(input,132,FOLLOW_2); 
+                    enumLiteral_15=(Token)match(input,133,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getCalcoutEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_15, grammarAccess.getRecordnamesAccess().getCalcoutEnumLiteralDeclaration_15());
@@ -3658,12 +3701,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalDbTextEditor.g:1321:3: (enumLiteral_16= 'scalcout' )
+                    // InternalDbTextEditor.g:1340:3: (enumLiteral_16= 'scalcout' )
                     {
-                    // InternalDbTextEditor.g:1321:3: (enumLiteral_16= 'scalcout' )
-                    // InternalDbTextEditor.g:1322:4: enumLiteral_16= 'scalcout'
+                    // InternalDbTextEditor.g:1340:3: (enumLiteral_16= 'scalcout' )
+                    // InternalDbTextEditor.g:1341:4: enumLiteral_16= 'scalcout'
                     {
-                    enumLiteral_16=(Token)match(input,133,FOLLOW_2); 
+                    enumLiteral_16=(Token)match(input,134,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getScalcoutEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_16, grammarAccess.getRecordnamesAccess().getScalcoutEnumLiteralDeclaration_16());
@@ -3675,12 +3718,12 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalDbTextEditor.g:1329:3: (enumLiteral_17= 'calc' )
+                    // InternalDbTextEditor.g:1348:3: (enumLiteral_17= 'calc' )
                     {
-                    // InternalDbTextEditor.g:1329:3: (enumLiteral_17= 'calc' )
-                    // InternalDbTextEditor.g:1330:4: enumLiteral_17= 'calc'
+                    // InternalDbTextEditor.g:1348:3: (enumLiteral_17= 'calc' )
+                    // InternalDbTextEditor.g:1349:4: enumLiteral_17= 'calc'
                     {
-                    enumLiteral_17=(Token)match(input,134,FOLLOW_2); 
+                    enumLiteral_17=(Token)match(input,135,FOLLOW_2); 
 
                     				current = grammarAccess.getRecordnamesAccess().getCalcEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_17, grammarAccess.getRecordnamesAccess().getCalcEnumLiteralDeclaration_17());
@@ -3719,16 +3762,16 @@ public class InternalDbTextEditorParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000000L,0xFFE0000000000000L,0x000000000000007FL});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000000L,0xFFC0000000000000L,0x00000000000000FFL});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000070000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0xFFFFFFFFFFF00000L,0x001FFFFFFFFFFFFFL});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000000000E0000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0xFFFFFFFFFFE00000L,0x003FFFFFFFFFFFFFL});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
 
 }

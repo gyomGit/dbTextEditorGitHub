@@ -31,11 +31,15 @@ class DbTextEditorLabelProvider extends DefaultEObjectLabelProvider {
 	}
 	
 		def text(Field f){
-		'field : ' + if (f.fieldstring === null) 
-			 f.fieldint
-			else f.fieldstring
+		'field : ' + 
+			if (f.fieldstring === null && f.fielddouble === null)
+			f.fieldint
+			else if (f.fieldstring === null)
+			f.fielddouble
+			else
+			f.fieldstring
 	}
-	
+				
 		def image(Record r) { "Iter.gif" }
 		def image(Field f) { "Itergreen.gif"}
 		

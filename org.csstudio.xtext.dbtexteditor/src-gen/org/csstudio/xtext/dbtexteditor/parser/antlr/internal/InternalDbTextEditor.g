@@ -319,10 +319,29 @@ ruleField returns [EObject current=null]
 					}
 				)
 			)
+			    |
+			(
+				(
+					lv_fielddouble_6_0=RULE_DOUBLE
+					{
+						newLeafNode(lv_fielddouble_6_0, grammarAccess.getFieldAccess().getFielddoubleDOUBLETerminalRuleCall_4_2_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getFieldRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"fielddouble",
+							lv_fielddouble_6_0,
+							"org.csstudio.xtext.dbtexteditor.DbTextEditor.DOUBLE");
+					}
+				)
+			)
 		)
-		otherlv_6=')'
+		otherlv_7=')'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getFieldAccess().getRightParenthesisKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getFieldAccess().getRightParenthesisKeyword_5());
 		}
 	)
 ;
@@ -1337,6 +1356,8 @@ ruleRecordnames returns [Enumerator current=null]
 ;
 
 RULE_SL_COMMENT : '#' ~(('\n'|'\r'))* ('\r'? '\n')?;
+
+RULE_DOUBLE : RULE_INT '.' RULE_INT;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

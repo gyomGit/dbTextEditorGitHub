@@ -35,12 +35,18 @@ public class DbTextEditorLabelProvider extends DefaultEObjectLabelProvider {
   
   public String text(final Field f) {
     Object _xifexpression = null;
-    String _fieldstring = f.getFieldstring();
-    boolean _tripleEquals = (_fieldstring == null);
-    if (_tripleEquals) {
+    if (((f.getFieldstring() == null) && (f.getFielddouble() == null))) {
       _xifexpression = Integer.valueOf(f.getFieldint());
     } else {
-      _xifexpression = f.getFieldstring();
+      String _xifexpression_1 = null;
+      String _fieldstring = f.getFieldstring();
+      boolean _tripleEquals = (_fieldstring == null);
+      if (_tripleEquals) {
+        _xifexpression_1 = f.getFielddouble();
+      } else {
+        _xifexpression_1 = f.getFieldstring();
+      }
+      _xifexpression = _xifexpression_1;
     }
     return ("field : " + _xifexpression);
   }

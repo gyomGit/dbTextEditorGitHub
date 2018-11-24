@@ -188,13 +188,22 @@ public interface DbTextEditorPackage extends EPackage
   int FIELD__FIELDINT = 3;
 
   /**
+   * The feature id for the '<em><b>Fielddouble</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD__FIELDDOUBLE = 4;
+
+  /**
    * The number of structural features of the '<em>Field</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIELD_FEATURE_COUNT = 4;
+  int FIELD_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.impl.InfoImpl <em>Info</em>}' class.
@@ -384,6 +393,17 @@ public interface DbTextEditorPackage extends EPackage
   EAttribute getField_Fieldint();
 
   /**
+   * Returns the meta object for the attribute '{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFielddouble <em>Fielddouble</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fielddouble</em>'.
+   * @see org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFielddouble()
+   * @see #getField()
+   * @generated
+   */
+  EAttribute getField_Fielddouble();
+
+  /**
    * Returns the meta object for class '{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Info <em>Info</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -559,6 +579,14 @@ public interface DbTextEditorPackage extends EPackage
      * @generated
      */
     EAttribute FIELD__FIELDINT = eINSTANCE.getField_Fieldint();
+
+    /**
+     * The meta object literal for the '<em><b>Fielddouble</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FIELD__FIELDDOUBLE = eINSTANCE.getField_Fielddouble();
 
     /**
      * The meta object literal for the '{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.impl.InfoImpl <em>Info</em>}' class.

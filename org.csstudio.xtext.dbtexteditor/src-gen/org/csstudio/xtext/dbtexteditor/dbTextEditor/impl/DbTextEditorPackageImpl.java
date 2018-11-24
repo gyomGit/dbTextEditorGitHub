@@ -99,7 +99,7 @@ public class DbTextEditorPackageImpl extends EPackageImpl implements DbTextEdito
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link DbTextEditorPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -114,7 +114,8 @@ public class DbTextEditorPackageImpl extends EPackageImpl implements DbTextEdito
     if (isInited) return (DbTextEditorPackage)EPackage.Registry.INSTANCE.getEPackage(DbTextEditorPackage.eNS_URI);
 
     // Obtain or create and register package
-    DbTextEditorPackageImpl theDbTextEditorPackage = (DbTextEditorPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DbTextEditorPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DbTextEditorPackageImpl());
+    Object registeredDbTextEditorPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    DbTextEditorPackageImpl theDbTextEditorPackage = registeredDbTextEditorPackage instanceof DbTextEditorPackageImpl ? (DbTextEditorPackageImpl)registeredDbTextEditorPackage : new DbTextEditorPackageImpl();
 
     isInited = true;
 
@@ -127,7 +128,6 @@ public class DbTextEditorPackageImpl extends EPackageImpl implements DbTextEdito
     // Mark meta-data to indicate it can't be changed
     theDbTextEditorPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(DbTextEditorPackage.eNS_URI, theDbTextEditorPackage);
     return theDbTextEditorPackage;
@@ -258,6 +258,16 @@ public class DbTextEditorPackageImpl extends EPackageImpl implements DbTextEdito
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getField_Fielddouble()
+  {
+    return (EAttribute)fieldEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getInfo()
   {
     return infoEClass;
@@ -347,6 +357,7 @@ public class DbTextEditorPackageImpl extends EPackageImpl implements DbTextEdito
     createEAttribute(fieldEClass, FIELD__FIELDNAME);
     createEAttribute(fieldEClass, FIELD__FIELDSTRING);
     createEAttribute(fieldEClass, FIELD__FIELDINT);
+    createEAttribute(fieldEClass, FIELD__FIELDDOUBLE);
 
     infoEClass = createEClass(INFO);
     createEAttribute(infoEClass, INFO__NAME);
@@ -402,6 +413,7 @@ public class DbTextEditorPackageImpl extends EPackageImpl implements DbTextEdito
     initEAttribute(getField_Fieldname(), this.getFieldnames(), "fieldname", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getField_Fieldstring(), ecorePackage.getEString(), "fieldstring", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getField_Fieldint(), ecorePackage.getEInt(), "fieldint", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getField_Fielddouble(), ecorePackage.getEString(), "fielddouble", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(infoEClass, Info.class, "Info", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInfo_Name(), ecorePackage.getEString(), "name", null, 0, 1, Info.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -13,7 +13,7 @@ import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class DbTextEditorUiModule extends AbstractDbTextEditorUiModule {
-  public DbTextEditorUiModule(final AbstractUIPlugin arg0) {
-    super(arg0);
+  public DbTextEditorUiModule(final AbstractUIPlugin plugin) {
+    super(plugin);
   }
 }

@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.impl.FieldImpl#getFieldname <em>Fieldname</em>}</li>
  *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.impl.FieldImpl#getFieldstring <em>Fieldstring</em>}</li>
  *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.impl.FieldImpl#getFieldint <em>Fieldint</em>}</li>
+ *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.impl.FieldImpl#getFielddouble <em>Fielddouble</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +112,26 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
    * @ordered
    */
   protected int fieldint = FIELDINT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getFielddouble() <em>Fielddouble</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFielddouble()
+   * @generated
+   * @ordered
+   */
+  protected static final String FIELDDOUBLE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getFielddouble() <em>Fielddouble</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFielddouble()
+   * @generated
+   * @ordered
+   */
+  protected String fielddouble = FIELDDOUBLE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -230,6 +251,29 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getFielddouble()
+  {
+    return fielddouble;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFielddouble(String newFielddouble)
+  {
+    String oldFielddouble = fielddouble;
+    fielddouble = newFielddouble;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DbTextEditorPackage.FIELD__FIELDDOUBLE, oldFielddouble, fielddouble));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -243,6 +287,8 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
         return getFieldstring();
       case DbTextEditorPackage.FIELD__FIELDINT:
         return getFieldint();
+      case DbTextEditorPackage.FIELD__FIELDDOUBLE:
+        return getFielddouble();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -268,6 +314,9 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
         return;
       case DbTextEditorPackage.FIELD__FIELDINT:
         setFieldint((Integer)newValue);
+        return;
+      case DbTextEditorPackage.FIELD__FIELDDOUBLE:
+        setFielddouble((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -295,6 +344,9 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
       case DbTextEditorPackage.FIELD__FIELDINT:
         setFieldint(FIELDINT_EDEFAULT);
         return;
+      case DbTextEditorPackage.FIELD__FIELDDOUBLE:
+        setFielddouble(FIELDDOUBLE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -317,6 +369,8 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
         return FIELDSTRING_EDEFAULT == null ? fieldstring != null : !FIELDSTRING_EDEFAULT.equals(fieldstring);
       case DbTextEditorPackage.FIELD__FIELDINT:
         return fieldint != FIELDINT_EDEFAULT;
+      case DbTextEditorPackage.FIELD__FIELDDOUBLE:
+        return FIELDDOUBLE_EDEFAULT == null ? fielddouble != null : !FIELDDOUBLE_EDEFAULT.equals(fielddouble);
     }
     return super.eIsSet(featureID);
   }
@@ -331,7 +385,7 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(", fieldname: ");
@@ -340,6 +394,8 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field
     result.append(fieldstring);
     result.append(", fieldint: ");
     result.append(fieldint);
+    result.append(", fielddouble: ");
+    result.append(fielddouble);
     result.append(')');
     return result.toString();
   }

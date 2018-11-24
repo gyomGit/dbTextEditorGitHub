@@ -57,7 +57,7 @@ public class DbTextEditorSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Field returns Field
 	 *
 	 * Constraint:
-	 *     (name='field' fieldname=Fieldnames (fieldstring=STRING | fieldint=INT))
+	 *     (name='field' fieldname=Fieldnames (fieldstring=STRING | fieldint=INT | fielddouble=DOUBLE))
 	 */
 	protected void sequence_Field(ISerializationContext context, Field semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

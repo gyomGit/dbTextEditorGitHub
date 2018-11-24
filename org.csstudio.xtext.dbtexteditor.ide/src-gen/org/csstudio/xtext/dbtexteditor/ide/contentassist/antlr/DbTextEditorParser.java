@@ -47,6 +47,7 @@ public class DbTextEditorParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getFieldAccess().getFieldnameAssignment_2(), "rule__Field__FieldnameAssignment_2");
 			builder.put(grammarAccess.getFieldAccess().getFieldstringAssignment_4_0(), "rule__Field__FieldstringAssignment_4_0");
 			builder.put(grammarAccess.getFieldAccess().getFieldintAssignment_4_1(), "rule__Field__FieldintAssignment_4_1");
+			builder.put(grammarAccess.getFieldAccess().getFielddoubleAssignment_4_2(), "rule__Field__FielddoubleAssignment_4_2");
 			builder.put(grammarAccess.getInfoAccess().getNameAssignment_2(), "rule__Info__NameAssignment_2");
 			builder.put(grammarAccess.getInfoAccess().getInfoValueAssignment_4(), "rule__Info__InfoValueAssignment_4");
 		}

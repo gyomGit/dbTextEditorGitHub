@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFieldname <em>Fieldname</em>}</li>
  *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFieldstring <em>Fieldstring</em>}</li>
  *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFieldint <em>Fieldint</em>}</li>
+ *   <li>{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFielddouble <em>Fielddouble</em>}</li>
  * </ul>
  *
  * @see org.csstudio.xtext.dbtexteditor.dbTextEditor.DbTextEditorPackage#getField()
@@ -132,5 +133,31 @@ public interface Field extends EObject
    * @generated
    */
   void setFieldint(int value);
+
+  /**
+   * Returns the value of the '<em><b>Fielddouble</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Fielddouble</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Fielddouble</em>' attribute.
+   * @see #setFielddouble(String)
+   * @see org.csstudio.xtext.dbtexteditor.dbTextEditor.DbTextEditorPackage#getField_Fielddouble()
+   * @model
+   * @generated
+   */
+  String getFielddouble();
+
+  /**
+   * Sets the value of the '{@link org.csstudio.xtext.dbtexteditor.dbTextEditor.Field#getFielddouble <em>Fielddouble</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Fielddouble</em>' attribute.
+   * @see #getFielddouble()
+   * @generated
+   */
+  void setFielddouble(String value);
 
 } // Field
