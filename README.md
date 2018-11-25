@@ -1,14 +1,14 @@
 # Db files Editor Eclipse Plug-in
 ============================
 
-This whole repository contains these 8 projects that together build this Eclipse plug-in.
-This plug-in is designed to edit db text files in Eclipse IDE, among other environments.
+This whole repository contains these 8 projects shown above that together build this Eclipse plug-in.
+This plug-in is designed to edit Epics db (database) record files in Eclipse IDE, among other environments.
 
 ====
 
 ### org.csstudio.xtext.dbtexteditor.feature:
 This project contains the description of the feature for this Db files Editor
-implementation that can be found in the feature.xml file. Here, you can change
+implementation that can be found in the *feature.xml* file. Here, you can change
 the name of the feature, the vendor, copyright information, and other things.
 Eclipse has a form-based editor for features, and we refer to the Eclipse
 documentation for the structure of this file.
@@ -18,7 +18,7 @@ This project contains the components related to the UI that are independent from
 Eclipse (this is useful for targeting IntelliJ and web integration).
 
 ### org.csstudio.xtext.dbtexteditor.repository:
-After a Maven build (mvn clean verify) the target folder of this project will
+After a Maven build *mvn clean verify* the target folder of this project will
 contain a zipped version of the update site and the subdirectory: "repository"
 will contain the update site itself. (Before the build this project contains
 only the category.xml and the pom.xml files.)
@@ -34,6 +34,8 @@ UI. The grammar language is the corner stone of Xtext. It is a domain-specific
 language, carefully designed for the description of our Db Syntax for instance.
 It is the file to update if changes must be made such as adding a record or a
 field name to the lists. To learn and understand this language: [Xtext grammar language documentation](https://www.eclipse.org/Xtext/documentation/301_grammarlanguage.html).
+If any change is made, don't forget to go and have a look to the related test projects
+to either update them accordingly or simply disable them.
 
 ### org.csstudio.xtext.dbtexteditor.tests:
 This project contains the JUnit tests that do not depend on any UI.
@@ -43,9 +45,12 @@ This project contains the JUnit tests that depend on the Eclipse UI.
 
 ### org.csstudio.xtext.dbtexteditor.ui:
 This project contains the components related to the Eclipse UI (the Eclipse editor and
-features related to the Eclipse tooling). A directory called "templates" contains a couple
-of Eclipse default templates according to a Context that are part of the Content assist
-window list triggered by pressing *Ctrl + Space*.
+features related to the Eclipse tooling). A directory shipped in this project is
+called *Templates* and it contains templates some users created within Eclipse according to a
+context in the Db files that are part of the content assist window list triggered by
+pressing *Ctrl + Space*. If you want to keep these templates shipped with the plug-in,
+don't forget to first export them all from Eclipse | Preferences | DdTextEditor | Templates and
+then place the exported *templates.xml* file in this *Templates* directory.
 
 ====
 ## How to obtain Db files Editor Plug-in to be installed from dbTextEditorGitHub Github repository:
@@ -83,24 +88,25 @@ update sites, and run all the tests.
 
 ## How to install Db files Editor Plug-in in Eclipse:
 
-After the Maven building is done:
-the target folder of the org.csstudio.xtext.dbtexteditor.repository project
-contains the update site and also a zipped version of it.
+After the Maven build, the target folder of the org.csstudio.xtext.dbtexteditor.repository project
+contains:
 
+### The update site (p2 repository)
 The subdirectory called "repository" is the update site itself.
 Just indicate the path of this "repository" update site in The Eclipse Install
 New Software... dialog.
 
-A zipped version of this update site, which is:
+### A zipped version of the update site (p2 repository)
 org.csstudio.xtext.dbtexteditor.repository-1.0.0-SNAPSHOT.zip You can put the
-zipped repository on the web as well to offer an offline installable version of
+zipped repository on the web as well to offer an offline (download first) installable version of
 your software. The Eclipse Install New Software... dialog allows you to also
 specify a local ZIP file as the repository.
 
 
 ====
 
-### Acknowledgments
-Thanks to Sven Efftinge, the founder of Xtext.
+## Acknowledgments
+Thanks to Bruno Evrard from Iter Organization who initiated, led this project and trusted me.
 Thanks to Bettini, Lorenzo and his book: Implementing Domain-Specific Languages with Xtext
 and Xtend - Second Edition, which allowed me to create this job.
+Thanks to Sven Efftinge, the founder of Xtext.
