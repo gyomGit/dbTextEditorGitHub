@@ -128,9 +128,9 @@ specify a local ZIP file as the repository.
 
 ## How to open and edit an Epics record file with this Db files Editor Plug-in in eclipse:
 First, if it is not already done, download and install Xtext in Eclipse IDE.
-Then create a project, create any *<file_name.db>* file, any name with the extension *.db>*.
-A dialog box will ask you if you want to convert this *<project name>* project to an Xtext project.
-Press *yes*. You can now start to edit your *<file_name.db>* file using this Db files Editor Plug-in.
+Then create a project, create any *file_name.db* file, any name with the extension *.db*.
+A dialog box will ask you if you want to convert this *project name* project to an Xtext project.
+Press *yes*. You can now start to edit your *file_name.db* file using this Db files Editor Plug-in.
 
 ====
 
