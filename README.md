@@ -2,9 +2,12 @@
 ============================
 
 This whole repository originally called *org.csstudio.xtext.dbtexteditor.parent*
-contains these 8 projects shown above that together build this Eclipse plug-in.
-This plug-in is designed to edit Epics db (database) record files in Eclipse IDE,
-among other environments.
+was created within Eclipse Xtext project wizard.
+This whole repository contains these 8 projects shown above, which can be updated
+and developed with Xtext in Eclipse. Once a modification is made, they can all
+together build this Eclipse plug-in with Maven/Tycho, as often as necessary.
+This plug-in final product is designed to edit Epics db (database) record files
+in Eclipse IDE, among other environments.
 
 ====
 
@@ -33,13 +36,19 @@ and test this Db files Editor.
 
 ### org.csstudio.xtext.dbtexteditor:
 This is the main project that contains the grammar definition, which is:
-DbTextEditor.xtext and all the runtime components that are independent from the
+*DbTextEditor.xtext* and all the runtime components that are independent from the
 UI. The grammar language is the corner stone of Xtext. It is a domain-specific
 language, carefully designed for the description of our Db Syntax for instance.
 It is the file to update if changes must be made such as adding a record or a
 field name to the lists. To learn and understand this language: [Xtext grammar language documentation](https://www.eclipse.org/Xtext/documentation/301_grammarlanguage.html).
 If any change is made, don't forget to go and have a look to the related test projects
-to either update them accordingly or simply disable them.
+to either update them accordingly or simply disable them. If any change is made in
+the grammar file *DbTextEditor.xtext* right click on it and run the *mwe2*
+(Modeling workflow engine 2). During the MWE2 workflow execution, Xtext will generate
+artifacts related to the UI editor for Db syntax, but most important of all, it will
+derive an ANTLR specification from the Xtext grammar with all the actions to create
+the AST while parsing. The classes for the nodes of the AST will be generated using
+the EMF framework. The generator must be run after every modification to the grammar.
 
 ### org.csstudio.xtext.dbtexteditor.tests:
 This project contains the JUnit tests that do not depend on any UI.
@@ -70,13 +79,14 @@ repository *dbTextEditorGitHub-master* in the package explorer. You can rename i
 *org.csstudio.xtext.dbtexteditor.parent*. Finally, when opening the repository a dialog box will ask you if
 you want to convert this *<project name>* project to an Xtext project, press *yes*. You can know start to work on it.
 I strongly recommend to get the Bettini, Lorenzo's book: Implementing Domain-Specific Languages with Xtext
-and Xtend - Second Edition or newer to guide you step-by-step to develop this Db files Editor Plug-in.
+and Xtend - [Second Edition](https://www.amazon.com/Implementing-Domain-Specific-Languages-Xtext/dp/1786464969)
+or newer to guide you step-by-step to develop this Db files Editor Plug-in.
 
 ## How to Build this plug-in with Maven:
 
-There are two ways.
+There are two ways:
 
-### with Maven build from any operating system:
+### First way, with Maven build from any operating system:
 
 Install [Maven binaries](https://maven.apache.org/) in your operating system.
 
@@ -86,7 +96,7 @@ repository*.
 ```bash
 mvn clean verify
 ```
-### with Maven build from within Eclipse:
+### Second way, with Maven build from within Eclipse:
 
 This way you do not need to install Maven on your computer.
 Install [M2Eclipse](https://www.eclipse.org/m2e/) abbreviated as m2e, a set of
@@ -94,9 +104,9 @@ Eclipse plug-ins that integrate Maven into Eclipse. After imported the
 *dbTextEditorGitHub-master* as a project, right-click on the
 *dbTextEditorGitHub-master* in the package explorer and select Run As | Maven build…
 and in the appearing dialog specify *clean verify* as the goals.
-The goal clean will instruct Maven to perform a clean build, thus, all the
+The goal *clean* will instruct Maven to perform a clean build, thus, all the
 existing generated artifacts will be removed before building, for example, all
-Java class files will be removed before compiling. The goal verify will instruct
+Java class files will be removed before compiling. The goal *verify* will instruct
 Maven to compile everything, generate artifacts, for example jar files and
 update sites, and run all the tests.
 
@@ -118,15 +128,15 @@ specify a local ZIP file as the repository.
 
 ## How to open and edit an Epics record file with this Db files Editor Plug-in in eclipse:
 First, if it is not already done, download and install Xtext in Eclipse IDE.
-Create a project. create any *<file_name.db>* file, any name with the extension *.db>*.
+Then create a project, create any *<file_name.db>* file, any name with the extension *.db>*.
 A dialog box will ask you if you want to convert this *<project name>* project to an Xtext project.
 Press *yes*. You can know start to edit your *<file_name.db>* file using this Db files Editor Plug-in.
 
 ====
 
 # Acknowledgments
-I'm grateful to Bruno Evrard, my Iter Organization supervisor who was behind this
-plug-in project and trusted me.
+I'm Guillaume Balourdet and I'm grateful to Bruno Evrard, my Iter Organization
+supervisor who was behind this plug-in project and trusted me.
 Many thanks to Bettini, Lorenzo and his book: Implementing Domain-Specific Languages with Xtext
 and Xtend - Second Edition, which enabled me to create this job.
 And finally a big thank you to Sven Efftinge, the founder of Xtext.
