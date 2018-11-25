@@ -1,10 +1,14 @@
 # Db files Editor Eclipse Plug-in
 ============================
 
-This whole repository contains these 8 projects shown above that together build this Eclipse plug-in.
-This plug-in is designed to edit Epics db (database) record files in Eclipse IDE, among other environments.
+This whole repository originally called *org.csstudio.xtext.dbtexteditor.parent*
+contains these 8 projects shown above that together build this Eclipse plug-in.
+This plug-in is designed to edit Epics db (database) record files in Eclipse IDE,
+among other environments.
 
 ====
+
+## These 8 projects are:
 
 ### org.csstudio.xtext.dbtexteditor.feature:
 This project contains the description of the feature for this Db files Editor
@@ -53,60 +57,76 @@ don't forget to first export them all from Eclipse | Preferences | DdTextEditor 
 then place the exported *templates.xml* file in this *Templates* directory.
 
 ====
-## How to obtain Db files Editor Plug-in to be installed from dbTextEditorGitHub Github repository:
 
-Click "Clone or download" and "Download Zip" the dbTextEditorGitHub-master.
+## How to obtain this Db files Editor Plug-in from this dbTextEditorGitHub Github repository:
 
-## Build the plug-in with Maven:
+Click "Clone or download" and "Download Zip" the dbTextEditorGitHub-master. You
+can rename it as it was called originally: *org.csstudio.xtext.dbtexteditor.parent*
+
+## How to develop this plug-in:
+
+First, if it is not already done, download and install Xtext in Eclipse IDE. Then import this whole
+repository *dbTextEditorGitHub-master* in the package explorer. You can rename it as it was called originally:
+*org.csstudio.xtext.dbtexteditor.parent*. Finally, when opening the repository a dialog box will ask you if
+you want to convert this *<project name>* project to an Xtext project, press *yes*. You can know start to work on it.
+I strongly recommend to get the Bettini, Lorenzo's book: Implementing Domain-Specific Languages with Xtext
+and Xtend - Second Edition or newer to guide you step-by-step to develop this Db files Editor Plug-in.
+
+## How to Build this plug-in with Maven:
 
 There are two ways.
 
-### Maven build from any operating system:
+### with Maven build from any operating system:
 
 Install [Maven binaries](https://maven.apache.org/) in your operating system.
 
-Run the build from the command line from the dbTextEditorGitHub-master
-repository.
+Run the build from the command line from the *dbTextEditorGitHub-master
+repository*.
 
 ```bash
 mvn clean verify
 ```
-### Maven build from within Eclipse:
+### with Maven build from within Eclipse:
 
 This way you do not need to install Maven on your computer.
 Install [M2Eclipse](https://www.eclipse.org/m2e/) abbreviated as m2e, a set of
 Eclipse plug-ins that integrate Maven into Eclipse. After imported the
-dbTextEditorGitHub-master as a project, right-click on the
-dbTextEditorGitHub-master in the package explorer and select Run As | Maven build…
-and in the appearing dialog specify "clean verify" as the goals.
+*dbTextEditorGitHub-master* as a project, right-click on the
+*dbTextEditorGitHub-master* in the package explorer and select Run As | Maven build…
+and in the appearing dialog specify *clean verify* as the goals.
 The goal clean will instruct Maven to perform a clean build, thus, all the
 existing generated artifacts will be removed before building, for example, all
 Java class files will be removed before compiling. The goal verify will instruct
 Maven to compile everything, generate artifacts, for example jar files and
 update sites, and run all the tests.
 
-
 ## How to install Db files Editor Plug-in in Eclipse:
 
-After the Maven build, the target folder of the org.csstudio.xtext.dbtexteditor.repository project
+After the Maven build, the target folder of the *org.csstudio.xtext.dbtexteditor.repository* project
 contains:
 
 ### The update site (p2 repository)
-The subdirectory called "repository" is the update site itself.
-Just indicate the path of this "repository" update site in The Eclipse Install
+The subdirectory called *repository* is the update site itself.
+Just indicate the path of this *repository* update site in The Eclipse Install
 New Software... dialog.
 
 ### A zipped version of the update site (p2 repository)
-org.csstudio.xtext.dbtexteditor.repository-1.0.0-SNAPSHOT.zip You can put the
+*org.csstudio.xtext.dbtexteditor.repository-1.0.0-SNAPSHOT.zip* You can put the
 zipped repository on the web as well to offer an offline (download first) installable version of
 your software. The Eclipse Install New Software... dialog allows you to also
 specify a local ZIP file as the repository.
 
+## How to open and edit an Epics record file with this Db files Editor Plug-in in eclipse:
+First, if it is not already done, download and install Xtext in Eclipse IDE.
+Create a project. create any *<file_name.db>* file, any name with the extension *.db>*.
+A dialog box will ask you if you want to convert this *<project name>* project to an Xtext project.
+Press *yes*. You can know start to edit your *<file_name.db>* file using this Db files Editor Plug-in.
 
 ====
 
-## Acknowledgments
-Thanks to Bruno Evrard from Iter Organization who initiated, led this project and trusted me.
-Thanks to Bettini, Lorenzo and his book: Implementing Domain-Specific Languages with Xtext
-and Xtend - Second Edition, which allowed me to create this job.
-Thanks to Sven Efftinge, the founder of Xtext.
+# Acknowledgments
+I'm grateful to Bruno Evrard, my Iter Organization supervisor who was behind this
+plug-in project and trusted me.
+Many thanks to Bettini, Lorenzo and his book: Implementing Domain-Specific Languages with Xtext
+and Xtend - Second Edition, which enabled me to create this job.
+And finally a big thank you to Sven Efftinge, the founder of Xtext.
