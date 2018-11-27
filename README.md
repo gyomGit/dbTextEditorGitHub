@@ -135,8 +135,7 @@ Press **yes**. You can now start to edit your **file_name.db** file using this D
 ====
 
 # Acknowledgments
-I'm Guillaume Balourdet and I'm grateful to Bruno Evrard, my Iter Organization
-supervisor who was behind this plug-in project and trusted me.
-Many thanks to Bettini, Lorenzo and his book: Implementing Domain-Specific Languages with Xtext
-and Xtend - Second Edition, which enabled me to create this job.
-And finally a big thank you to Sven Efftinge, the founder of Xtext.
+I am Guillaume Balourdet and I'm grateful to the ITER Organization.
+I am grateful to Nadine Utzel and my supervisor Bruno Evrard, who were behind this plug-in project for ITER and trusted me. Also thank you to Zhen Chen and Celine Rossini who contributed to welcome me at the ITER Organisation.
+Many thanks to Lorenzo Bettini and his book: Implementing Domain-Specific Languages with Xtext and Xtend - Second Edition, which enabled me to create this job.
+Finally a big thank you to Sven Efftinge, the founder of Xtext.
