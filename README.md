@@ -74,7 +74,7 @@ can rename it as it was called originally: **org.csstudio.xtext.dbtexteditor.par
 
 ## How to develop this plug-in:
 
-First, if it is not already done, download and install Xtext in Eclipse IDE. Then import this whole
+First, Download and install Xtext SDK in Eclipse IDE. Then import this whole
 repository **dbTextEditorGitHub-master** in the package explorer. You can rename it as it was called originally:
 **org.csstudio.xtext.dbtexteditor.parent**. Finally, when opening the repository a dialog box will ask you if
 you want to convert this *<project name>* project to an Xtext project, press **yes**. You can know start to work on it.
@@ -127,8 +127,7 @@ your software. The Eclipse **Install New Software...** dialog allows you to also
 specify a local ZIP file as the repository.
 
 ## How to open and edit an Epics record file with this Db files Editor Plug-in in eclipse:
-First, if it is not already done, download and install Xtext in Eclipse IDE.
-Then create a project, create any **file_name.db** file, actually any name with the extension **.db**.
+Create a project, create any **file_name.db** file, actually any name with the extension **.db**.
 A dialog box will ask you if you want to convert this *<project_name>* project to an Xtext project.
 Press **yes**. You can now start to edit your **file_name.db** file using this Db files Editor Plug-in.
 
