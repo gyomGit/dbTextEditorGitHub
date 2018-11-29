@@ -1,13 +1,15 @@
-# Db files Editor Eclipse Plug-in
+# DbTextEditor Continuous Integration
 ============================
 
 This whole repository originally called **org.csstudio.xtext.dbtexteditor.parent**
-was created within Eclipse Xtext project wizard.
+was created within Eclipse Xtext project wizard from the Xtext SDK.
 This whole repository contains these 8 projects shown above, which can be updated
-and developed with Xtext in Eclipse. Once a modification is made, they can all
+and developed with Xtext SDK in Eclipse. Once a modification is made, they can all
 together build this Eclipse plug-in with Maven/Tycho, as often as necessary.
 This plug-in final product is designed to edit Epics db (database) record files
-in Eclipse IDE, among other environments.
+in Eclipse IDE, among other environments. If you wish to download and install in your Eclipse an
+already built version of this product the link is here:
+[Epics-record-db-Plugin-for-Eclipse](https://github.com/gyomGit/Epics-record-db-Plugin-for-Eclipse).
 
 ====
 
