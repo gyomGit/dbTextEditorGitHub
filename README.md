@@ -85,6 +85,7 @@ and Xtend - [Second Edition](https://www.amazon.com/Implementing-Domain-Specific
 or newer to guide you step-by-step to develop this Db files Editor Plug-in.
 
 ## How to Build this plug-in with Maven:
+*Developed on MacOS with Eclipse Photon and tested on Linux Mint, with Eclipse “2018-11”*
 
 There are two ways:
 
@@ -136,8 +137,6 @@ Press **yes**. You can now start to edit your **file_name.db** file using this D
 ====
 
 # Acknowledgments
-I am Guillaume Balourdet and I am grateful to the ITER Organization.
-I am grateful to Nadine Utzel and my supervisor Bruno Evrard, who were behind this plug-in project for ITER and trusted me. I would like to say thank you to Zhen Chen and Celine Rossini who contributed to welcome me at the ITER Organisation.
-Also thanks to Ralph Lange who I was very happy to meet and work a tiny little bit with.
-Many thanks to Lorenzo Bettini and his book: Implementing Domain-Specific Languages with Xtext and Xtend - Second Edition, which enabled me to create this job.
-Finally a big thank you to Sven Efftinge, the founder of Xtext.
+I am grateful to the ITER Organization and more especially to Nadine Utzel who technically supported me, and to my supervisor Bruno Evrard, who initiated this plug-in project and trusted me. Also thanks to Ralph Lange who I was very happy to meet and work with.  Many thanks to Lorenzo Bettini and his book: Implementing Domain-Specific Languages with Xtext and Xtend - Second Edition, which enabled me to create this job. Finally a big thank you to Sven Efftinge, the founder of Xtext.
+
+Guillaume Balourdet
