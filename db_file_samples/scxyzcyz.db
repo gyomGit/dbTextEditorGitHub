@@ -1,0 +1,14 @@
+record (calc, "$(PREFIX)TSOS:StepIdx1"){
+	field(INPA, "$(PREFIX)TSOS:L0-X CP")
+	field(INPB, "$(PREFIX)TSOS:L1-X CP")
+	field(INPC, "$(PREFIX)TSOS:L2-X CP")
+	field(INPD, "$(PREFIX)TSOS:L3-X CP")
+	field(INPE, "$(PREFIX)TSOS:L4-X CP")
+	field(INPF, "$(PREFIX)TSOS:L10-X CP") # comments
+	field(INPG, "$(PREFIX)TSOS:L11-X CP")
+	field(INPH, "$(PREFIX)TSOS:L12-X CP")
+	field(INPI, "$(PREFIX)TSOS:L13-X CP")
+	field(INPJ, "$(PREFIX)TSOS:L100a-X CP")
+	field(INPK, "$(PREFIX)TSOS:L100b-X CP")
+	field(CALC, "A|(B<<1)|(C<<2)|(D<<3)|(E<<4)|(F<<5)|(G<<6)|(H<<7)|(I<<8)|(J<<9)|(K<<10)")
+}

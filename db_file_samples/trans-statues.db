@@ -1,0 +1,20 @@
+
+record (bi, "$(PREFIX)TSOS:L14-X")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "@asynMask(StatCfgVarFrame 222 0x01)UINT8")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "$(PREFIX)TSOS:L14-X-sim.VAL CP NMS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(SCAN, "1 second")
+	field(PINI, "YES")
+}
+
+record (calc, "$(PREFIX)$(SEQ_TRANS_ID)-status") {
+	field(DESC, "Status Calculation for Transition")
+	field(INPA, "$(PREFIX)$(SEQ_TRANS_ID)-TV CP")
+	field(INPB, "$(PREFIX)$(SEQ_TRANS_ID)-TT CP")
+	field(CALC, "B+A*2")
+}

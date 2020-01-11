@@ -1,0 +1,7 @@
+record (bi, "$(PREFIX)SIMMODE") {
+	field(DESC, "Simulation Mode Switch")
+	field(PINI, "YES")
+	field(INP, "0")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+}

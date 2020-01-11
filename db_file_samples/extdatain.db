@@ -1,0 +1,87 @@
+record (bo, "VAC-MAST:AcbCl80kPresOk")
+{
+	field(DESC, "CP ACB cryolines 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x01)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:AcbCl80kPresOk-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (bo, "VAC-MAST:Cp80kLpRdyWup")
+{
+	field(DESC, "CP ready for 80 K loop warm-up")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x02)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:Cp80kLpRdyWup-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (bo, "VAC-MAST:CpAcbCl80kOk")
+{
+	field(DESC, "CP ACB cryolines at 80K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x04)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:CpAcbCl80kOk-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (bo, "VAC-MAST:CpAcbClPresOk")
+{
+	field(DESC, "CP ACB cryolines pressure OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x08)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:CpAcbClPresOk-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (bo, "VAC-MAST:CpCl80kStp")
+{
+	field(DESC, "CP cryoline 80K stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x10)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:CpCl80kStp-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (bo, "VAC-MAST:Cvbs80kCircOk")
+{
+	field(DESC, "CP CVBs 80K circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x20)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:Cvbs80kCircOk-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (bo, "VAC-MAST:RdyCpCdwn")
+{
+	field(DESC, "VAC available for CP cool-down")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(OUT, "@asynMask(ExtDataInVarPort 0 0x40)UINT8C")
+	field(DTYP, "asynUInt32Digital")
+	field(SIOL, "VAC-MAST:RdyCpCdwn-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+}
+record (ao, "CTRL-GOS:OPSTATE")
+{
+	field(DESC, "Global Operating State")
+	field(OUT, "@asyn(ExtDataInVarPort 2)INT16C")
+	field(DTYP, "asynInt32")
+	field(SIOL, "CTRL-GOS:OPSTATE-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+	field(DRVH, "100.0")
+}

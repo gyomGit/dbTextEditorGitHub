@@ -1,0 +1,600 @@
+record (calc, "$(PREFIX)SYS:InitSysFct-calc")
+{
+	field(DESC, "Call SysIniFcts")
+}
+record (bi, "$(PREFIX)SYS:InitSysFct-sim")
+{
+	field(DESC, "Call SysIniFcts")
+	field(ZNAM, "OFF")
+	field(ONAM, 8.6)
+	field(INP, "$(PREFIX)SYS:InitSysFct-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)SYS:DisProcess-calc")
+{
+	field(DESC, "Disable Process Functions")
+}
+record (bi, "$(PREFIX)SYS:DisProcess-sim")
+{
+	field(DESC, "Disable Process Functions")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)SYS:DisProcess-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)SYS:EnProcess-calc")
+{
+	field(DESC, "Enable Process Functions")
+}
+record (bi, "$(PREFIX)SYS:EnProcess-sim")
+{
+	field(DESC, "Enable Process Functions")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)SYS:EnProcess-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOSRQ:80kPltsStpCmd-calc")
+{
+	field(DESC, "Both 80K Plants are Stopped Request")
+}
+record (bi, "$(PREFIX)TSOSRQ:80kPltsStpCmd-sim")
+{
+	field(DESC, "Both 80K Plants are Stopped Request")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOSRQ:80kPltsStpCmd-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOSRQ:Cp80kLpRdyOperCmd-calc")
+{
+	field(DESC, "Cryopump 80K Loop Ready for Operation RE")
+}
+record (bi, "$(PREFIX)TSOSRQ:Cp80kLpRdyOperCmd-sim")
+{
+	field(DESC, "Cryopump 80K Loop Ready for Operation RE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOSRQ:Cp80kLpRdyOperCmd-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOSRQ:MagCp80kLpRdyOperCmd-calc")
+{
+	field(DESC, "Magnets and Cryopumps 80KLoops ready for")
+}
+record (bi, "$(PREFIX)TSOSRQ:MagCp80kLpRdyOperCmd-sim")
+{
+	field(DESC, "Magnets and Cryopumps 80KLoops ready for")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOSRQ:MagCp80kLpRdyOperCmd-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOSRQ:80kLpNomModCmd-calc")
+{
+	field(DESC, "80 Loops Nominal Mode Request")
+}
+record (bi, "$(PREFIX)TSOSRQ:80kLpNomModCmd-sim")
+{
+	field(DESC, "80 Loops Nominal Mode Request")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOSRQ:80kLpNomModCmd-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOSRQ:80KLpStdByModCmd-calc")
+{
+	field(DESC, "80 Loops StandBy Mode Request")
+}
+record (bi, "$(PREFIX)TSOSRQ:80KLpStdByModCmd-sim")
+{
+	field(DESC, "80 Loops StandBy Mode Request")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOSRQ:80KLpStdByModCmd-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:OFF_SQ-calc")
+{
+	field(DESC, "Turn sequencer off (OFF_SEQUENCE)")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:OFF_SQ-sim")
+{
+	field(DESC, "Turn sequencer off (OFF_SEQUENCE)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:OFF_SQ-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:INIT_SQ-calc")
+{
+	field(DESC, "Set sequencer to initial state (INIT_SEQ")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:INIT_SQ-sim")
+{
+	field(DESC, "Set sequencer to initial state (INIT_SEQ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:INIT_SQ-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:ACK_EF-calc")
+{
+	field(DESC, "Acknowledge all errors and disturbances ")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:ACK_EF-sim")
+{
+	field(DESC, "Acknowledge all errors and disturbances ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:ACK_EF-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:S_PREV-calc")
+{
+	field(DESC, "Display previous step in S_NO (PREVIOUS_")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:S_PREV-sim")
+{
+	field(DESC, "Display previous step in S_NO (PREVIOUS_")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:S_PREV-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:S_NEXT-calc")
+{
+	field(DESC, "Display next step in S_NO (NEXT_STEP)")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:S_NEXT-sim")
+{
+	field(DESC, "Display next step in S_NO (NEXT_STEP)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:S_NEXT-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:SW_AUTO-calc")
+{
+	field(DESC, "Set automatic mode (SWITCH_MODE_AUTOMATI")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:SW_AUTO-sim")
+{
+	field(DESC, "Set automatic mode (SWITCH_MODE_AUTOMATI")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:SW_AUTO-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:SW_TAP-calc")
+{
+	field(DESC, "Set inching mode T and T_PUSH (SWITCH_MO")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:SW_TAP-sim")
+{
+	field(DESC, "Set inching mode T and T_PUSH (SWITCH_MO")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:SW_TAP-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:SW_TOP-calc")
+{
+	field(DESC, "Set inching mode T or T_PUSH (SWITCH_MOD")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:SW_TOP-sim")
+{
+	field(DESC, "Set inching mode T or T_PUSH (SWITCH_MOD")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:SW_TOP-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:SW_MAN-calc")
+{
+	field(DESC, "Set manual mode (SWITCH_MODE_MANUAL)")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:SW_MAN-sim")
+{
+	field(DESC, "Set manual mode (SWITCH_MODE_MANUAL)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:SW_MAN-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:S_ON-calc")
+{
+	field(DESC, "Activate step displayed in S_NO (STEP_ON")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:S_ON-sim")
+{
+	field(DESC, "Activate step displayed in S_NO (STEP_ON")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:S_ON-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:S_OFF-calc")
+{
+	field(DESC, "Deactivate step displayed in (STEP_OFF)")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:S_OFF-sim")
+{
+	field(DESC, "Deactivate step displayed in (STEP_OFF)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:S_OFF-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:T_PREV-calc")
+{
+	field(DESC, "Display previous transition in T_NO (PRE")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:T_PREV-sim")
+{
+	field(DESC, "Display previous transition in T_NO (PRE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:T_PREV-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:T_NEXT-calc")
+{
+	field(DESC, "Display next transition in T_NO (NEXT_TR")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:T_NEXT-sim")
+{
+	field(DESC, "Display next transition in T_NO (NEXT_TR")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:T_NEXT-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSOS-CTRL:T_PUSH-calc")
+{
+	field(DESC, "Enable transition to switch in SW_TAP an")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:T_PUSH-sim")
+{
+	field(DESC, "Enable transition to switch in SW_TAP an")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSOS-CTRL:T_PUSH-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:OFF_SQ-calc")
+{
+	field(DESC, "Turn sequencer off (OFF_SEQUENCE)")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:OFF_SQ-sim")
+{
+	field(DESC, "Turn sequencer off (OFF_SEQUENCE)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:OFF_SQ-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:INIT_SQ-calc")
+{
+	field(DESC, "Set sequencer to initial state (INIT_SEQ")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:INIT_SQ-sim")
+{
+	field(DESC, "Set sequencer to initial state (INIT_SEQ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:INIT_SQ-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:ACK_EF-calc")
+{
+	field(DESC, "Acknowledge all errors and disturbances ")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:ACK_EF-sim")
+{
+	field(DESC, "Acknowledge all errors and disturbances ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:ACK_EF-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:S_PREV-calc")
+{
+	field(DESC, "Display previous step in S_NO (PREVIOUS_")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:S_PREV-sim")
+{
+	field(DESC, "Display previous step in S_NO (PREVIOUS_")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:S_PREV-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:S_NEXT-calc")
+{
+	field(DESC, "Display next step in S_NO (NEXT_STEP)")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:S_NEXT-sim")
+{
+	field(DESC, "Display next step in S_NO (NEXT_STEP)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:S_NEXT-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:SW_AUTO-calc")
+{
+	field(DESC, "Set automatic mode (SWITCH_MODE_AUTOMATI")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:SW_AUTO-sim")
+{
+	field(DESC, "Set automatic mode (SWITCH_MODE_AUTOMATI")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:SW_AUTO-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:SW_TAP-calc")
+{
+	field(DESC, "Set inching mode T and T_PUSH (SWITCH_MO")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:SW_TAP-sim")
+{
+	field(DESC, "Set inching mode T and T_PUSH (SWITCH_MO")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:SW_TAP-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:SW_TOP-calc")
+{
+	field(DESC, "Set inching mode T or T_PUSH (SWITCH_MOD")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:SW_TOP-sim")
+{
+	field(DESC, "Set inching mode T or T_PUSH (SWITCH_MOD")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:SW_TOP-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:SW_MAN-calc")
+{
+	field(DESC, "Set manual mode (SWITCH_MODE_MANUAL)")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:SW_MAN-sim")
+{
+	field(DESC, "Set manual mode (SWITCH_MODE_MANUAL)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:SW_MAN-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:S_ON-calc")
+{
+	field(DESC, "Activate step displayed in S_NO (STEP_ON")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:S_ON-sim")
+{
+	field(DESC, "Activate step displayed in S_NO (STEP_ON")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:S_ON-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:S_OFF-calc")
+{
+	field(DESC, "Deactivate step displayed in (STEP_OFF)")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:S_OFF-sim")
+{
+	field(DESC, "Deactivate step displayed in (STEP_OFF)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:S_OFF-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:T_PREV-calc")
+{
+	field(DESC, "Display previous transition in T_NO (PRE")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:T_PREV-sim")
+{
+	field(DESC, "Display previous transition in T_NO (PRE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:T_PREV-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:T_NEXT-calc")
+{
+	field(DESC, "Display next transition in T_NO (NEXT_TR")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:T_NEXT-sim")
+{
+	field(DESC, "Display next transition in T_NO (NEXT_TR")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:T_NEXT-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSCP-CTRL:T_PUSH-calc")
+{
+	field(DESC, "Enable transition to switch in SW_TAP an")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:T_PUSH-sim")
+{
+	field(DESC, "Enable transition to switch in SW_TAP an")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSCP-CTRL:T_PUSH-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:OFF_SQ-calc")
+{
+	field(DESC, "Turn sequencer off (OFF_SEQUENCE)")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:OFF_SQ-sim")
+{
+	field(DESC, "Turn sequencer off (OFF_SEQUENCE)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:OFF_SQ-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:INIT_SQ-calc")
+{
+	field(DESC, "Set sequencer to initial state (INIT_SEQ")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:INIT_SQ-sim")
+{
+	field(DESC, "Set sequencer to initial state (INIT_SEQ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:INIT_SQ-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:ACK_EF-calc")
+{
+	field(DESC, "Acknowledge all errors and disturbances ")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:ACK_EF-sim")
+{
+	field(DESC, "Acknowledge all errors and disturbances ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:ACK_EF-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:S_PREV-calc")
+{
+	field(DESC, "Display previous step in S_NO (PREVIOUS_")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:S_PREV-sim")
+{
+	field(DESC, "Display previous step in S_NO (PREVIOUS_")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:S_PREV-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:S_NEXT-calc")
+{
+	field(DESC, "Display next step in S_NO (NEXT_STEP)")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:S_NEXT-sim")
+{
+	field(DESC, "Display next step in S_NO (NEXT_STEP)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:S_NEXT-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:SW_AUTO-calc")
+{
+	field(DESC, "Set automatic mode (SWITCH_MODE_AUTOMATI")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:SW_AUTO-sim")
+{
+	field(DESC, "Set automatic mode (SWITCH_MODE_AUTOMATI")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:SW_AUTO-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:SW_TAP-calc")
+{
+	field(DESC, "Set inching mode T and T_PUSH (SWITCH_MO")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:SW_TAP-sim")
+{
+	field(DESC, "Set inching mode T and T_PUSH (SWITCH_MO")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:SW_TAP-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:SW_TOP-calc")
+{
+	field(DESC, "Set inching mode T or T_PUSH (SWITCH_MOD")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:SW_TOP-sim")
+{
+	field(DESC, "Set inching mode T or T_PUSH (SWITCH_MOD")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:SW_TOP-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:SW_MAN-calc")
+{
+	field(DESC, "Set manual mode (SWITCH_MODE_MANUAL)")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:SW_MAN-sim")
+{
+	field(DESC, "Set manual mode (SWITCH_MODE_MANUAL)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:SW_MAN-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:S_ON-calc")
+{
+	field(DESC, "Activate step displayed in S_NO (STEP_ON")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:S_ON-sim")
+{
+	field(DESC, "Activate step displayed in S_NO (STEP_ON")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:S_ON-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:S_OFF-calc")
+{
+	field(DESC, "Deactivate step displayed in (STEP_OFF)")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:S_OFF-sim")
+{
+	field(DESC, "Deactivate step displayed in (STEP_OFF)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:S_OFF-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:T_PREV-calc")
+{
+	field(DESC, "Display previous transition in T_NO (PRE")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:T_PREV-sim")
+{
+	field(DESC, "Display previous transition in T_NO (PRE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:T_PREV-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:T_NEXT-calc")
+{
+	field(DESC, "Display next transition in T_NO (NEXT_TR")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:T_NEXT-sim")
+{
+	field(DESC, "Display next transition in T_NO (NEXT_TR")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:T_NEXT-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "$(PREFIX)TSMG-CTRL:T_PUSH-calc")
+{
+	field(DESC, "Enable transition to switch in SW_TAP an")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:T_PUSH-sim")
+{
+	field(DESC, "Enable transition to switch in SW_TAP an")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "$(PREFIX)TSMG-CTRL:T_PUSH-calc CP NMS")
+	field(PINI, "YES")
+}

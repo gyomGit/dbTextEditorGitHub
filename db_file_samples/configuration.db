@@ -1,0 +1,27 @@
+record (ao, "$(PREFIX)TSOS-CTRL:S_SEL") {
+	field(DESC, "Select step for display in S_NO (STEP_SE")
+	field(OUT, "@asyn(StatCfgVarFrame 0)INT16C")
+	field(DTYP, "asynInt32")
+	field(SIOL, "$(PREFIX)TSOS-CTRL:S_SEL-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+	field(DRVH, "100.0")
+}
+record (ao, "$(PREFIX)TSCP-CTRL:S_SEL") {
+	field(DESC, "Select step for display in S_NO (STEP_SE")
+	field(OUT, "@asyn(StatCfgVarFrame 2)INT16C")
+	field(DTYP, "asynInt32")
+	field(SIOL, "$(PREFIX)TSCP-CTRL:S_SEL-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+	field(DRVH, "100.0")
+}
+record (ao, "$(PREFIX)TSMG-CTRL:S_SEL") {
+	field(DESC, "Select step for display in S_NO (STEP_SE")
+	field(OUT, "@asyn(StatCfgVarFrame 4)INT16C")
+	field(DTYP, "asynInt32")
+	field(SIOL, "$(PREFIX)TSMG-CTRL:S_SEL-calc.VAL CP MS")
+	field(SIML, "$(PREFIX)SIMMODE CP NMS")
+	field(PINI, "YES")
+	field(DRVH, "100.0")
+}

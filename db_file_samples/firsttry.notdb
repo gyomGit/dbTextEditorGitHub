@@ -1,0 +1,33 @@
+record(ai, "CWS-TCWS-DLHT:MT2-TT"){
+info(asyn:READBACK, "4")
+field(DTYP, "ni6259")
+field(INP, "#C0 S0")
+field(SCAN, "10 second")field(EGU, "Celsius") field(LINR, "LINEAR")
+field(EGUL, 0)field(EGUF, 120)  # Comments bla bla bla
+field(HIGH, 50)field(HSV, "MINOR")field(HIHI, 80)
+field(HHSV, "MAJOR")
+}record(bo, "TEST-S7-COOM"){info(asyn:READBACK, "1")
+field(SXST, "Bad Version")
+field(SXSV, "NO_ALARM")field(SXVL, "6")
+field(TEST, "No States")
+}   record(bi, "CWS-TCWS-DLHT:BIO-0-CY-CRC"){
+field(DTYP, "ni6259")
+field(INP, "#C1 S2")
+field(SCAN, ".1 second")
+field(ZNAM, "STOP")field(ONAM, "START")
+field(ZSV, "NO_ALARM")
+field(OSV, "MAJOR")}
+record (mbbo, "TEST-S7-COMM:MBBO16-YT"){
+info(asyn:READBACK, "1")
+field(DESC, "State binary input record")
+field(DTYP, "asynUInt32Digital")
+field(EIST, "Stop Timestamp")
+field(DESC, "NO_ALARM")
+field(EIVL, 8)
+field(ELST, "Bad States Length")field(ELSV, "NO_ALARM")
+field(ELVL, "11")ield(FRST, "Bad Footer")
+field(FRSV, "NO_ALARM")field(FRVL, "4")
+field(FVST, "Bad Length")
+field(FVSV, "NO_ALARM")field(FVVL, "5")
+	field(MASK, "0")
+}

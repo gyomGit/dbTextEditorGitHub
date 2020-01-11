@@ -1,0 +1,21 @@
+record(mbbo, "TEST-S7-COMM:MBBO16-YT"){
+	info(asyn:READBACK, "1")
+	field(DESC, "State binary input record")
+	field(DTYP, "asynUInt32Digital")
+	field(EIST, "Stop Timestamp")
+	field(DESC, "NO_ALARM")
+	field(EIVL, "8")
+	field(ELST, "Bad States Length")
+	field(ELSV, "NO_ALARM")
+	field(ELVL, "11")
+	field(FRST, "Bad Footer")
+	field(FRSV, "NO_ALARM")
+	field(FRVL, "4")
+	field(FVST, "Bad Length")
+	field(FVSV, "NO_ALARM")
+	field(FVVL, "5")
+	field(MASK, "0")
+}
+record(longin, "TEST-S7-COMM:MBBO16-YT"){
+	field(SCAN, "6" )
+}

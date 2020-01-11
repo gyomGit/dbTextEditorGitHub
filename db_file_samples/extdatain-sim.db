@@ -1,0 +1,94 @@
+record (calc, "VAC-MAST:AcbCl80kPresOk-calc")
+{
+	field(DESC, "CP ACB cryolines 80K pressurization OK")
+}
+record (bi, "VAC-MAST:AcbCl80kPresOk-sim")
+{
+	field(DESC, "CP ACB cryolines 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:AcbCl80kPresOk-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "VAC-MAST:Cp80kLpRdyWup-calc")
+{
+	field(DESC, "CP ready for 80 K loop warm-up")
+}
+record (bi, "VAC-MAST:Cp80kLpRdyWup-sim")
+{
+	field(DESC, "CP ready for 80 K loop warm-up")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:Cp80kLpRdyWup-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "VAC-MAST:CpAcbCl80kOk-calc")
+{
+	field(DESC, "CP ACB cryolines at 80K OK")
+}
+record (bi, "VAC-MAST:CpAcbCl80kOk-sim")
+{
+	field(DESC, "CP ACB cryolines at 80K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:CpAcbCl80kOk-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "VAC-MAST:CpAcbClPresOk-calc")
+{
+	field(DESC, "CP ACB cryolines pressure OK")
+}
+record (bi, "VAC-MAST:CpAcbClPresOk-sim")
+{
+	field(DESC, "CP ACB cryolines pressure OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:CpAcbClPresOk-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "VAC-MAST:CpCl80kStp-calc")
+{
+	field(DESC, "CP cryoline 80K stopped")
+}
+record (bi, "VAC-MAST:CpCl80kStp-sim")
+{
+	field(DESC, "CP cryoline 80K stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:CpCl80kStp-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "VAC-MAST:Cvbs80kCircOk-calc")
+{
+	field(DESC, "CP CVBs 80K circulation OK")
+}
+record (bi, "VAC-MAST:Cvbs80kCircOk-sim")
+{
+	field(DESC, "CP CVBs 80K circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:Cvbs80kCircOk-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "VAC-MAST:RdyCpCdwn-calc")
+{
+	field(DESC, "VAC available for CP cool-down")
+}
+record (bi, "VAC-MAST:RdyCpCdwn-sim")
+{
+	field(DESC, "VAC available for CP cool-down")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "VAC-MAST:RdyCpCdwn-calc CP NMS")
+	field(PINI, "YES")
+}
+record (calc, "CTRL-GOS:OPSTATE-calc")
+{
+	field(DESC, "Global Operating State")
+}
+record (ai, "CTRL-GOS:OPSTATE-sim")
+{
+	field(DESC, "Global Operating State")
+	field(INP, "CTRL-GOS:OPSTATE-calc CP NMS")
+	field(PINI, "YES")
+}

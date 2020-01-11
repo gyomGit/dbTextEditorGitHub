@@ -1,0 +1,33 @@
+
+# Example 1
+
+record(ai, "CWS-TCWS-DLHT:MT2-TT"){ # The record type is Analog Input 
+	info(asyn:READBACK, "1")
+	field(DTYP, "")
+	field(INP, "#C0 S0") # When processes: read from the first ai Channel of the first PXI 6259 card
+	field(SCAN, "1 second") # Processes every second
+	field(EGU, "Celsius")
+	field(LINR, "LINEAR") # Values in between EGUL and EGUF use linear interpolation
+	field(EGUL, "4678") # Minimum raw valuefield(EGUF, 120)# Maximum raw value
+	field(HIGH, 50.678)
+	field(HSV, "MINOR") # Alarm severity 50-80 minor alarm (0-50 no alarm)
+	field(HIHI, 80)
+	field(HHSV, "MAJOR") # Alarm severity 80-120 major alarm
+}
+# Example 2
+record(bi, "CWS-TCWS-DLHT:BI0-0-CY-CRC"){ # The record type is Binary Input 
+	field(DTYP, "ni6259")
+	field(INP, "#C1 S2") # When processes: read from the first ai Channel of the first PXI 6259 card
+	field(SCAN, "I/O Intr") # if the hardware acquires a new sample: interrupt requesting the record to process
+	field(ZNAM, "STOP") # State named zero = state 0 = ‘’STOP’’
+	field(ONAM, "START") # State named one = state 1 = ‘’START’’
+	field(ZSV, "NO_ALARM") # In “STOP” no alarm is raised
+	field(OSV, "MAJOR") # In “START” state a ‘’MAJOR’’ alarm is raised
+}
+# Example 3
+record(calcout, "CHILLER: AUTO_ON_CMD"){ # The record type is Calcout 
+	field(CALC, "(A+B)/2>10?1:0") # Take A and B average value if  > 10 sends a 1 to another record otherwise a 0   
+	field(INPA, "TEMP1 PP MS") # CP input link on  TEMP2 so  if TEMP2 trigger a monitor this record process
+	field(INPB, "TEMP2 PP MS") # both links use MS to propagate so the record severity is TEMP1 and TEMP2 max
+	field(OUT, "CHILLER:ON_OFF_CMD PP")
+}

@@ -1,0 +1,3638 @@
+record (ai, "$(PREFIX)SYS:AliveCounter-sim")
+{
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)SYS:CommandsCounter-sim")
+{
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)SYS:CycleTime-sim")
+{
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)SYS:AvgCycleTime-sim")
+{
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)SYS:MinCycleTime-sim")
+{
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)SYS:MaxCycleTime-sim")
+{
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)SYS:Status-sim")
+{
+	field(DESC, "To be developped (-1:FAULT;1:STOP;2:INIT")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)SYS:ProcessDis-sim")
+{
+	field(DESC, "Process Function Disabled")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOSRQ:80kPltsStp-sim")
+{
+	field(DESC, "Both 80K Plants are Stopped Requested")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOSRQ:Cp80kLpRdyOper-sim")
+{
+	field(DESC, "Cryopump 80K Loop Ready for Operation")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOSRQ:MagCp80kLpRdyOper-sim")
+{
+	field(DESC, "Magnets and Cryopumps 80KLoops ready for")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOSRQ:80kLpNomMod-sim")
+{
+	field(DESC, "80 Loops Nominal Mode Requested")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOSRQ:80KLpStdByMod-sim")
+{
+	field(DESC, "80 Loops StandBy Mode Requested")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (stringin, "$(PREFIX)TSOSRQ:StepName-sim")
+{
+	field(DESC, "Name of Requested Step")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (stringin, "$(PREFIX)TSOSRQ:StepID-sim")
+{
+	field(DESC, "Identification of Requested Step")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L0-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L0-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:80KPltsStp-sim")
+{
+	field(DESC, "L0: Both 80K Plants are Stopped. Stable ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L1-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L1-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttCp80kPltOper-sim")
+{
+	field(DESC, "L1: Start 80K plant Selected for CP Ther")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L2-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L2-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttCp80kLpPresCirc-sim")
+{
+	field(DESC, "L2: Start Pressurisation and Circulation")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L3-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L3-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttCp80kLpClDwn-sim")
+{
+	field(DESC, "L3: Start CP 80K loop CoolDown")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttCpCl80kTmpCtrlCdwn-sim")
+{
+	field(DESC, "L3 to VAC: Start request CP cryoline 80K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L4-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L4-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Cp80kLpRdyOper-sim")
+{
+	field(DESC, "L4 (+to VAC) : CP 80K Loop Ready for CP ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L5-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L5-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttCp80kLpWup-sim")
+{
+	field(DESC, "L5: CP 80K Loop Warm Up")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttCpCl80kTmpCtrlWup-sim")
+{
+	field(DESC, "L5 to VAC : Start request CP Cryoline 80")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L6-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L6-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:StpCp80KLp-sim")
+{
+	field(DESC, "L6: Stop CP 80K Loop")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:StpCpCl80k-sim")
+{
+	field(DESC, "L6 to VAC: Stop request CP Cryoline 80K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L10-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L10-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kPltOper-sim")
+{
+	field(DESC, "L10: Start 80K Selected For Magnet Therm")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L11-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L11-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kLpPresCirc-sim")
+{
+	field(DESC, "L11: Start Pressurisation and Circulatio")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L12-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L12-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kLpCdwn-sim")
+{
+	field(DESC, "L12: Start Mag 80K loop CoolDown")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L13-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L13-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:MagCp80kLpRdyOper-sim")
+{
+	field(DESC, "L13: Magnets and Cryopumps 80KLoops read")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L14-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L14-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kLpWup-sim")
+{
+	field(DESC, "L14: Mag 80K Loop Warm Up")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L15-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L15-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:StpMag80kLp-sim")
+{
+	field(DESC, "L15: Stop Mag 80K Loop")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L100a-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L100a-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Stt80kLpLn2Cplg-sim")
+{
+	field(DESC, "L100a: Start Combining 80 K Loops  in LN")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L100b-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L100b-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Stt80kLpCtcbCplg-sim")
+{
+	field(DESC, "L100b: Start Coupling 80K Loops in Ctcb")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L100c-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L100c-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:80kLpCtcbCplgOk-sim")
+{
+	field(DESC, "L100c: Combining Sequence Completed in C")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L102-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L102-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:E80KLpNomMod-sim")
+{
+	field(DESC, "L102: 80K Loops Ready for Operation")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L101a-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L101a-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Stt80kLpDisc-sim")
+{
+	field(DESC, "L101a: Start 80K Loops Disconnection")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L101b-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L101b-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Stt80kLpCtcbDisc-sim")
+{
+	field(DESC, "L101b: Start 80k Loops Disconnection in ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L101c-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L101c-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:80kLpCtcbDiscOk-sim")
+{
+	field(DESC, "L101c: Disconnection Sequence 80k Loop i")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L19-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L19-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kLpDisc-sim")
+{
+	field(DESC, "L19: Start Request MAG 80K plant Disconn")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L19b-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L19b-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kLpCtcbDisc-sim")
+{
+	field(DESC, "L19b: Start MAG plant Disconnection by C")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L19c-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L19c-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Mag80kLpCtcbDiscOk-sim")
+{
+	field(DESC, "L19c: Magnet 80k Plant Cryoline disconne")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L20-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L20-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kPltWup-sim")
+{
+	field(DESC, "L20: Start request Magnet 80k plant Warm")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L21-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L21-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:StpMag80kPlt-sim")
+{
+	field(DESC, "L21: Stop request Magnet 80k Plant")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L22-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L22-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:80KLpStdbyMod-sim")
+{
+	field(DESC, "L22: 80 Loops StandBy Mode Requested")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L16-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L16-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kPlt-sim")
+{
+	field(DESC, "L16: Start Request Magnet 80k Plant")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L17-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L17-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80KPltCdwn-sim")
+{
+	field(DESC, "L17: Start Request Magnet 80k Plant Cool")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L18a-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L18a-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80KPltConn-sim")
+{
+	field(DESC, "L18a: Start Connecting sequence")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L18b-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L18b-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:SttMag80kPltCtcbCon-sim")
+{
+	field(DESC, "L18b: Enable connecting sequence at CTCB")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:L18c-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:L18c-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:Mag80kPltCtcbConnOk-sim")
+{
+	field(DESC, "L18c: Connecting sequence Completed at C")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL0L1-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL0L1-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL0L1-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL1L2-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL1L2-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL1L2-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL2L3-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL2L3-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL2L3-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL3L4-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL3L4-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL3L4-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL4L5-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL4L5-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL4L5-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL5L6-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL5L6-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL5L6-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL6L0-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL6L0-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL6L0-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL4L10-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL4L10-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL4L10-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL10L11-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL10L11-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL10L11-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL11L12-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL11L12-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL11L12-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL12L13-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL12L13-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL12L13-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL13L14-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL13L14-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL13L14-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL14L15-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL14L15-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL14L15-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL15L4-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL15L4-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL15L4-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL13L100a-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL13L100a-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL13L100a-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL100aL100b-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL100aL100b-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL100aL100b-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL100bL100c-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL100bL100c-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL100bL100c-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL100cL102-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL100cL102-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL100cL102-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL102L101a-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL102L101a-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL102L101a-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL101aL101b-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL101aL101b-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL101aL101b-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL101bL101c-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL101bL101c-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL101bL101c-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL101cL13-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL101cL13-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL101cL13-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL102L19-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL102L19-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL102L19-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL19L19b-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL19L19b-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL19L19b-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL19bL19c-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL19bL19c-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL19bL19c-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL19cL20-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL19cL20-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL19cL20-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL20L21-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL20L21-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL20L21-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL21L22-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL21L22-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL21L22-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL22L16-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL22L16-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL22L16-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL16L17-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL16L17-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL16L17-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL17L18a-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL17L18a-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL17L18a-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL18aL18b-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL18aL18b-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL18aL18b-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL18bL18c-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL18bL18c-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL18bL18c-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL18cL102-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS:TL18cL102-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS:TL18cL102-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS-CTRL:S_NO-sim")
+{
+	field(DESC, "Step number (STEP_NUMBER)")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:S_MORE-sim")
+{
+	field(DESC, "More steps available for display (MORE_S")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:S_ACTIVE-sim")
+{
+	field(DESC, "Step S_NO is active (STEP_ACTIVE)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSOS-CTRL:T_NO-sim")
+{
+	field(DESC, "Transition number (TRANSITION_NUMBER)")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:ERR_FLT-sim")
+{
+	field(DESC, "Group error interlocks or supervisions  ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:SQ_ISOFF-sim")
+{
+	field(DESC, "Sequencer is off (no step active) (SEQUE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:AUTO_ON-sim")
+{
+	field(DESC, "SW_AUTO mode is active (AUTOMATIC_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:TAP_ON-sim")
+{
+	field(DESC, "SW_TAP mode is active (T_AND_PUSH_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:TOP_ON-sim")
+{
+	field(DESC, "SW_TOP mode is active (T_OR_PUSH_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSOS-CTRL:MAN_ON-sim")
+{
+	field(DESC, "SW_MAN mode is active (MANUAL_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P100-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P100-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:NotPres-sim")
+{
+	field(DESC, "P100: CP 80K Loop not Pressurized.  Stab")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P101-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P101-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kClPres-sim")
+{
+	field(DESC, "P101: Start CP 80K cryoline pressurizati")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P102-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P102-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kPlt1MfldPres-sim")
+{
+	field(DESC, "P102: Start CP 80K manifold plant #1 Pre")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P103-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P103-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kPlt2MfldPres-sim")
+{
+	field(DESC, "P103: Start CP 80K Manifold plant #2 Pre")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P104-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P104-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kClPres2-sim")
+{
+	field(DESC, "P104: Start CP 80K CryoLine 80K Pressuri")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P105-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P105-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kAcb5Pres1-sim")
+{
+	field(DESC, "P105: CP ACB 80k Pressurization")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P106-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P106-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kAcb5Pres2-sim")
+{
+	field(DESC, "P106: Start Request CP 80K ACB Pressuriz")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P107-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P107-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kCtcbCirc-sim")
+{
+	field(DESC, "P107:Start Request CP CTCB 80K Circulati")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P108-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P108-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kAcb5Circ-sim")
+{
+	field(DESC, "P108: Start Request CP ACB 80K Circulati")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P109-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P109-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:Stt80kAcbClCirc-sim")
+{
+	field(DESC, "P109 (+to VAC): Start Request CP ACB cry")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:P110-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:P110-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:CircOk-sim")
+{
+	field(DESC, "P110: CP 80K Loop Circulation OK  Stable")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP100P101-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP100P101-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP100P101-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP101P102-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP101P102-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP101P102-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP102P104-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP102P104-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP102P104-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP101P103-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP101P103-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP101P103-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP103P104-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP103P104-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP103P104-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP104P105-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP104P105-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP104P105-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP105P106-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP105P106-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP105P106-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP106P107-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP106P107-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP106P107-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP107P108-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP107P108-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP107P108-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP108P109-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP108P109-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP108P109-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP109P110-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP109P110-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP109P110-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP110P100-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP:TP110P100-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP:TP110P100-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP-CTRL:S_NO-sim")
+{
+	field(DESC, "Step number (STEP_NUMBER)")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:S_MORE-sim")
+{
+	field(DESC, "More steps available for display (MORE_S")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:S_ACTIVE-sim")
+{
+	field(DESC, "Step S_NO is active (STEP_ACTIVE)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSCP-CTRL:T_NO-sim")
+{
+	field(DESC, "Transition number (TRANSITION_NUMBER)")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:ERR_FLT-sim")
+{
+	field(DESC, "Group error interlocks or supervisions  ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:SQ_ISOFF-sim")
+{
+	field(DESC, "Sequencer is off (no step active) (SEQUE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:AUTO_ON-sim")
+{
+	field(DESC, "SW_AUTO mode is active (AUTOMATIC_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:TAP_ON-sim")
+{
+	field(DESC, "SW_TAP mode is active (T_AND_PUSH_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:TOP_ON-sim")
+{
+	field(DESC, "SW_TOP mode is active (T_OR_PUSH_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSCP-CTRL:MAN_ON-sim")
+{
+	field(DESC, "SW_MAN mode is active (MANUAL_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P200-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P200-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:NotPres-sim")
+{
+	field(DESC, "P200: Mag 80K Loop Not Pressurized")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P201-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P201-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:SttClPres1-sim")
+{
+	field(DESC, "P201: Start Request Mag 80k Cryoline and")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P202-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P202-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:SttMfldPlt1Pres-sim")
+{
+	field(DESC, "P202: Start Request Mag 80k Manifold Pla")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P203-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P203-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:StrMfldPlt2Pres-sim")
+{
+	field(DESC, "P203: Start Request Mag 80k Manifold Pla")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P204-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P204-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:StrClPres2-sim")
+{
+	field(DESC, "P204: Start Request MAG Cryoline 80K Pre")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P205-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P205-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:StrCcbAcbsTcvbPres-sim")
+{
+	field(DESC, "P205: Start MAG CCB/ACBs/TCVBs 80K seque")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P206-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P206-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:SttMagAcbsClShdPres-sim")
+{
+	field(DESC, "P206: Start MAG ACBs 80k Cryolines and M")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P207-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P207-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:SttCvbsCtbsShdPres-sim")
+{
+	field(DESC, "P207: Start Request Mag CVBs/CTBs shield")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P208-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P208-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:SttCcbsAcbsQchTkShdCirc-sim")
+{
+	field(DESC, "P208: Start Request MAG CCB/ACB Quench T")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P209-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P209-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:StrCvbsCtbsShdCirc-sim")
+{
+	field(DESC, "P209: Start Request MAG CVBs/CTBs 80K sh")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:P210-X-sim")
+{
+	field(DESC, "Step is Activated")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:P210-SNO-sim")
+{
+	field(DESC, "Step User Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:CircOk-sim")
+{
+	field(DESC, "P210:  Start request MAG CVBs/CTBs 80k S")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP200P201-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP200P201-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP200P201-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP201P203-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP201P203-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP201P203-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP203P204-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP203P204-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP203P204-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP201P202-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP201P202-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP201P202-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP202P204-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP202P204-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP202P204-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP204P205-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP204P205-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP204P205-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP205P206-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP205P206-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP205P206-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP206P207-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP206P207-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP206P207-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP207P208-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP207P208-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP207P208-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP208P209-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP208P209-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP208P209-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP209P210-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP209P210-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP209P210-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP210P200-TV-sim")
+{
+	field(DESC, "Transition is activated (Conditions are ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG:TP210P200-TT-sim")
+{
+	field(DESC, "Transition Conditions atre satisfied)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG:TP210P200-TNO-sim")
+{
+	field(DESC, "Transtion user Number")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG-CTRL:S_NO-sim")
+{
+	field(DESC, "Step number (STEP_NUMBER)")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:S_MORE-sim")
+{
+	field(DESC, "More steps available for display (MORE_S")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:S_ACTIVE-sim")
+{
+	field(DESC, "Step S_NO is active (STEP_ACTIVE)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (ai, "$(PREFIX)TSMG-CTRL:T_NO-sim")
+{
+	field(DESC, "Transition number (TRANSITION_NUMBER)")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:ERR_FLT-sim")
+{
+	field(DESC, "Group error interlocks or supervisions  ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:SQ_ISOFF-sim")
+{
+	field(DESC, "Sequencer is off (no step active) (SEQUE")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:AUTO_ON-sim")
+{
+	field(DESC, "SW_AUTO mode is active (AUTOMATIC_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:TAP_ON-sim")
+{
+	field(DESC, "SW_TAP mode is active (T_AND_PUSH_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:TOP_ON-sim")
+{
+	field(DESC, "SW_TOP mode is active (T_OR_PUSH_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)TSMG-CTRL:MAN_ON-sim")
+{
+	field(DESC, "SW_MAN mode is active (MANUAL_IS_ON)")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CpPlt300kOk-sim")
+{
+	field(DESC, "Cp 80k Plant at 300k OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CpPltRdy-sim")
+{
+	field(DESC, "Plant Selected for CP 80k Loop and Ready")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagPltRdy-sim")
+{
+	field(DESC, "Plant Selected for Magnet Thermal Shield")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CpCircOk-sim")
+{
+	field(DESC, "CP 80K plant circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CpPresStb-sim")
+{
+	field(DESC, "CP 80K plant pressure stability")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CpStp-sim")
+{
+	field(DESC, "CP 80K Plant stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagDiscRdy-sim")
+{
+	field(DESC, "Ready to disconnect Magnet Thermal Shiel")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CplgRdy-sim")
+{
+	field(DESC, "Ready to combine 80K loops")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:CplgOk-sim")
+{
+	field(DESC, " Combining Sequences Completed at 80K pl")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:ClVlvOpn-sim")
+{
+	field(DESC, "80K cryoline plant valves open")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:LpDiscOk-sim")
+{
+	field(DESC, "Disconnection Sequence Completed at 80 K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:LpDiscRdy-sim")
+{
+	field(DESC, "Ready to disconnect 80K loops")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagPresStb-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant pressure")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagStp-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80 K Plant stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:Mag80kOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant at 80K O")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:Mag300kOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant at 300K ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagCircOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant circulat")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagCircRdy-sim")
+{
+	field(DESC, "Ready to Connect TS 80k Plant")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-CP:MagDiscOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K Plant Disconne")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CpPlt300kOk-sim")
+{
+	field(DESC, "Cp 80k Plant at 300k OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CpPltRdy-sim")
+{
+	field(DESC, "Plant Selected for CP 80k Loop and Ready")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagPltRdy-sim")
+{
+	field(DESC, "Plant Selected for Magnet Thermal Shield")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CpCircOk-sim")
+{
+	field(DESC, "CP 80K plant circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CpPresStb-sim")
+{
+	field(DESC, "CP 80K plant pressure stability")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CpStp-sim")
+{
+	field(DESC, "CP 80K Plant stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagDiscRdy-sim")
+{
+	field(DESC, "Ready to disconnect Magnet Thermal Shiel")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CplgRdy-sim")
+{
+	field(DESC, "Ready to combine 80K loops")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:CplgOk-sim")
+{
+	field(DESC, " Combining Sequences Completed at 80K pl")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:ClVlvOpn-sim")
+{
+	field(DESC, "80K cryoline plant valves open")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:LpDiscOk-sim")
+{
+	field(DESC, "Disconnection Sequence Completed at 80 K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:LpDiscRdy-sim")
+{
+	field(DESC, "Ready to disconnect 80K loops")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagPresStb-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant pressure")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagStp-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80 K Plant stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:Mag80kOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant at 80K O")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:Mag300kOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant at 300K ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagCircOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K plant circulat")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagCircRdy-sim")
+{
+	field(DESC, "Ready to Connect TS 80k Plant")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-MAG:MagDiscOk-sim")
+{
+	field(DESC, "Magnet Thermal Shield 80K Plant Disconne")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-SEL:Plt1CpBf-sim")
+{
+	field(DESC, "Plant 1 Selected for CP Baffles Operatio")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-SEL:Plt2CpBf-sim")
+{
+	field(DESC, "Plant 2 Selected for CP Baffles Operatio")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-SEL:Plt1MagTs-sim")
+{
+	field(DESC, "Plant 1 Selected for Magnets CP Operatio")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-SEL:Plt2MagTs-sim")
+{
+	field(DESC, "Plant 2 Selected for Magnets CP Operatio")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)E80KPLT-SEL:Error-sim")
+{
+	field(DESC, "Selection Error")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)GOSOPSTATE:STM-sim")
+{
+	field(DESC, "Short Term Maintenance")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)GOSOPSTATE:LTM-sim")
+{
+	field(DESC, "Long Term Maintenance")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)GOSOPSTATE:TCS-sim")
+{
+	field(DESC, "Test And Conditionning State")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)GOSOPSTATE:POS-sim")
+{
+	field(DESC, "Plasma Operating State")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)GOSOPSTATE:SAFE-sim")
+{
+	field(DESC, "Safe State")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CPLHEOS:CpLhePltLpNotPres-sim")
+{
+	field(DESC, "Cryopump Plant Loop not Pressurized")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CPLHEOS:CpLhePltLpCircOk-sim")
+{
+	field(DESC, "Cryopump Plant Loop circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CPOS:LhePltStp-sim")
+{
+	field(DESC, "St0: Liquid Helium plant Stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CPOS:CpLhePltLpWup6kTo300k-sim")
+{
+	field(DESC, "St7: Cryopump LHe Plant Warm up drom 6k ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CPOS:CpAcbNomMod-sim")
+{
+	field(DESC, "St5b: Cryopump ACB Nominal Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)GHS:RdyOper-sim")
+{
+	field(DESC, "Gaseous Storage Ready for Operation")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)QCHT:80kShPresOk-sim")
+{
+	field(DESC, "Quench tank 80K shield pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)QCHT:SttQchtGheCirc-sim")
+{
+	field(DESC, "Start Request Quench Tank GHe Circulatio")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CA-HERP:RdyOper-sim")
+{
+	field(DESC, "HERP ready for operation")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOS:LhePltlpStp300k-sim")
+{
+	field(DESC, "LHe Plant Loop Stopped at 300 K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOS:80kStdbyMod-sim")
+{
+	field(DESC, "80 K  Stand by Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOS:4-5kStdbyMod-sim")
+{
+	field(DESC, "4.5 K Stand by Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOS:NomMod-sim")
+{
+	field(DESC, "Nominal Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOSRQ:LhePltlpStp300k-sim")
+{
+	field(DESC, "LHe Plant Loop Stopped at 300 K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOSRQ:80kStdbyMod-sim")
+{
+	field(DESC, "80 K  Stand by Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOSRQ:4-sim")
+{
+	field(DESC, "4.5 K Stand by Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MGOSRQ:NomMod-sim")
+{
+	field(DESC, "Nominal Mode")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CH-MAST:CpPltRdyOper-sim")
+{
+	field(DESC, " CP Lhe plant available")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:CtbsCvbs80kOk-sim")
+{
+	field(DESC, "CTBs/CVBs 80K at 80K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:CtbsCvbs80kStp-sim")
+{
+	field(DESC, "CTBs/CVBs 80K stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:MagAcbsClPresOk-sim")
+{
+	field(DESC, "MAG ACBs cryolines 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:MagCvbCtb80kShCircOk-sim")
+{
+	field(DESC, "MAG CVBs/CTBs 80K shields circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:MagCvbCtb80kShPresOk-sim")
+{
+	field(DESC, "MAG CVBs/CTBs 80K shields pressurization")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:MagRdy80kLpWrmup-sim")
+{
+	field(DESC, "Magnet ready for 80 K loop warm-up")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)MAG-MAST:MagAvgTmp250k-sim")
+{
+	field(DESC, "& MAG Average  temperature <250 K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:CpCl80kPresOk-sim")
+{
+	field(DESC, "CP cryoline 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:Cl80kVlvOpn-sim")
+{
+	field(DESC, "CP ACB cryolines 80K valves open")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:80kCircOk-sim")
+{
+	field(DESC, "CP ACB 80K circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:80kPresOk-sim")
+{
+	field(DESC, "CP ACB 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:80kTsOk-sim")
+{
+	field(DESC, "CP ACB 80K TS at 80K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:80kTsStp-sim")
+{
+	field(DESC, "CP ACB 80K TS stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-ACB5CP:T300kOk-sim")
+{
+	field(DESC, "CP ACB at 300 K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Cp80kCircOk-sim")
+{
+	field(DESC, "CP CTCB 80K circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Cp80kLp300kOk-sim")
+{
+	field(DESC, "CP 80 K Loop at 300 K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Cp80kMfldPlt1OrPresOk-sim")
+{
+	field(DESC, "CP 80K manifold plant #1 pressurization ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Cp80kMfldPlt2OrPresOk-sim")
+{
+	field(DESC, "CP 80K manifold plant #2 pressurization ")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:CpCl80kVlvOpn-sim")
+{
+	field(DESC, "CTCB CP cryoline 80K valves open")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:CplgOk-sim")
+{
+	field(DESC, "Combining Sequence Completed at CTCB sid")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:80kClPlt1PresOk-sim")
+{
+	field(DESC, "80K cryoline plant #1 pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:80kClPlt2PresOk-sim")
+{
+	field(DESC, "80K cryoline plant #2 pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:80kStp-sim")
+{
+	field(DESC, "CTCB 80K stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Mag80kLp300kOk-sim")
+{
+	field(DESC, "MAG 80 K Loop at 300 K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Mag80kStp-sim")
+{
+	field(DESC, "MAG CTCB 80K stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:TmpGheMagHgh75k-sim")
+{
+	field(DESC, "T GHe supply MAG LHe plant loop >75K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:Ts80kPltClDiscOk-sim")
+{
+	field(DESC, "TS 80K Plant cryoline disconnection OK a")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:TsCl80kVlvOpn-sim")
+{
+	field(DESC, "CTCB TS cryoline 80K valves open")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:TsTmpOut100kOk-sim")
+{
+	field(DESC, "TS T-out at 100K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-CTCB:DiscOk-sim")
+{
+	field(DESC, "Disconnection Sequence Completed at CTCB")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-TSCS:80kTsPresOk-sim")
+{
+	field(DESC, "80K TS pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-TSCS:Tscs300kOk-sim")
+{
+	field(DESC, "TSCS at 300 K")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:MagAcbCl80kVlvOpn-sim")
+{
+	field(DESC, "MAG ACBs cryolines 80K valves open")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:MagAcbsTcvb80kTsStp-sim")
+{
+	field(DESC, "MAG ACBs/TCVB 80K TS stopped")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:MagAcbsTcvbPresOk-sim")
+{
+	field(DESC, "MAG ACBs/TCVB 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:MagAcbsTs80kOk-sim")
+{
+	field(DESC, "MAG ACBs TS at 80K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:MagAcbTcvb80kCircOk-sim")
+{
+	field(DESC, "MAG ACBs/TCVBs 80K circulation OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:Ts80kOk-sim")
+{
+	field(DESC, "TS 80K loop at 80K OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CD-MAST:TsCl80kPresOk-sim")
+{
+	field(DESC, "TS cryoline 80K pressurization OK")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
+record (bi, "$(PREFIX)CA-LN2:PltRdy-sim")
+{
+	field(DESC, "Liquid Nitrogen Plant Ready")
+	field(ZNAM, "OFF")
+	field(ONAM, "ON")
+	field(INP, "0")
+	field(PINI, "YES")
+}
